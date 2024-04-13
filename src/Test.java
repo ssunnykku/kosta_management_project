@@ -14,6 +14,7 @@ import dao.ScholarshipDAO;
 import dao.ScholarshipDAOImpl;
 import dao.StudentDAO;
 import dao.StudentDAOImpl;
+import daoTest.StudentDAOTest;
 import jdbc.JdbcTest;
 import vo.CourseVO;
 import vo.NotificationVO;
@@ -124,6 +125,14 @@ public class Test {
 //			System.out.println(student.getStudentInfoListByName("손유철"));
 //			StudentVO st = new StudentVO("sun", "테스트", "1999/02/16", "경기", "신한", "99552188454","010-8888-8888","sun@gmail.com",1,'1',0,277,"가산");
 //			student.addStudent(st);
+			
+			
+			
+			
+			/*********** ㅅㅐㄹㅗ ㄹㅣㅍㅐㄱㅌㅗㄹㅣㅇ *************/
+		//	StudentDAOTest st = new StudentDAOTest(conn);
+			
+		//	System.out.println(st.getStudentInfoList());
 			
 		} catch(Exception e) {
 			e.printStackTrace();
