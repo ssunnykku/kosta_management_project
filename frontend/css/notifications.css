@@ -1,0 +1,39 @@
+@import 'reset.css';
+
+.notifications-table {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+}
+
+.notifications-item {
+  border-color: black;
+  border: solid;
+}
+
+.notifications-item:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 12;
+}
+
+.notifications-item:nth-child(2) {
+  grid-column-start: 6;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 12;
+}
+/* Header */
+
+/* box-sizing: border-box;
+
+position: absolute;
+width: 1440px;
+height: 94px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border-bottom: 1px solid #F3F5F9;
+ */
