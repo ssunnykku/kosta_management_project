@@ -2,7 +2,7 @@ package dao;
 
 import java.util.Collection;
 
-import customVo.ScholarshipStatementVO;
+import vo.customVo.ScholarshipStatementVO;
 
 public interface ScholarshipResultDAO {
 	

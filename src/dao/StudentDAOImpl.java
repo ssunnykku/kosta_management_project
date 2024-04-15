@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,28 +10,27 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import customVo.StudentCompletionVO;
-import customVo.StudentCourseVO;
+import jdbc.JdbcConnectionManager;
+import vo.customVo.StudentCourseVO;
 import vo.StudentVO;
 
 public class StudentDAOImpl implements StudentDAO {
-
-	private Connection conn;
 	
-	public StudentDAOImpl(Connection connection) {
-		conn = connection;
+	Connection conn = JdbcConnectionManager.jdbcConnector();
+	
+	public StudentDAOImpl() throws ClassNotFoundException, SQLException {
+
 	}
 	
 	/** 전체 수강생 목록 불러오기(students) */
 	@Override
-	public Collection<StudentVO> getStudentInfoList() {
+	public Collection<StudentVO> getStudentInfoList() throws ClassNotFoundException, SQLException  {
 		String sql = "select hrd_net_id, course_id, name, "
 				+ "birth, province, bank, account, "
 				+ "phone_number,email,completion_status "
 				+ "from students";
 		List<StudentVO> studentsList = new ArrayList<>();
 
-		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next()) {
@@ -47,15 +47,12 @@ public class StudentDAOImpl implements StudentDAO {
 						rs.getInt("completion_status"));
 				studentsList.add(studentInfo);
 			}
-		}  catch (SQLException e) {
-			e.printStackTrace();
-		}
 		return studentsList;
 	}
 	
 	/** 특정 기수의 수강생 목록 불러오기 */
 	@Override
-	public Collection<StudentVO> getStudentInfoListByCourseId(int courseId) {
+	public Collection<StudentVO> getStudentInfoListByCourseId(int courseId) throws ClassNotFoundException, SQLException  {
 		
 		String sql = "select hrd_net_id, course_id, name, "
 				+ "birth, province, bank, account, "
@@ -65,7 +62,6 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		List<StudentVO> studentsList = new ArrayList<>();
 		
-		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, courseId);
 			ResultSet rs = pstmt.executeQuery();
@@ -83,16 +79,13 @@ public class StudentDAOImpl implements StudentDAO {
 						rs.getInt("completion_status")));
 						
 	        }
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 		
 		return studentsList;
 	}
 
 	/** 특정 이름을 가진 수강생 목록 불러오기 */
 	@Override
-	public Collection<StudentVO> getStudentInfoListByName(String name) {
+	public Collection<StudentVO> getStudentInfoListByName(String name) throws ClassNotFoundException, SQLException {
 		String sql = "select hrd_net_id, course_id, name, "
 				+ "birth, province, bank, account, "
 				+ "phone_number,email,completion_status "
@@ -101,7 +94,6 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		List<StudentVO> studentsList = new ArrayList<>();
 		
-		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, name);
 			ResultSet rs = pstmt.executeQuery();
@@ -119,9 +111,6 @@ public class StudentDAOImpl implements StudentDAO {
 						rs.getInt("completion_status")));
 						
 	        }
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 		
 		return studentsList;
 
@@ -129,7 +118,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 	/** 새로운 수강생 정보를 등록하기 -1 */
 	@Override
-	public boolean addStudent(StudentVO studentVO) {
+	public boolean addStudent(StudentVO studentVO) throws ClassNotFoundException, SQLException {
 		String sql = "insert into students "
 				+ "(hrd_net_id, name, birth, province, bank, account, phone_number,email,completion_status,gender,completion_rate,course_id,academy_location)"
 				+ "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ?, ?, ?)";
@@ -150,7 +139,6 @@ public class StudentDAOImpl implements StudentDAO {
 		int courseId = studentVO.getCourseId();
 		String academyLocation = studentVO.getAcademyLocation();
 
-		try {
 		    PreparedStatement pstmt = conn.prepareStatement(sql);
 		    pstmt.setString(1, hrdNetId);
 		    pstmt.setString(2, name);
@@ -170,10 +158,6 @@ public class StudentDAOImpl implements StudentDAO {
 			if(num==1)
 				result=true;
 
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
 		return result;
 	}
 
@@ -186,34 +170,36 @@ public class StudentDAOImpl implements StudentDAO {
 		return false;
 	}
 
-	/**전체 학생의 출결 정보를 불러오기(students, attendances) * 수료율 계산하기 */
-	@Override
-	public Collection<StudentCompletionVO> getStudentCourseInfoList() {
-		String sql = "select b.hrd_net_id, c.course_id, b.name, b.birth,  "
-				+ "c.total_training_hours/c.training_hours_of_day as course_duration_day, "
-				+ "b.completion_rate, b.completion_Status from attendances a left join students b on a.hrd_net_id = b.hrd_net_id left join courses c on b.course_id = c.course_id and b.academy_location = c.academy_location";
-		List<StudentCompletionVO> studentsList = new ArrayList<>();
+	// attendances, students
+	/**전체 학생의 출결 정보를 불러오기(students, attendances) */
+//	@Override
+//	public Collection<StudentCompletionVO> getStudentCourseInfoList() {
+//		String sql = "select b.hrd_net_id, c.course_id, b.name, b.birth,  "
+//				+ "c.total_training_hours/c.training_hours_of_day as course_duration_day, "
+//				+ "b.completion_rate, b.completion_Status from attendances a left join students b on a.hrd_net_id = b.hrd_net_id left join courses c on b.course_id = c.course_id and b.academy_location = c.academy_location";
+//		List<StudentCompletionVO> studentsList = new ArrayList<>();
+//
+//		try {
+//			Statement stmt = conn.createStatement();
+//			ResultSet rs = stmt.executeQuery(sql);
+//			while(rs.next()) {
+//				StudentCompletionVO studentInfo = new StudentCompletionVO(
+//						rs.getString("hrd_net_id"),
+//						rs.getInt("course_id"), 
+//						rs.getString("name"), 
+//						rs.getString("birth"), 
+//						rs.getInt(5), 
+//						rs.getDouble("completion_rate"), 
+//						rs.getInt("completion_Status"));
+//				studentsList.add(studentInfo);
+//			}
+//		}  catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return studentsList;
+//	}
 
-		try {
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
-			while(rs.next()) {
-				StudentCompletionVO studentInfo = new StudentCompletionVO(
-						rs.getString("hrd_net_id"),
-						rs.getInt("course_id"), 
-						rs.getString("name"), 
-						rs.getString("birth"), 
-						rs.getInt(5), 
-						rs.getDouble("completion_rate"), 
-						rs.getInt("completion_Status"));
-				studentsList.add(studentInfo);
-			}
-		}  catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return studentsList;
-	}
-
+	// attendances, students
 	/** 특정 기수에 속한 학생들의 출결 정보를 불러오기 */
 	@Override
 	public Collection<StudentCourseVO> getStudentCourseInfoListByCourseId(int courseId) {
@@ -225,6 +211,7 @@ public class StudentDAOImpl implements StudentDAO {
 		return null;
 	}
 
+	// attendances, students
 	/** 특정 이름을 가진 학생의 출결 정보를 불러오기 */
 	@Override
 	public Collection<StudentCourseVO> getStudentCourseInfoListByName(int name) {
@@ -235,6 +222,7 @@ public class StudentDAOImpl implements StudentDAO {
 		return null;
 	}
 	
+	// attendances, students
 	/** "특정 아이디를 가진 학생의 출결 입력하기 (출결 입력 시 수료율 계산하여 넣기) (수료율 계산 시 수료 여부 계산하여 넣기)" */
 	@Override
 	public boolean addStudentCourseInfoByHrdNetId(StudentCourseVO studentCourseVO) {

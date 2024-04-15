@@ -11,11 +11,11 @@ import java.util.List;
 
 import vo.NotificationVO;
 
-public class BoardDAOImpl implements BoardDAO {
+public class NotificationDAOImpl implements NotificationDAO {
 
 	private Connection conn;
 
-	public BoardDAOImpl(Connection connection) {
+	public NotificationDAOImpl(Connection connection) {
 		conn = connection;
 	}
 

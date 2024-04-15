@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import vo.NotificationVO;
 
-public interface BoardDAO {
+public interface NotificationDAO {
 	
 	boolean addNotification(NotificationVO notification);
 	

@@ -2,7 +2,7 @@ package dao;
 
 import java.util.Collection;
 
-import customVo.StudentCompletionVO;
+import vo.customVo.StudentCompletionVO;
 
 public interface CompletionDAO {
 

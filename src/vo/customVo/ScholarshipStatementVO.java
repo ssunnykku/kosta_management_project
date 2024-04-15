@@ -1,4 +1,4 @@
-package customVo;
+package vo.customVo;
 
 import java.util.Objects;
 

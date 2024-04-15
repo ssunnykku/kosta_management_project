@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,18 +10,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import jdbc.JdbcConnectionManager;
 import vo.CourseVO;
-import vo.NotificationVO;
 
 public class CourseDAOImpl implements CourseDAO {
 
-	private List<CourseVO> courses;
-	private Connection conn;
+//	JdbcConnectionManager jdbc = JdbcConnectionManager.getJdbcConector();
+	Connection conn = JdbcConnectionManager.jdbcConnector();
+	public CourseDAOImpl() throws ClassNotFoundException, SQLException {
 
-	public CourseDAOImpl(Connection connection) {
-		// 왜 생성자함수에서 객체생성?
-		//		courses = new ArrayList<>();
-		conn = connection;
 	}
 
 	/** 과정 전체 정보 불러오기 */
@@ -126,19 +124,19 @@ public class CourseDAOImpl implements CourseDAO {
 		return course;
 	}
 
-	/* 특정 강의장의 강의 정보 불러오기 */
+	/** 특정 강의장의 강의 정보 불러오기 */
 	@Override
 	public Collection<CourseVO> getCourseInfoByAcademyLocation(String academyLocation) {
-		
+
 		List<CourseVO> courseList = new ArrayList<CourseVO>();
-		
+
 		String sql = "select course_id,academy_location,"
 				+ "course_name,course_start_date,"
 				+ "course_end_date,subject,"
 				+ "course_type,total_training_hours,"
 				+ "training_hours_of_day,number_of_months,number_of_settlement "
 				+ "from courses where academy_location = ? ";
-		
+
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, academyLocation);
@@ -149,7 +147,7 @@ public class CourseDAOImpl implements CourseDAO {
 						rs.getString(6), rs.getString(7), 
 						rs.getInt(8), rs.getInt(9),
 						rs.getInt(10), rs.getInt(11)));
-	        }
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

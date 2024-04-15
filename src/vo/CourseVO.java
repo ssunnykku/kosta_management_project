@@ -13,18 +13,24 @@ public class CourseVO {
 	private int numberOfMonths;
 	private int numberOfSettlement;
 
-	public CourseVO(int courseId, String academyLocation, String courseName, String courseStartDate, String courseEndDate,
-			String subject, String courseType, int totalTrainingHours, int trainingHoursOfDay, int numberOfMonths,  int numberOfSettlement) {	
+	public CourseVO(int courseId, 
+			String academyLocation, 
+			String courseName, 
+			String courseStartDate, 
+			String courseEndDate,
+			String subject, 
+			String courseType, 
+			int totalTrainingHours, 
+			int trainingHoursOfDay, 
+			int numberOfMonths,  
+			int numberOfSettlement) {	
 		setCourseId(courseId);
 		setAcademyLocation(academyLocation);
 		setCourseName(courseName);
 		setCourseStartDate(courseStartDate);
 		setCourseEndDate(courseEndDate);
-		setCourseEndDate(courseEndDate);
 		setSubject(subject);
 		setCourseType(courseType);
-		setTotalTrainingHours(totalTrainingHours);
-		setTrainingHoursOfDay(trainingHoursOfDay);
 		setTotalTrainingHours(totalTrainingHours);
 		setTrainingHoursOfDay(trainingHoursOfDay);
 		setNumberOfMonths(numberOfMonths);
