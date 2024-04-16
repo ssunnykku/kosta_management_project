@@ -1,3 +1,6 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
 html,
 body,
 div,
@@ -121,4 +124,29 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+/** 추가 설정*/
+body {
+  min-height: 100vh;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/** font*/
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-size: 14px;
 }

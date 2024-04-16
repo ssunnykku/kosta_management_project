@@ -1,0 +1,186 @@
+@import 'reset.css';
+
+#nav-title-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#header {
+  display: block;
+  height: 94px;
+  width: 100%;
+}
+
+#nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#top-logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 144%;
+
+  color: #2d62ea;
+}
+
+/* 수강생 관리 시스템 */
+#top-logo > h2 {
+  text-align: center;
+  height: 100%;
+}
+
+/** menu*/
+
+/* 수강생 관리 */
+
+#nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+}
+
+.nav-li {
+  height: 30px;
+  width: 125px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 144%;
+  text-align: center;
+
+  color: #1d1d1d;
+}
+
+/** 로그아웃, 설정 버튼*/
+
+/* 로그아웃 */
+
+/* identical to box height, or 22px */
+
+#header-btns {
+  width: 9%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-right: 10px;
+}
+
+.btn-wrapper {
+  width: 65px;
+  height: 30px;
+}
+
+#setting-btn-wrapper {
+  padding-bottom: 5px;
+}
+
+#logout-btn {
+  width: 30px;
+  width: 65px;
+
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 144%;
+  text-decoration-line: underline;
+
+  color: rgba(0, 0, 0, 0.72);
+  cursor: pointer;
+}
+
+#setting-btn {
+  background-image: url(../assets/Setting.svg);
+  background-repeat: no-repeat;
+  height: 23px;
+
+  border: 1px solid #ebebeb;
+  border: 1px solid var(--color_border_in_divider);
+  background-color: #fff;
+  background-color: var(--color_button1_bg);
+  color: #606060;
+
+  width: 98px;
+  border-radius: 19px;
+  font-size: 1.3rem;
+  line-height: 36px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#header {
+  height: 94px;
+  box-sizing: border-box;
+
+  position: absolute;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+}
+/** nav*/
+#nav-wrapper {
+  height: 94px;
+}
+
+#top-logo {
+  height: 94px;
+  width: 15%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+/* 메뉴(제목) */
+#title-wrapper {
+  height: 120px;
+  width: 100%;
+  background-color: rgba(244, 244, 244, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  /* 공지사항 */
+  height: 35px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 144%;
+  /* identical to box height, or 35px */
+  text-align: center;
+
+  color: #000000;
+}
+
+#menu {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 144%;
+  text-align: center;
+
+  color: #000000;
+}
