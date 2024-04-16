@@ -7,9 +7,12 @@
 }
 
 #header {
-  display: block;
   height: 94px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 #nav-wrapper {
@@ -49,7 +52,7 @@
   justify-content: space-between;
   width: 60%;
   align-items: center;
-  padding-right: 150px;
+  padding-right: 85px;
 }
 
 .nav-li {
@@ -91,7 +94,6 @@
 }
 
 #logout-btn {
-  width: 30px;
   width: 65px;
 
   font-family: 'Pretendard';
@@ -126,12 +128,6 @@
 
 #header {
   height: 94px;
-  box-sizing: border-box;
-
-  position: absolute;
-  height: 94px;
-  left: 0px;
-  top: 0px;
 
   background: #ffffff;
   border-bottom: 1px solid #f3f5f9;
