@@ -1,0 +1,101 @@
+@import "reset.css";
+
+* {
+  font-size: 14px;
+}
+
+.addcourse-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 700px;
+  margin: 5px 0px;
+  padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.addcourse-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addcourse-form-row {
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.addcourse-form-row > input,
+select {
+  width: 300px;
+  height: 38px;
+  padding: 0 15px;
+  border: #c9d3db;
+  border-radius: 6px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.addcourse-form-row > select {
+  padding: 0 10px;
+}
+
+#btn-wrapper {
+  height: 55px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  color: #ffffff;
+
+  width: 57px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  background: #eee;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #888;
+  line-height: 1.5em;
+}
+
+#enroll-btn {
+  background-color: rgba(45, 98, 234, 1);
+}
+
+#edit-btn {
+  background-color: rgba(201, 211, 219, 1);
+}
+
+/* input:focus {
+  border-color: #e7e7e7;
+} */
