@@ -1,0 +1,161 @@
+@import 'reset.css';
+
+/************pointBoard*****************/
+/** button*/
+
+#button-wrapper {
+  height: 55px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  display: flex;
+  justify-content: end;
+
+  padding-right: 130px;
+}
+
+.btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  color: #ffffff;
+
+  width: 57px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  float: right;
+  background: #eee;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #888;
+  line-height: 1.5em;
+}
+
+#enroll-btn {
+  width: 96px;
+  top: calc(50% - 32px / 2 - 7px);
+  background: #2d62ea;
+  border-radius: 6px;
+
+  background-color: rgba(45, 98, 234, 1);
+}
+
+#point-search-btn {
+  background-color: rgba(234, 45, 45, 1);
+}
+
+.search-form-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 600px;
+}
+
+#filter-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+}
+
+.filter-search-btn {
+  width: 131px;
+  height: 35px;
+
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 144%;
+}
+/**************table***********************/
+.point-table {
+  width: 100%;
+  /* 왜안됨... */
+  padding: 0 300px 0 300px;
+}
+
+.point-table-row {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 144%;
+
+  color: #1d1d1d;
+}
+
+#point-title-row {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  line-height: 144% !important;
+  text-align: center;
+
+  color: #1d1d1d;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#point-radio-btn {
+  width: 25%;
+}
+
+#point-table-courseId {
+  width: 25%;
+}
+
+#point-table-birth {
+  width: 25%;
+}
+
+#point-table-name {
+  width: 25%;
+}
+
+#point-table-total-point {
+  width: 25%;
+}
+
+.cnt-pages {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  margin: 60px 150px 60px 150px;
+
+  color: #999999;
+}
+
+/*****************scholarship settlement***********/
