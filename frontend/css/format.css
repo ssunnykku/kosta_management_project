@@ -196,6 +196,13 @@
   flex-direction: column;
 }
 
+/****************pageinfo***********/
+.page-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*****************footer***************/
 
 footer {
