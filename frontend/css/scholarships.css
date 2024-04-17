@@ -159,3 +159,144 @@
 }
 
 /*****************scholarship settlement***********/
+#scholarshipBoard-table {
+  width: 100%;
+  /* padding: 0 100px 0 100px; */
+}
+.scholarshipBoard-row {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 144%;
+
+  color: #1d1d1d;
+}
+
+.scholarshipBoard-checkbox {
+  width: 10px;
+}
+
+#scholarshipBoard-title-row {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  line-height: 144% !important;
+  text-align: center;
+
+  color: #1d1d1d;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.scholarshipBoard-corseId {
+  /* width: ; */
+}
+
+.scholarshipBoard-course-name {
+}
+
+.scholarshipBoard-birth {
+}
+
+.scholarshipBoard-name {
+}
+
+.scholarshipBoard-bank {
+}
+
+.scholarshipBoard-phonenumber {
+}
+
+.scholarshipBoard-point {
+}
+
+.scholarshipBoard-total-amount {
+}
+
+/************************scholarshipResultBoard  ************/
+
+#scholarshipResultBoard-table {
+  width: 100%;
+  /* padding: 0 100px 0 100px; */
+}
+.scholarshipResultBoard-row {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 144%;
+
+  color: #1d1d1d;
+}
+
+.scholarshipResultBoard-checkbox {
+  width: 10px;
+}
+
+#scholarshipResultBoard-title-row {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  line-height: 144% !important;
+  text-align: center;
+
+  color: #1d1d1d;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.scholarshipResultBoard-checkbox {
+  width: 5%;
+}
+.scholarshipResultBoard-courseId {
+  width: 7%;
+}
+.scholarshipResultBoard-birth {
+  width: 12%;
+}
+.scholarshipResultBoard-name {
+  width: 12%;
+}
+.scholarshipResultBoard-bank {
+  width: 12%;
+}
+.scholarshipResultBoard-account {
+  width: 16%;
+}
+.scholarshipResultBoard-total-amount {
+  width: 16%;
+}
+.scholarshipResultBoard-settlement-date {
+  width: 13%;
+}
