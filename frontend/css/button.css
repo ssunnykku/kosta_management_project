@@ -1,0 +1,54 @@
+@import 'reset.css';
+
+#button-wrapper {
+  height: 55px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  padding-right: 130px;
+}
+
+.btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  color: #ffffff;
+
+  width: 57px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  float: right;
+  background: #eee;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #888;
+  line-height: 1.5em;
+}
+
+#enroll-btn {
+  background-color: rgba(45, 98, 234, 1);
+}
+
+#edit-btn {
+  background-color: rgba(201, 211, 219, 1);
+}
+
+#delete-btn {
+  background-color: rgba(234, 45, 45, 1);
+}

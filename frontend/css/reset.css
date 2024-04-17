@@ -135,6 +135,25 @@ button {
   background-color: transparent;
 }
 
+body {
+  width: 100%;
+  font-size: 14px;
+  color: #1d1d1d;
+  padding-top: 8.751rem;
+  padding-top: 94px;
+}
+
+p {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 a {
   text-align: center;
   text-decoration: none;
@@ -144,9 +163,11 @@ a {
 /** font*/
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
     'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-  font-size: 14px;
 }

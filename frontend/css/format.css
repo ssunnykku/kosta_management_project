@@ -1,5 +1,6 @@
 @import 'reset.css';
 
+/******************header ***************/
 #nav-title-wrapper {
   min-height: 100vh;
   display: flex;
@@ -180,4 +181,23 @@
   text-align: center;
 
   color: #000000;
+}
+
+/******************* Content-format ***************/
+#content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#content-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/*****************footer***************/
+
+footer {
+  height: 200px;
 }
