@@ -1,9 +1,10 @@
 @import 'reset.css';
 
-/****************** benefitResultBoard **************/
+/*************table*******************/
+
 .board-table {
   width: 100%;
-  padding: 0 100px 0 100px;
+  padding: 0 60px 0 60px;
 }
 .board-row {
   display: flex;
@@ -54,4 +55,47 @@
   margin: 60px 150px 60px 150px;
 
   color: #999999;
+}
+
+/****************** benefitResultBoard **************/
+
+.scholarshipResult-checkbox {
+  width: 1%;
+}
+.scholarshipResult-courseId {
+  width: 7%;
+}
+.scholarshipResult-birth {
+  width: 7%;
+}
+.scholarshipResult-name {
+  width: 7%;
+}
+
+.scholarshipResult-bank {
+  width: 7%;
+}
+
+.scholarshipResult-account {
+  width: 14%;
+}
+
+.scholarshipResult-settlement-duration {
+  width: 20%;
+}
+
+.scholarshipResult-training-aid {
+  width: 10%;
+}
+
+.scholarshipResult-meal-aid-amount {
+  width: 10%;
+}
+
+.scholarshipResult-settlement_aid_amount {
+  width: 10%;
+}
+
+.scholarshipResult-total-amount {
+  width: 10%;
 }
