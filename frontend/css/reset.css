@@ -135,6 +135,10 @@ button {
   background-color: transparent;
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   width: 100%;
   font-size: 14px;
