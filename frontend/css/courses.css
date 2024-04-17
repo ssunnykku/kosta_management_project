@@ -32,7 +32,7 @@
   height: 35px;
 }
 
-.search-btn {
+.filter-search-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
