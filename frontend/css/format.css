@@ -1,4 +1,4 @@
-@import 'reset.css';
+@import "reset.css";
 
 /******************header ***************/
 #nav-title-wrapper {
@@ -97,7 +97,7 @@
 #logout-btn {
   width: 65px;
 
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -173,7 +173,7 @@
 }
 
 #menu {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -194,13 +194,6 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-}
-
-/****************pageinfo***********/
-.page-information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 /*****************footer***************/

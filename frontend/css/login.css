@@ -7,7 +7,7 @@
 .login-wrapper {
   width: 450px;
   height: 500px;
-  padding: 40px;
+  padding: 35px;
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -29,7 +29,11 @@ h4 {
   font-weight: bold;
 }
 
-#login-form > input,
+#login-form > div {
+  margin: 15px 0;
+}
+
+#login-form > div > input,
 button {
   width: 100%;
   height: 50px;
