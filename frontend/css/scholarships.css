@@ -1,5 +1,6 @@
 @import 'reset.css';
 
+/************pointBoard*****************/
 /** button*/
 
 #button-wrapper {
@@ -51,7 +52,7 @@
   background-color: rgba(45, 98, 234, 1);
 }
 
-#scholarship-search-btn {
+#point-search-btn {
   background-color: rgba(234, 45, 45, 1);
 }
 
@@ -85,13 +86,13 @@
   line-height: 144%;
 }
 /**************table***********************/
-.scholarship-table {
+.point-table {
   width: 100%;
   /* 왜안됨... */
   padding: 0 300px 0 300px;
 }
 
-.scholarship-table-row {
+.point-table-row {
   display: flex;
   flex-direction: row;
   height: 60px;
@@ -108,7 +109,7 @@
   color: #1d1d1d;
 }
 
-#scholarship-title-row {
+#point-title-row {
   font-style: normal !important;
   font-weight: 500 !important;
   font-size: 15px;
@@ -127,23 +128,23 @@
   border-radius: 10px 10px 0px 0px;
 }
 
-#scholarship-radio-btn {
+#point-radio-btn {
   width: 25%;
 }
 
-#scholarships-table-courseId {
+#point-table-courseId {
   width: 25%;
 }
 
-#scholarships-table-birth {
+#point-table-birth {
   width: 25%;
 }
 
-#scholarships-table-name {
+#point-table-name {
   width: 25%;
 }
 
-#scholarships-table-total-point {
+#point-table-total-point {
   width: 25%;
 }
 
@@ -156,3 +157,5 @@
 
   color: #999999;
 }
+
+/*****************scholarship settlement***********/
