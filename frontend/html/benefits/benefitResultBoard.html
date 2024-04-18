@@ -47,12 +47,24 @@
       <h2 id="title">정산 결과 조회</h2>
     </section>
     <section>
-      <article>버튼버튼버튼</article>
+      <article class="benefitResult-search-btn-wrapper">
+        <div class="benefitResult-search-form-wrapper">
+          <!-- form???? -->
+          <select name="courseId-filter" class="courseId-filter">
+            <option value="none">기수</option>
+            <option value="227">227</option>
+            <option value="191">191</option>
+          </select>
+          <input type="date" class="settlement-date-input" />
+          <input placeholder="수강생을 입력하세요" class="search-input" />
+          <button type="button" class="filter-search-btn">검색</button>
+        </div>
+      </article>
       <article>
         <div class="board-table">
           <div class="board-row" id="board-title-row">
-            <div class="benefitSettlementResult-checkbox">
-              <input type="checkbox" name="" />
+            <div class="benefitSettlementResult-no">
+              <span>NO</span>
             </div>
             <div class="benefitSettlementResult-courseId">
               <span>기수</span>
@@ -89,14 +101,14 @@
             </div>
           </div>
           <div class="board-row">
-            <div class="benefitSettlementResult-checkbox">
-              <input type="checkbox" name="" />
+            <div class="benefitSettlementResult-no">
+              <span>NO</span>
             </div>
             <div class="benefitSettlementResult-courseId">
               <span>277</span>
             </div>
             <div class="benefitSettlementResult-birth">
-              <span>930628</span>
+              <span>9306298</span>
             </div>
             <div class="benefitSettlementResult-name">
               <span>김선희</span>
@@ -105,7 +117,7 @@
               <span>신한</span>
             </div>
             <div class="benefitSettlementResult-account">
-              <span>939594968392</span>
+              <span>9384759278172</span>
             </div>
             <div class="benefitSettlementResult-settlement-duration">
               <span>2024.03.01 ~ 2024.03.31</span>
@@ -123,7 +135,7 @@
               <span>495,000</span>
             </div>
             <div>
-              <span class="benefit-settlementdate">2024.04.16</span>
+              <span class="benefit-settlementdate">정산일</span>
             </div>
           </div>
         </div>
