@@ -1,8 +1,9 @@
-@import 'reset.css';
-@import 'button.css';
+@import "reset.css";
+@import "button.css";
 
-* {
+body {
   font-size: 14px;
+  font-family: "Pretendard";
 }
 
 .addcourse-wrapper {
@@ -22,6 +23,7 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  font-weight: bold;
 }
 
 .addcourse-wrapper > div {
@@ -176,7 +178,7 @@ select {
 }
 
 #course-id-list {
-  background-image: url('../assets/Polygon.svg');
+  background-image: url("../assets/Polygon.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right;
@@ -201,7 +203,7 @@ select {
 }
 
 #course-location-list {
-  background-image: url('../assets/Polygon.svg');
+  background-image: url("../assets/Polygon.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right;

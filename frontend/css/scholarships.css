@@ -1,4 +1,4 @@
-@import 'reset.css';
+@import "reset.css";
 
 /************pointBoard*****************/
 /** button*/
@@ -159,6 +159,7 @@
 }
 
 /*****************scholarship settlement***********/
+
 #scholarshipBoard-table {
   width: 100%;
   /* padding: 0 100px 0 100px; */
@@ -299,4 +300,207 @@
 }
 .scholarshipResultBoard-settlement-date {
   width: 13%;
+}
+
+/********** addPointModal**********/
+
+.addpoint-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 1000px;
+  height: 650px;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+
+.addpoint-wrapper1,
+.addpoint-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.info-name {
+  width: 100%;
+  height: 40px;
+  left: 46px;
+  top: 43px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 144%;
+  /* or 24px */
+  text-align: center;
+
+  /* Text/Text_900 */
+  color: #1d1d1d;
+}
+
+.underline {
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+  padding-bottom: 20px;
+}
+
+.underline > h4 {
+  font-weight: bold;
+}
+
+.total-point > h3,
+.line > h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.line {
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-top: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px 0;
+}
+
+body {
+  font-family: "Pretendard";
+}
+
+/* 적용 안됨 */
+#point-info-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.student-info,
+.choose-point-info,
+.point-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  gap: 40px;
+}
+
+.student-info-detail,
+.choose-point-info-detail,
+.point-info-detail {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 20px;
+}
+
+.student-info-detail > div,
+.choose-point-info-detail > div,
+.point-info-detail > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* .student_info_detail > div > h4 {
+  display: flex;
+  justify-content: center;
+} */
+
+#point-btn-wrapper {
+  height: 55px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.point-btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  color: #ffffff;
+
+  width: 57px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  float: right;
+  background: #eee;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #888;
+  line-height: 1.5em;
+}
+
+#point-enroll-btn {
+  background-color: rgba(45, 98, 234, 1);
+}
+
+#edit-btn {
+  background-color: rgba(201, 211, 219, 1);
+}
+
+/*********setPointModal **********/
+
+.setpoint-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 1000px;
+  height: 400px;
+}
+
+.total-point-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  gap: 40px;
+}
+
+.total-point-info-detail {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 20px;
+}
+
+.total-point-info-detail > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.total-point {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.total-point > h1 {
+  font-size: 17;
 }
