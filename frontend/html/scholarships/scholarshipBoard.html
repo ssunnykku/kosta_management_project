@@ -46,9 +46,22 @@
     <section id="title-wrapper">
       <h2 id="title">장학금 정산</h2>
     </section>
-    <section>
-      <!-- 여기에 버튼 입력 -->
-      <article>검색, 버튼</article>
+    <section id="scholarship-contents">
+      <article>
+        <div class="scholarship-search-form-wrapper">
+          <!-- form???? -->
+          <select
+            name="scholarship-courseId-filter"
+            class="scholarship-courseId-filter"
+          >
+            <option value="none">기수</option>
+            <option value="227">227</option>
+            <option value="191">191</option>
+          </select>
+          <input placeholder="수강생을 입력하세요" class="search-input" />
+          <button type="button" class="filter-search-btn">검색</button>
+        </div>
+      </article>
       <article>
         <div id="scholarshipBoard-table">
           <div class="scholarshipBoard-row" id="scholarshipBoard-title-row">

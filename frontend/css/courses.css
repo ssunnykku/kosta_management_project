@@ -250,9 +250,30 @@ select {
 .search-form-wrapper {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 330px;
   justify-content: space-between;
-  padding-left: 600px;
+}
+
+.data-filter {
+  width: 90px;
+
+  background: #ffffff;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 144%;
+
+  color: #000000;
+
+  background-image: url('../assets/Polygon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: right;
+  background-position: 60px;
 }
 
 #filter-button-wrapper {
@@ -275,6 +296,7 @@ select {
   font-weight: 400;
   font-size: 14px;
   line-height: 144%;
+  margin-left: 5px;
 }
 
 #courseBoard-no {
