@@ -1,1 +1,148 @@
-@import url(reset.css);
+@import 'reset.css';
+
+/*************table*******************/
+
+.board-table {
+  width: 100%;
+  padding: 0 80px 80px;
+}
+.board-row {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 144%;
+
+  color: #1d1d1d;
+}
+
+.board-checkbox {
+  width: 10px;
+}
+
+#board-title-row {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  line-height: 144% !important;
+  text-align: center;
+
+  color: #1d1d1d;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.cnt-pages {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  margin: 60px 150px 60px 150px;
+
+  color: #999999;
+}
+
+/****************** benefitResultBoard **************/
+
+.benefitSettlement-checkbox {
+  width: 1%;
+}
+.benefitSettlement-courseId {
+  width: 7%;
+}
+.benefitSettlement-birth {
+  width: 7%;
+}
+.benefitSettlement-name {
+  width: 7%;
+}
+
+.benefitSettlement-bank {
+  width: 7%;
+}
+
+.benefitSettlement-account {
+  width: 14%;
+}
+
+.benefitSettlement-settlement-duration {
+  width: 20%;
+}
+
+.benefitSettlement-training-aid {
+  width: 10%;
+}
+
+.benefitSettlement-meal-aid-amount {
+  width: 10%;
+}
+
+.benefitSettlement-settlement_aid_amount {
+  width: 10%;
+}
+
+.benefitSettlement-total-amount {
+  width: 10%;
+}
+
+/********************* benefitSettlementResult **********/
+
+.benefitSettlementResult-checkbox {
+  width: 1%;
+}
+.benefitSettlementResult-courseId {
+  width: 4%;
+}
+.benefitSettlementResult-birth {
+  width: 4%;
+}
+.benefitSettlementResult-name {
+  width: 4%;
+}
+
+.benefitSettlementResult-bank {
+  width: 3%;
+}
+
+.benefitSettlementResult-account {
+  width: 12%;
+}
+
+.benefitSettlementResult-settlement-duration {
+  width: 13%;
+}
+
+.benefitSettlementResult-training-aid {
+  width: 8%;
+}
+
+.benefitSettlementResult-meal-aid-amount {
+  width: 8%;
+}
+
+.benefitSettlementResult-settlement_aid_amount {
+  width: 8%;
+}
+
+.benefitSettlementResult-total-amount {
+  width: 8%;
+}
+
+.benefit-settlementdate {
+  width: 8%;
+}
