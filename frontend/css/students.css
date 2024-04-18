@@ -1,4 +1,4 @@
-@import "reset.css";
+@import 'reset.css';
 
 * {
   font-size: 14px;
@@ -80,7 +80,7 @@ select {
   background-color: #fff;
 }
 
-.gender input[type="radio"] {
+.gender input[type='radio'] {
   display: none;
 }
 
@@ -102,7 +102,7 @@ select {
   padding-right: 10px;
 } */
 
-.gender > div > input[type="radio"] + label {
+.gender > div > input[type='radio'] + label {
   display: inline-block;
   cursor: pointer;
   width: 100%;
@@ -114,11 +114,11 @@ select {
   margin-top: 5px;
 }
 
-.gender > div input[type="radio"] + label {
+.gender > div input[type='radio'] + label {
   background-color: #fff;
   color: #333;
 }
-.gender > div input[type="radio"]:checked + label {
+.gender > div input[type='radio']:checked + label {
   background-color: rgba(45, 98, 234, 1);
   color: #fff;
   box-shadow: 0px 0px 5px #888;
