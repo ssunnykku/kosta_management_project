@@ -1,4 +1,7 @@
 /***************** certificationBoard *************/
+#nav-certification {
+  color: #2d62ea;
+}
 
 .certification-contents {
   padding: 0 100px 0 100px;

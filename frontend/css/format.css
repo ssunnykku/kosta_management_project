@@ -1,6 +1,8 @@
 @import 'reset.css';
 
 /******************header ***************/
+@import 'reset.css';
+
 #nav-title-wrapper {
   min-height: 100vh;
   display: flex;
@@ -85,7 +87,11 @@
   padding-right: 10px;
 }
 
-.btn-wrapper {
+#header-btns > div:first-child {
+  width: 65px;
+  height: 35px;
+}
+#header-btns > div:nth-child(2) {
   width: 65px;
   height: 30px;
 }
@@ -106,6 +112,8 @@
 
   color: rgba(0, 0, 0, 0.72);
   cursor: pointer;
+
+  padding-top: 5px;
 }
 
 #setting-btn {
