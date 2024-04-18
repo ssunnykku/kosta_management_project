@@ -4,38 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포인트 등록</title>
+    <link rel="stylesheet" href="../../css/scholarships.css" />
   </head>
   <body>
     <div class="addpoint-wrapper">
-      <div class="addpoint-wrapper1">
-        <div>
-          <h1>수강생 정보</h1>
-          <div>
-            <div>
-              <h4>과정명</h4>
-              <h4>Java 기반 클라우드 개발자 양성 과정</h4>
+      <div class="main-wrapper">
+        <div class="addpoint-wrapper1">
+          <div class="student-info">
+            <h1 class="info-name underline">수강생 정보</h1>
+            <div class="student-info-detail">
+              <div>
+                <h4>과정명</h4>
+                <h4>Java 기반 클라우드 개발자 양성 과정</h4>
+              </div>
+              <div>
+                <h4>기수</h4>
+                <h4>277기</h4>
+              </div>
+              <div>
+                <h4>기간</h4>
+                <h4>2024.02.27 ~ 2024.07.31</h4>
+              </div>
+              <div>
+                <h4>이름</h4>
+                <h4>김선희</h4>
+              </div>
             </div>
-            <div>
-              <h4>기수</h4>
-              <h4>277기</h4>
+          </div>
+
+          <div class="choose-point-info">
+            <h1 class="info-name">선택한 항목</h1>
+            <div class="choose-point-info-detail">
+              <div class="underline">
+                <h4>항목</h4>
+                <h4>포인트(점)</h4>
+              </div>
+              <div>
+                <h4>국가 자격증 획득</h4>
+                <h4>10</h4>
+              </div>
+              <div class="line">
+                <h3>적립 포인트</h3>
+                <h3>10</h3>
+              </div>
             </div>
-            <div>
-              <h4>기간</h4>
-              <h4>2024.02.27 ~ 2024.07.31</h4>
-            </div>
-            <div>
-              <h4>이름</h4>
-              <h4>김선희</h4>
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
           </div>
         </div>
-        <div></div>
-        <div></div>
+
+        <div class="addpoint-wrapper2">
+          <div class="point-info">
+            <div class="info-name underline" id="point-info-name">
+              <input
+                type="checkbox"
+                id="point"
+                name="point"
+                value="selectAll"
+              />
+              <h1>항목</h1>
+              <h1>포인트(점)</h1>
+            </div>
+            <div class="point-info-detail">
+              <div>
+                <input type="checkbox" id="point1" name="point" value="1" />
+                <h4>사전 학습(pre-course 이수)</h4>
+                <h4>5</h4>
+              </div>
+              <div>
+                <input type="checkbox" id="point1" name="point" value="2" />
+                <h4>시험치기 응시</h4>
+                <h4>10</h4>
+              </div>
+              <div>
+                <input type="checkbox" id="point1" name="point" value="3" />
+                <h4>시험치기 점수 우수</h4>
+                <h4>10</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="addpoint-wrapper2"></div>
+      <div id="point-btn-wrapper">
+        <button id="point-enroll-btn" class="point-btn-setting">등록</button>
+        <button id="#edit-btn" class="point-btn-setting">취소</button>
+      </div>
     </div>
   </body>
 </html>

@@ -1,8 +1,9 @@
 @import "reset.css";
 
-/* body {
+body {
   font-size: 14px;
-} */
+  font-family: "Pretendard";
+}
 
 .login-wrapper {
   width: 450px;
