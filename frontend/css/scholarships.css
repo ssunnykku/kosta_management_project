@@ -222,12 +222,51 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
-  margin: 60px 155px 60px 150px;
+  /* margin: 60px 155px 60px 150px; */
+  margin-left: 10px;
+  margin-top: 40px;
 
   color: #999999;
 }
 
 /*****************scholarship settlement***********/
+#scholarship-contents {
+  padding: 0 10% 0 10%;
+}
+/* button, search */
+
+.scholarship-search-form-wrapper {
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.scholarship-courseId-filter {
+  width: 90px;
+  height: 41px;
+
+  background: #ffffff;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 144%;
+
+  padding-left: 18px;
+  margin-left: 4px;
+
+  color: #000000;
+
+  background-image: url('../assets/Polygon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: right;
+  background-position: 60px;
+}
 
 #scholarshipBoard-table {
   width: 100%;
