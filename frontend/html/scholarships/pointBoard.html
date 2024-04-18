@@ -46,16 +46,19 @@
     <section id="title-wrapper">
       <h2 id="title">포인트 관리</h2>
     </section>
-    <section id="content-section">
+    <section id="point-section">
       <article class="search-form-wrapper">
         <form action="#" class="seacrch-form">
           <div id="filter-button-wrapper">
-            <select name="course-id-list" id="course-id-list">
+            <select name="courseId-filter" class="courseId-filter">
               <option value="none">기수</option>
               <option value="227">277기</option>
               <option value="191">191기</option>
             </select>
-            <input placeholder="수강생 이름을 입력하세요" />
+            <input
+              placeholder="수강생 이름을 입력하세요"
+              class="search-input"
+            />
             <button type="button" class="filter-search-btn">검색</button>
           </div>
         </form>
@@ -91,16 +94,16 @@
                 <input type="radio" value="hrdNetId" />
               </div>
               <div id="point-table-courseId">
-                <span>기수</span>
+                <span>277</span>
               </div>
               <div id="point-table-birth">
-                <span>생년월일</span>
+                <span>980630</span>
               </div>
               <div id="point-table-name">
-                <span>이름</span>
+                <span>차미강</span>
               </div>
               <div id="point-table-total-point">
-                <span>총 적립 포인트</span>
+                <span>50</span>
               </div>
             </div>
           </form>
