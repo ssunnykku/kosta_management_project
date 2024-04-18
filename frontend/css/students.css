@@ -173,3 +173,242 @@ p {
   margin-top: 30px;
   margin-left: 2px;
 }
+/******* studentBoard **********/
+
+.student-cnt-pages {
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  /* margin: 0 150px 0 150px; */
+  margin: 60px 20px 60px 150px;
+  color: #999999;
+}
+
+/*************button *****************/
+
+.student-filter-btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 36%;
+}
+
+.search-form-wrapper {
+  padding-top: 12px;
+  display: flex;
+  width: 450px;
+  gap: 8px;
+}
+
+.courseId-filter {
+  width: 90px;
+  height: 41px;
+
+  background: #ffffff;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 144%;
+
+  padding-left: 18px;
+
+  color: #000000;
+
+  background-image: url('../assets/Polygon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: right;
+  background-position: 55px;
+}
+
+.search-input {
+  width: 300px;
+  height: 41px;
+
+  background: #ffffff;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+
+  z-index: 1;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 144%;
+
+  padding-left: 20px;
+
+  color: #000000;
+}
+
+.filter-search-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background: #f4f4f4;
+  border-radius: 4px;
+
+  width: 115px;
+  height: 41px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #1d1d1d;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.student-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 120px;
+  gap: 10px;
+  margin-right: 10%;
+}
+
+.student-btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  color: #ffffff;
+
+  width: 57px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  float: right;
+  background: #eee;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #888;
+  line-height: 1.5em;
+}
+
+#student-enroll-btn {
+  background-color: rgba(45, 98, 234, 1);
+}
+
+#student-edit-btn {
+  background-color: rgba(201, 211, 219, 1);
+}
+
+/*********** table ****************/
+
+#student-section {
+  padding: 0 4% 0 4%;
+}
+
+.board-table {
+  width: 100%;
+  padding: 0 80px 80px;
+}
+.board-row {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 144%;
+
+  color: #1d1d1d;
+}
+
+.board-checkbox {
+  width: 10px;
+}
+
+#board-title-row {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  line-height: 144% !important;
+  text-align: center;
+
+  color: #1d1d1d;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.student-checkbox {
+  width: 1%;
+}
+
+.student-hrdNetId {
+  width: 7%;
+}
+
+.student-courseId {
+  width: 5%;
+}
+
+.student-name {
+  width: 5%;
+}
+
+.student-birth {
+  width: 5%;
+}
+
+.student-location {
+  width: 5%;
+}
+
+.student-bank {
+  width: 5%;
+}
+.student-account {
+  width: 10%;
+}
+.student-phonenumber {
+  width: 10%;
+}
+.student-email {
+  width: 10%;
+}
+.student-completion-status {
+  width: 10%;
+}
