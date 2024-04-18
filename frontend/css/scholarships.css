@@ -71,11 +71,10 @@
 }
 
 .filter-search-btn {
-  width: 131px;
+  width: 100px;
   height: 35px;
 
-  background-color: #f4f4f4;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
 
   border-radius: 4px;
 
@@ -84,6 +83,14 @@
   font-size: 14px;
   line-height: 144%;
   margin-bottom: 6px;
+
+  float: right;
+
+  line-height: 1.5em;
+
+  background-color: rgba(45, 98, 234, 1);
+
+  margin-top: 2px;
 }
 
 #search-date-input {
@@ -155,6 +162,11 @@
 }
 
 /**************table***********************/
+
+#point-table-wrapper {
+  margin: 0 10% 0 10%;
+}
+
 .point-table {
   width: 100%;
   padding: 0 200px 0 200px;
@@ -217,14 +229,14 @@
   width: 25%;
 }
 
-.cnt-pages {
+.point-cnt-pages {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
-  /* margin: 60px 155px 60px 150px; */
-  margin-left: 10px;
-  margin-top: 40px;
+
+  margin-top: 5%;
+  margin-left: 10%;
 
   color: #999999;
 }
@@ -665,4 +677,16 @@ body {
 
 .total-point > h1 {
   font-size: 17;
+}
+
+/*  studentBoard page */
+.student-cnt-pages {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+
+  margin-top: 5%;
+
+  color: #999999;
 }

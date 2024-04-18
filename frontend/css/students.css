@@ -563,6 +563,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding-right: 4%;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .attendance-search-form-wrapper {
