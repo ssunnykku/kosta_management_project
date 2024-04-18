@@ -1,11 +1,14 @@
-@import 'reset.css';
-@import 'button.css';
+@import "reset.css";
+@import "button.css";
 
-* {
+body {
   font-size: 14px;
+  font-family: "Pretendard";
 }
 
-.addcourse-wrapper {
+/******* addCourseModal / setCourseModal.html ********/
+
+#course-wrapper {
   display: flex;
   flex-direction: column;
   width: 600px;
@@ -17,20 +20,21 @@
   justify-content: center;
 }
 
-h1 {
+#course-wrapper > div > h1 {
   font-size: 20px;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.addcourse-wrapper > div {
+#course-wrapper > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.addcourse-form-row {
+.course-form-row {
   width: 420px;
   display: flex;
   flex-direction: row;
@@ -38,7 +42,7 @@ h1 {
   margin: 5px 0;
 }
 
-.addcourse-form-row > input,
+.course-form-row > input,
 select {
   width: 300px;
   height: 38px;
@@ -48,7 +52,7 @@ select {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.addcourse-form-row > select {
+.course-form-row > select {
   padding: 0 10px;
 }
 
@@ -97,9 +101,46 @@ select {
   background-color: rgba(201, 211, 219, 1);
 }
 
-/* input:focus {
-  border-color: #e7e7e7;
-} */
+/*********** removeCourseModal.html ************/
+
+.removecourse-wrapper {
+  width: 340px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+}
+
+.removecourse-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  column-gap: 30px;
+}
+
+.removecourse-info > h1 {
+  font-size: 18px;
+}
+
+.title {
+  font-weight: bold;
+  color: rgba(45, 98, 234, 1);
+}
+
+.upperline {
+  background: #ffffff;
+  border-top: 1px solid #f3f5f9;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px 0;
+}
 
 /******************courseBoard*******************/
 

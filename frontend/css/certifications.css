@@ -101,7 +101,7 @@
 
   color: #000000;
 
-  background-image: url('../assets/Polygon.svg');
+  background-image: url("../assets/Polygon.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right;
@@ -230,4 +230,92 @@
 }
 .certification-status {
   width: 15%;
+}
+
+/***************certificationResultModal.html****************/
+
+body {
+  font-family: "Pretendard";
+}
+
+#arrow {
+  width: 15px;
+  height: 100px;
+}
+
+#certificationResult-wrapper {
+  width: 850px;
+  height: 750px;
+  left: 300px;
+  top: 120px;
+  background: #ffffff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  row-gap: 30px;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#certificationResult-form {
+  width: 450px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.certificationResult-title {
+  font-size: 22px;
+}
+
+.student-info {
+  width: 100%;
+}
+
+.student-info > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.certificationResult-content {
+  display: flex;
+  flex-direction: column;
+  column-gap: 30px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.certificationResult-btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  color: #ffffff;
+
+  width: 57px;
+  height: 32px;
+  padding: 10px 16px;
+
+  background: #eee;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #888;
+}
+
+#edit-btn {
+  background-color: rgba(201, 211, 219, 1);
 }
