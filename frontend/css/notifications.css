@@ -1,4 +1,4 @@
-@import "reset.css";
+@import 'reset.css';
 
 #notification-body {
   display: flex;
@@ -14,14 +14,6 @@
 
 /*************button ***************/
 
-/*********** table ***************/
-
-.notification-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #notification-btn-wrapper {
   padding-right: 50px;
   margin: 10px 0 5px 0;
@@ -34,6 +26,51 @@
   width: 900px;
   height: 50px;
 
+  align-items: center;
+}
+
+.notification-btn-setting {
+  border-radius: 6px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  width: 57px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  float: right;
+  padding: 5px;
+  line-height: 1.5em;
+}
+
+#notification-enroll-btn {
+  color: rgba(45, 98, 234, 1);
+  border: solid rgba(45, 98, 234, 1);
+}
+
+#notification-edit-btn {
+  color: rgb(160, 164, 167);
+  border: solid rgb(160, 164, 167);
+}
+
+#notification-delete-btn {
+  color: rgba(234, 45, 45, 1);
+  border: solid rgba(234, 45, 45, 1);
+}
+
+/*********** table ***************/
+
+.notification-contents {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
