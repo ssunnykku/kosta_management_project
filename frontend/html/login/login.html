@@ -7,6 +7,15 @@
     <title>login</title>
   </head>
   <body>
+    <script type="text/javascript">
+      function check() {
+        let id = document.querySelector("#manager_id").value;
+        if (id === null) {
+          alert("아이디를 입력하세요.");
+        }
+      }
+    </script>
+
     <div class="login-wrapper">
       <h2>관리자 로그인</h2>
       <form method="post" id="login-form">
@@ -21,5 +30,9 @@
         <button type="button">Login</button>
       </form>
     </div>
+
+    <script type="text/javascript">
+      document.querySelector("button").addEventListener("click", check());
+    </script>
   </body>
 </html>
