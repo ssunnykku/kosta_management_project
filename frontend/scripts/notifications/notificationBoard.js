@@ -1,7 +1,6 @@
 const notificationEnrollBtn = document.querySelector(
   '#notification-enroll-btn'
 );
-const notificationEditBtn = document.querySelector('#notification-edit-btn');
 const notificationDeleteBtn = document.querySelector(
   '#notification-delete-btn'
 );
