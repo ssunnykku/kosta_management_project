@@ -1,4 +1,4 @@
-@import 'reset.css';
+@import "reset.css";
 
 /************pointBoard*****************/
 
@@ -17,7 +17,6 @@
 }
 
 .btn-setting {
-  border-radius: 6px;
   font-style: normal;
 
   font-weight: 500;
@@ -32,27 +31,27 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 16px;
   gap: 10px;
 
   float: right;
   background: #eee;
   padding: 5px;
-  box-shadow: 0px 0px 5px #888;
+  box-shadow: 0px 0px 3px #888;
   line-height: 1.5em;
 }
 
 #enroll-btn {
   width: 96px;
-  top: calc(50% - 32px / 2 - 7px);
-  background: #2d62ea;
-  border-radius: 6px;
-
-  background-color: rgba(45, 98, 234, 1);
+  color: #ffffff;
+  background-color: rgb(64, 64, 64);
+  border-radius: 8px;
 }
 
 #point-search-btn {
-  background-color: rgba(234, 45, 45, 1);
+  font-weight: 600;
+  color: rgb(64, 64, 64);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 
 .search-form-wrapper {
@@ -71,26 +70,26 @@
 }
 
 .filter-search-btn {
-  width: 100px;
-  height: 35px;
-
-  color: #ffffff;
-
-  border-radius: 4px;
-
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 144%;
-  margin-bottom: 6px;
 
-  float: right;
+  width: 100px;
+  height: 40px;
+  padding: 10px 16px;
+  gap: 10px;
 
   line-height: 1.5em;
+  border-radius: 8px;
 
-  background-color: rgba(45, 98, 234, 1);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
 
-  margin-top: 2px;
+  box-shadow: 0px 0px 2px #888;
+  line-height: 1.5em;
+
+  background: rgba(244, 244, 244, 1);
+  color: #000000;
 }
 
 #search-date-input {
@@ -124,7 +123,7 @@
 
   color: #000000;
 
-  background-image: url('../assets/Polygon.svg');
+  background-image: url("../assets/Polygon.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right;
@@ -155,7 +154,7 @@
 }
 
 .search-input::placeholder {
-  background-image: url('../assets/search.svg');
+  background-image: url("../assets/search.svg");
   background-repeat: no-repeat;
   background-size: 19px;
   background-position: left;
@@ -251,7 +250,7 @@
   margin: 20px 0 20px 0;
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .scholarship-courseId-filter {
@@ -273,7 +272,7 @@
 
   color: #000000;
 
-  background-image: url('../assets/Polygon.svg');
+  background-image: url("../assets/Polygon.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right;
@@ -322,6 +321,39 @@
   background: #ffffff;
   border-bottom: 1px solid #f3f5f9;
   border-radius: 10px 10px 0px 0px;
+}
+
+/* 버튼 */
+.board-filter-search-btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  width: 30px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  line-height: 1.5em;
+  border-radius: 8px;
+
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+
+  box-shadow: 0px 0px 2px #888;
+  line-height: 1.5em;
+
+  background: rgba(244, 244, 244, 1);
+  color: #000000;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
 }
 
 .scholarshipBoard-corseId {
@@ -390,7 +422,7 @@
 
   color: #000000;
 
-  background-image: url('../assets/Polygon.svg');
+  background-image: url("../assets/Polygon.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right;
@@ -472,7 +504,7 @@
 /********** addPointModal**********/
 
 body {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
 }
 
 #addpoint-wrapper {
@@ -506,7 +538,7 @@ body {
   left: 46px;
   top: 43px;
 
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
@@ -545,7 +577,7 @@ body {
 }
 
 body {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
 }
 
 /* 적용 안됨 */
@@ -602,7 +634,6 @@ body {
 }
 
 .point-btn-setting {
-  border-radius: 6px;
   font-style: normal;
 
   font-weight: 500;
@@ -617,24 +648,28 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 16px;
   gap: 10px;
 
   float: right;
   background: #eee;
   padding: 5px;
-  box-shadow: 0px 0px 5px #888;
+  box-shadow: 0px 0px 3px #888;
   line-height: 1.5em;
 }
 
 #point-enroll-btn {
-  background-color: rgba(45, 98, 234, 1);
+  color: #ffffff;
+  background-color: rgb(64, 64, 64);
+  border-radius: 8px;
 }
 
-#edit-btn {
-  background-color: rgba(201, 211, 219, 1);
+#edit-btn,
+#delete-btn {
+  font-weight: 600;
+  color: rgb(64, 64, 64);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
-
 /*********PointModal **********/
 
 #point-wrapper {

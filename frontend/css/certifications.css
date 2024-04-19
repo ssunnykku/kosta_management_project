@@ -129,7 +129,7 @@
   color: #000000;
 }
 
-.filter-search-btn {
+/* .filter-search-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -158,11 +158,44 @@
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+} */
+
+.filter-search-btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+
+  width: 100px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+  line-height: 1.5em;
+  border-radius: 8px;
+
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+
+  box-shadow: 0px 0px 2px #888;
+  line-height: 1.5em;
+
+  background: rgba(244, 244, 244, 1);
+  color: #000000;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
 }
 
 .btn-wrapper {
   padding-top: 12px;
   width: 250px;
+  height: 53px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -171,38 +204,44 @@
 #setting-btn-wrapper {
   padding-bottom: 5px;
 }
+
 #get-list-btn {
-  background-color: rgba(45, 98, 234, 1);
-  width: 120px;
+  color: rgb(64, 64, 64);
+  background-color: rgb(255, 255, 255);
+  width: 130px;
+  height: 90%;
+  border-radius: 8px;
+  font-weight: 700;
 }
 
 #certifiation-btn {
-  background-color: rgba(45, 98, 234, 1);
+  color: #ffffff;
+  background-color: rgb(64, 64, 64);
   width: 90px;
+  height: 90%;
+  border-radius: 8px;
 }
 
 .btn-setting {
-  border-radius: 6px;
   font-style: normal;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 144%;
 
   color: #ffffff;
 
-  height: 32px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 16px;
   gap: 10px;
+  height: 32px;
 
   float: right;
   background: #eee;
   padding: 5px;
-  box-shadow: 0px 0px 5px #888;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px #888;
   line-height: 1.5em;
 }
 
