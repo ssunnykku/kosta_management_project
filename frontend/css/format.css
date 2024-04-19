@@ -74,7 +74,7 @@
   z-index: 100;
 }
 
-#nav-wrapper-subject {
+#nav-wrapper-dropdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -84,7 +84,7 @@
   background-color: #ffffff;
 }
 
-.nav-li-subject {
+.nav-li-dropdown {
   height: 30px;
   width: 130px;
 
