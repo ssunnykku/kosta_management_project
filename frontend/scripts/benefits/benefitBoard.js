@@ -1,14 +1,16 @@
 //filter
-const courseIdSelect = document.querySelector('.courseId-filter');
+const courseIdSelector = document.querySelector('.courseId-filter');
 
 // button
 const settlementListBtn = document.querySelector('#get-settlement-list-btn');
 const settlementBtn = document.querySelector('#settlement-btn');
-const searchBtn = document.querySelector('#filter-search-btn');
+const searchBtn = document.querySelector('.filter-search-btn');
 const inputData = document.querySelector('.search-input');
 
 function filterByCourseId() {
   // courseId의 값 가져와서 필터링 해주는 기능...
+  console.log(inputData.value);
+  console.log(courseIdSelector);
 }
 
 function getSettlementList() {

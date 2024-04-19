@@ -1,4 +1,4 @@
-@import "reset.css";
+@import 'reset.css';
 
 #notification-body {
   display: flex;
@@ -23,41 +23,23 @@
   gap: 10px;
 
   display: flex;
-  width: 900px;
+  width: 1000px;
   height: 50px;
 
   align-items: center;
 }
 
-.notification-btn-setting {
-  font-style: normal;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 144%;
-
-  width: 57px;
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 16px;
-  gap: 10px;
-
-  float: right;
-  padding: 5px;
-  line-height: 1.5em;
-}
-
 #notification-enroll-btn {
-  color: rgba(45, 98, 234, 1);
-  border: solid rgba(45, 98, 234, 1);
+  color: #ffffff;
+  background-color: rgb(64, 64, 64);
+  border-radius: 8px;
 }
 
 #notification-delete-btn {
-  color: rgba(234, 45, 45, 1);
-  border: solid rgba(234, 45, 45, 1);
+  font-weight: 600;
+  color: rgb(64, 64, 64);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 
 /*********** table ***************/
@@ -75,7 +57,7 @@
 
 #notification-table {
   text-align: center;
-  width: 900px;
+  width: 1000px;
 
   display: flex;
   flex-direction: column;
@@ -98,6 +80,11 @@
   color: #1d1d1d;
 }
 
+#notification-table {
+  display: flex;
+  flex-direction: column;
+}
+
 .table-first-row {
   font-style: normal !important;
   font-weight: 500 !important;
@@ -118,32 +105,22 @@
 }
 
 .notificationBoard-checkbox {
-  width: 5%;
-}
-
-.notificationBoard-no-column {
-  width: 7%;
-}
-
-.first-column {
   width: 10%;
 }
 
-.title-column {
-  width: 50%;
-  text-align: left;
-  padding-left: 50px;
+.notificationBoard-no {
+  width: 10%;
 }
 
-.title-first-column {
-  width: 50%;
+.notificationBoard-title {
+  width: 40%;
 }
 
-.third-column {
-  width: 25%;
+.notificationBoard-enroll-date {
+  width: 20%;
 }
 
-.writer-column {
+.notificationBoard-writer {
   width: 20%;
 }
 
@@ -237,14 +214,6 @@ footer {
 .notificationPost-content {
   font-size: 15px;
 }
-/* 
-#notification-content {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 100px;
-} */
 
 #notificationPost-btn-wrapper {
   margin: 10px 0 5px 0;
