@@ -1,4 +1,4 @@
-package customVo;
+package vo.customVo;
 
 public class StudentCourseVO {
 	

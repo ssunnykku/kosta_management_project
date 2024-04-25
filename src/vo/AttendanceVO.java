@@ -1,11 +1,13 @@
 package vo;
 
+import java.util.Objects;
+
 public class AttendanceVO {
 	private String attendanceDate;
-	private int hrdNetID;
+	private String hrdNetID;
 	private int attendanceStatus;
 	
-	public AttendanceVO(String attendanceDate, int hrdNetID, int attendanceStatus) {
+	public AttendanceVO(String attendanceDate, String hrdNetID, int attendanceStatus) {
 		setAttendanceDate(attendanceDate);
 		setHrdNetID(hrdNetID);
 		setAttendanceStatus(attendanceStatus);
@@ -17,10 +19,10 @@ public class AttendanceVO {
 	public void setAttendanceDate(String attendanceDate) {
 		this.attendanceDate = attendanceDate;
 	}
-	public int getHrdNetID() {
+	public String getHrdNetID() {
 		return hrdNetID;
 	}
-	public void setHrdNetID(int hrdNetID) {
+	public void setHrdNetID(String hrdNetID) {
 		this.hrdNetID = hrdNetID;
 	}
 	public int getAttendanceStatus() {
@@ -29,21 +31,18 @@ public class AttendanceVO {
 	public void setAttendanceStatus(int attendanceStatus) {
 		this.attendanceStatus = attendanceStatus;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "attendancesVo [attendanceDate=" + attendanceDate + ", hrdNetID=" + hrdNetID + ", attendanceStatus="
+		return "AttendanceVO [attendanceDate=" + attendanceDate + ", hrdNetID=" + hrdNetID + ", attendanceStatus="
 				+ attendanceStatus + "]";
 	}
+
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((attendanceDate == null) ? 0 : attendanceDate.hashCode());
-		result = prime * result + attendanceStatus;
-		result = prime * result + hrdNetID;
-		return result;
+		return Objects.hash(attendanceDate, attendanceStatus, hrdNetID);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -53,17 +52,9 @@ public class AttendanceVO {
 		if (getClass() != obj.getClass())
 			return false;
 		AttendanceVO other = (AttendanceVO) obj;
-		if (attendanceDate == null) {
-			if (other.attendanceDate != null)
-				return false;
-		} else if (!attendanceDate.equals(other.attendanceDate))
-			return false;
-		if (attendanceStatus != other.attendanceStatus)
-			return false;
-		if (hrdNetID != other.hrdNetID)
-			return false;
-		return true;
+		return Objects.equals(attendanceDate, other.attendanceDate) && attendanceStatus == other.attendanceStatus
+				&& Objects.equals(hrdNetID, other.hrdNetID);
 	}
 	
-
+	
 }

@@ -1,24 +1,25 @@
 package dao;
 
+import java.sql.SQLException;
 import java.util.Collection;
 
-import customVo.StudentCompletionVO;
-import customVo.StudentCourseVO;
+import vo.customVo.StudentCompletionVO;
+import vo.customVo.StudentCourseVO;
 import vo.StudentVO;
 
 public interface StudentDAO {
 
-	Collection<StudentVO> getStudentInfoList();
+	Collection<StudentVO> getStudentInfoList() throws ClassNotFoundException, SQLException;
 	
-	Collection<StudentVO> getStudentInfoListByCourseId(int courseId);
+	Collection<StudentVO> getStudentInfoListByCourseId(int courseId) throws ClassNotFoundException, SQLException;
 	
-	Collection<StudentVO> getStudentInfoListByName(String name);
+	Collection<StudentVO> getStudentInfoListByName(String name) throws ClassNotFoundException, SQLException;
 	
-	boolean addStudent(StudentVO studentVO);
+	boolean addStudent(StudentVO studentVO) throws ClassNotFoundException, SQLException;
 
 	boolean setStudentInfoByHrdNetId(StudentVO studentVO);
 
-	Collection<StudentCompletionVO> getStudentCourseInfoList();
+//	Collection<StudentCompletionVO> getStudentCourseInfoList();
 
 	Collection<StudentCourseVO> getStudentCourseInfoListByCourseId(int courseId);
 

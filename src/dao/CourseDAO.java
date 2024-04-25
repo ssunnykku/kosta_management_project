@@ -14,10 +14,11 @@ public interface CourseDAO {
 
 	CourseVO getCourseInfoByCourseId(int courseId);
 	
+	
 	Collection<CourseVO> getCourseInfoByAcademyLocation(String academyLocation);
 	
 	boolean addCourseInfo(CourseVO course);
 	
 	boolean setCourseInfo(CourseVO course);
-	
+
 }
