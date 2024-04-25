@@ -11,6 +11,7 @@ public interface CertificationService {
 	 * @throws ClassNotFoundException */
 	Collection<StudentCompletionVO> getStudentCompletionInfoList() throws ClassNotFoundException, SQLException;
 	/** (수료 구분 전체, 기수 내림차순, 이름 오름차순) 특정 기수에 속한 학생들의 수료 정보 불러오기 */
+	
 	Collection<StudentCompletionVO> getStudentCompletionInfoByCourseId(int courseId) throws ClassNotFoundException, SQLException;
 	/** (수료 구분 전체, 기수 내림차순, 이름 오름차순) 특정 이름을 가진 학생의 수료 정보 불러오기(n명) */
 	Collection<StudentCompletionVO>  getStudentCompletionInfoByName(String name) throws ClassNotFoundException, SQLException;
