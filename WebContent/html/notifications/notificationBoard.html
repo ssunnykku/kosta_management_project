@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../css/notifications.css" />
     <link rel="stylesheet" href="../../css/button.css" />
     <link rel="stylesheet" href="../../css/format.css" />
+    <script src="../../../scripts/notifications/notificationBoard.js"></script>
   </head>
   <body id="notification-body">
     <div id="header">
@@ -36,7 +37,9 @@
         </ul>
         <div id="header-btns">
           <div class="btn-wrapper">
-            <button id="logout-btn" type="button">로그아웃</button>
+          <form action="controller?cmd=logoutAction" method="post">
+            <button id="logout-btn" type="submit" >로그아웃</button>
+            </form>
           </div>
           <div class="btn-wrapper" id="setting-btn-wrapper">
             <button id="setting-btn" type="button"></button>
@@ -58,7 +61,7 @@
             <div class="notificationBoard-checkbox">
               <input type="checkbox" name="" class="notificationBoard-check" />
             </div>
-            <div class="notificationBoard-no">
+            <div class="notificationBoard-no" >
               <span>NO</span>
             </div>
             <div class="notificationBoard-title">
@@ -272,5 +275,16 @@
     </section>
     <footer></footer>
     <script src="./../../scripts/notifications/notificationBoard.js"></script>
+    <script type="text/javascript">
+    const notification_title = document.querySelector('#notificationBoard-title');
+    console.log(notification_title);
+    console.log(document.querySelector('.notificationBoard-title'));
+
+    notification_title.addEventListener('click',openPost());
+
+    function openPost(){
+    	window.location.href = 'controller?cmd=notificationPostUI';
+    }
+    </script>
   </body>
 </html>

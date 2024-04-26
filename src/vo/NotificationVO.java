@@ -32,7 +32,6 @@ public class NotificationVO {
 		setDescription(description);
 	}
 
-
 	public int getNotificationId() {
 		return notificationId;
 	}
@@ -73,12 +72,21 @@ public class NotificationVO {
 		this.managerId = managerId;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((managerId == null) ? 0 : managerId.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((notificationDate == null) ? 0 : notificationDate.hashCode());
 		result = prime * result + notificationId;
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
@@ -104,6 +112,11 @@ public class NotificationVO {
 				return false;
 		} else if (!managerId.equals(other.managerId))
 			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
 		if (notificationDate == null) {
 			if (other.notificationDate != null)
 				return false;
@@ -121,10 +134,8 @@ public class NotificationVO {
 
 	@Override
 	public String toString() {
-		return "notificationsVO [notificationId=" + notificationId + ", title=" + title + ", description=" + description
-				+ ", notificationDate=" + notificationDate + ", managerId=" + managerId + "]";
+		return "NotificationVO [notificationId=" + notificationId + ", title=" + title + ", description=" + description
+				+ ", notificationDate=" + notificationDate + ", managerId=" + managerId + ", name=" + name + "]";
 	}
-	
-	
-	
+
 }
