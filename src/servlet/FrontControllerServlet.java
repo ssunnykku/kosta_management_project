@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ManagerDAOImpl;
+
 @WebServlet("/controller")
 public class FrontControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,17 +22,25 @@ public class FrontControllerServlet extends HttpServlet {
 		String cmd = request.getParameter("cmd");
 		Action a = ActionFactory.getAction(cmd);
 
+		try {
+			ManagerDAOImpl dao = new ManagerDAOImpl();
+			System.out.println(dao.login("123","123"));
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		String url;
 		try {
 			url = a.execute(request);
 			request.getRequestDispatcher("/" + url).forward(request, response);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-
-
+		} 
 
 	}
 

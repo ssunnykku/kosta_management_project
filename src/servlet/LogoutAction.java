@@ -10,13 +10,12 @@ import javax.servlet.http.HttpSession;
 public class LogoutAction implements Action {
 
 	@Override
-	public String execute(HttpServletRequest request)
-			throws ServletException, IOException, ClassNotFoundException, SQLException {
+	public String execute(HttpServletRequest request) throws ServletException, IOException, ClassNotFoundException, SQLException {
 		HttpSession session=request.getSession();
 		if(session != null)
 			session.invalidate(); // 세션 전체 해제
 		
-		return "/frontend/html/login/login.html";
+		return "frontend/html/login/login.html";
 	}
 
 }
