@@ -21,6 +21,9 @@ public class ActionFactory {
 		case "notificationPostUI":
 			a = new notificationPostUIAction();
 			break;
+		case "addNotificationUI":
+			a = new addNotificationUIAction();
+			break;
 			
 		default:
 			break;
