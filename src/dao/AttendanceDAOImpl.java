@@ -2,7 +2,6 @@ package dao;
 
 import java.sql.Statement;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,15 +9,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import jdbc.JdbcConnectionManager;
+import jdbc.JdbcTest;
 import vo.AttendanceVO;
 
 public class AttendanceDAOImpl implements AttendanceDAO {
 
-	Connection conn = JdbcConnectionManager.jdbcConnector();
+	Connection conn;
 
 	public AttendanceDAOImpl() throws ClassNotFoundException, SQLException {
-		
+		conn = new JdbcTest().jdbcConnector();
 	}
 
 	@Override

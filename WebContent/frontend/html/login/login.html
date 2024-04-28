@@ -18,16 +18,16 @@
 
     <div class="login-wrapper">
       <h2>관리자 로그인</h2>
-      <form method="post" id="login-form">
+      <form action="controller?cmd=loginAction"  method="post" id="login-form">
         <div>
           <h4>Manager ID</h4>
-          <input type="text" id="manager_id" />
+          <input type="text" id="manager_id"   name="id"/>
         </div>
         <div>
           <h4>Password</h4>
-          <input type="password" id="password" />
+          <input type="password" id="password"   name="pw"/>
         </div>
-        <button type="button">Login</button>
+        <button type="submit" >Login</button>
       </form>
     </div>
 
