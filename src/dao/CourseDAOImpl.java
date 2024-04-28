@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import jdbc.JdbcTest;
+import jdbc.JdbcConnectionManager;
 import vo.CourseVO;
 
 public class CourseDAOImpl implements CourseDAO {
 
 //	JdbcConnectionManager jdbc = JdbcConnectionManager.getJdbcConector();
-	Connection conn = JdbcTest.jdbcConnector();
+	Connection conn = JdbcConnectionManager.jdbcConnector();
 	public CourseDAOImpl() throws ClassNotFoundException, SQLException {
 
 	}
