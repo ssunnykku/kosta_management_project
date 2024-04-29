@@ -38,8 +38,6 @@ public class NotificationVO {
 		setManagerId(managerId);
 	}
 
-
-
 	public int getNotificationId() {
 		return notificationId;
 	}

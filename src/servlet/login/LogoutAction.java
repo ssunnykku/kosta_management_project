@@ -1,4 +1,4 @@
-package servlet;
+package servlet.login;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import servlet.Action;
 
 public class LogoutAction implements Action {
 

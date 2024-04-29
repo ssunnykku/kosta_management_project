@@ -1,5 +1,8 @@
 package servlet;
 
+import servlet.login.LoginAction;
+import servlet.login.LoginUIAction;
+import servlet.login.LogoutAction;
 import servlet.notifications.AddNotificationAction;
 import servlet.notifications.AddNotificationUIAction;
 import servlet.notifications.DeleteNotificationAction;
@@ -11,6 +14,7 @@ import servlet.notifications.setNotificationUIAction;
 public class ActionFactory {
 	public static Action getAction(String cmd) { 
 		Action a = null;
+		
 		switch (cmd) {
 		case "loginUI":
 			a = new LoginUIAction();
