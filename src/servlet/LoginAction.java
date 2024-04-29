@@ -15,18 +15,19 @@ public class LoginAction implements Action {
 	public String execute(HttpServletRequest request) throws ServletException, IOException,  SQLException {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		String url="controller?cmd=loginUI";
+		String url="jsp/notifications/notificationBoard.jsp";
 		boolean login;
 		
 		try {
 			login = new ManagerDAOImpl().login(id, pw);
-			System.out.println(login);
-			if(!login) {
+			
+			if(login) {
 				HttpSession session = request.getSession(true); 
 				session.setAttribute("loginStatus", login); 
+				session.setAttribute("userId", id);
 
+			} else {
 				url = "loginOK.jsp";
-
 			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

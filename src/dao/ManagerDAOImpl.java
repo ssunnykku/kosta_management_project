@@ -18,29 +18,17 @@ public class ManagerDAOImpl implements ManagerDAO {
 	//	사번 M2018이고 이름이 홍길동, 비밀번호가 487312인 사원 생성 (managers)
 	//	사번 M2018이고 비밀번호가 487312인 사원 로그인하기 (managers)
 
-	//	private Connection conn;
+	private Connection conn;
 	private DataSource dataSource;
 	public ManagerDAOImpl()  throws ClassNotFoundException, SQLException {
-		// 1. driver loading -> 객체 생성 new String()
-		//		Class.forName("oracle.jdbc.OracleDriver");
-		//		System.out.println("1 loading ok");
-		//
-		//		// 2. Connection
-		//		String url = "jdbc:oracle:thin:@192.168.0.67:1521:XE";
-		//
-		//		conn = DriverManager.getConnection(url, "hr", "hr");
-		//		System.out.println("2 connection ok");
-
 		try {
 			Context context = new InitialContext();
-//			System.out.println(context);
-			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/myoracle");
-//			System.out.println(dataSource);
 
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/myoracle");
+			conn = dataSource.getConnection();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	@Override
@@ -49,7 +37,7 @@ public class ManagerDAOImpl implements ManagerDAO {
 
 		boolean result = false;
 		try {
-			Connection conn = dataSource.getConnection();
+//			Connection conn = dataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1,  managerId);
 			pstmt.setString(2,   password);
@@ -75,5 +63,37 @@ public class ManagerDAOImpl implements ManagerDAO {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public ManagerVO getManagerByManagerId(String managerId) {
+		String sql = "select * from managers where manager_id = ? ";
+		ManagerVO managerInfo = null;
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,  managerId);
+			ResultSet rs = pstmt.executeQuery();
+			
+			String id;
+			String name;
+			
+			if(rs.next()) {
+				 id = rs.getString(1);
+				 name = rs.getString(2);
+				 managerInfo = new ManagerVO(id, name);
+			}
+			
+			rs.close();
+			pstmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return managerInfo;
+	}
+	
+
+	
 }
 

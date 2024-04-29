@@ -7,11 +7,15 @@ public class ManagerVO {
 	private String name;
 	private String password;
 	
-
 	public ManagerVO(String managerId, String name, String password) {
 		 setManagerId(managerId);
 		 setName(name);
 		 setPassword(password);
+	}
+	
+	public ManagerVO(String managerId, String name) {
+		 setManagerId(managerId);
+		 setName(name);
 	}
 	
 	public String getManagerId() {

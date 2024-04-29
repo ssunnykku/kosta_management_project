@@ -10,7 +10,7 @@ public interface NotificationDAO {
 	
 	Collection<NotificationVO> getNotificationsList();
 	
-	int getNotificationNumber();
+//	int getNotificationNumber();
 	
 	NotificationVO getNotification(int notificationId);
 	

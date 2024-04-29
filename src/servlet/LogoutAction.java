@@ -15,7 +15,7 @@ public class LogoutAction implements Action {
 		if(session != null)
 			session.invalidate(); // 세션 전체 해제
 		
-		return "frontend/html/login/login.html";
+		return "jsp/login/login.jsp";
 	}
 
 }

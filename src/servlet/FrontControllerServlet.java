@@ -21,22 +21,14 @@ public class FrontControllerServlet extends HttpServlet {
 
 		String cmd = request.getParameter("cmd");
 		Action a = ActionFactory.getAction(cmd);
-
-		try {
-			ManagerDAOImpl dao = new ManagerDAOImpl();
-			System.out.println(dao.login("123","123"));
-		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		
 		String url;
 		try {
+
 			url = a.execute(request);
 			request.getRequestDispatcher("/" + url).forward(request, response);
+			
+	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -9,14 +9,25 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 import vo.NotificationVO;
 
 public class NotificationDAOImpl implements NotificationDAO {
 
 	private Connection conn;
-
-	public NotificationDAOImpl(Connection connection) {
-		conn = connection;
+	private DataSource dataSource;
+	
+	public NotificationDAOImpl() {
+		try {
+			Context context = new InitialContext();
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/myoracle");;
+			conn = dataSource.getConnection();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	//	M2018 직원이 게시글을 작성
@@ -69,24 +80,6 @@ public class NotificationDAOImpl implements NotificationDAO {
 		}
 
 		return boards;
-	}
-
-	/** 게시글 전체의 갯수 가져오기 */
-	@Override
-	public int getNotificationNumber() {
-		String sql = "select count(notification_id) from notifications";
-		int result = 0;
-
-		try {
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
-			if (rs.next()) {
-	            result = rs.getInt(1);
-	        }
-		}  catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return result;
 	}
 
 	/** 게시글 번호가 notificationId번인 게시글의 게시물 번호, 제목, 내용, 게시일, 작성자명 가져오기 */

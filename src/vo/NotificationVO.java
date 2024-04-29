@@ -32,6 +32,13 @@ public class NotificationVO {
 		setDescription(description);
 	}
 
+	public NotificationVO(String title, String description, String managerId) {
+		setTitle(title);
+		setDescription(description);
+		setManagerId(managerId);
+	}
+
+
 
 	public int getNotificationId() {
 		return notificationId;
