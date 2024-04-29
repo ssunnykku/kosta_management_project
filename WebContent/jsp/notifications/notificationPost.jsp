@@ -15,7 +15,7 @@
     <div id="header">
       <div id="nav-wrapper">
         <div id="top-logo">
-          <img src="../../assets/kosta-logo.png" alt="" />
+          <img src="${pageContext.request.contextPath}/assets/kosta-logo.png" alt="" />
         </div>
         <ul id="nav-ul">
           <li id="nav-notification" class="nav-li">
@@ -87,12 +87,15 @@
           </div>
         </div>
         <div id="notificationPost-btn-wrapper">
-          <button id="enroll-btn" class="btn-setting">수정</button>
-          <button id="edit-btn" class="btn-setting">삭제</button>
+          <button id="enroll-btn" class="btn-setting edit-btn"
+          data-id="${notificationVO.notificationId}">수정</button>
+          <button id="edit-btn" class="btn-setting delete-btn" 
+          data-id="${notificationVO.notificationId}">삭제</button>
         </div>
       
       </article>
     </section>
     <footer></footer>
+    <script src="${pageContext.request.contextPath}/scripts/notifications/setNotification.js"></script>
   </body>
 </html>

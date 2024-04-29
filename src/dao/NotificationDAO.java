@@ -14,8 +14,11 @@ public interface NotificationDAO {
 	
 	NotificationVO getNotification(int notificationId);
 	
-	boolean setNotificationById(NotificationVO notificationVo);
+	boolean setNotification(NotificationVO notificationVO);
 	
 	boolean deleteNodificationById(int notificationId);
+	
+	// 추가 메소드
+	String getManagerIdByNotificationId(int notificationId);
 
 }

@@ -25,7 +25,7 @@ public class LoginAction implements Action {
 			HttpSession session = request.getSession(true);
 			session.setAttribute("managerId", managerId);
 			session.setAttribute("password", password);
-			url = "loginOK.jsp";
+			url = "jsp/login/loginOK.jsp";
 		}
 		
 		System.out.println(url);

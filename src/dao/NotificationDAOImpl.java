@@ -36,7 +36,6 @@ public class NotificationDAOImpl implements NotificationDAO {
 	}
 
 	// M2018 직원이 게시글을 작성
-	/** 로그인 어떻게 구현? */
 	@Override
 	public boolean addNotification(NotificationVO notification) {
 
@@ -46,19 +45,18 @@ public class NotificationDAOImpl implements NotificationDAO {
 		boolean result = false;
 		String title = notification.getTitle();
 		String description = notification.getDescription();
-		String managerId = "M2018"; // ???????
+		String managerId = notification.getManagerId();
 
-		try {
-			Connection conn = dataSource.getConnection();
+		try (Connection conn = dataSource.getConnection()) {
+			try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+				pstmt.setString(1, title);
+				pstmt.setString(2, description);
+				pstmt.setString(3, managerId);
 
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, title);
-			pstmt.setString(2, description);
-			pstmt.setString(3, managerId);
-
-			int num = pstmt.executeUpdate();
-			if (num == 1)
-				result = true;
+				int num = pstmt.executeUpdate();
+				if (num == 1)
+					result = true;
+			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -87,7 +85,8 @@ public class NotificationDAOImpl implements NotificationDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}// 캐치 하나로 오류 다 잡을 수 있음 / close() 하지 않아도 try가 끝나면 자동으로 close() 호출 / AutoCloseable을 상속받는 애들은 다 쓸 수 있음
+		} // 캐치 하나로 오류 다 잡을 수 있음 / close() 하지 않아도 try가 끝나면 자동으로 close() 호출 /
+			// AutoCloseable을 상속받는 애들은 다 쓸 수 있음
 
 		return boards;
 	}
@@ -117,16 +116,18 @@ public class NotificationDAOImpl implements NotificationDAO {
 
 		NotificationVO board = null;
 
-		String sql = "select n.notification_id, n.title, n.description, n.notification_date, m.name from managers m, notifications n where m.manager_id = n.manager_id and notification_id = ?";
+		String sql = "select n.title, n.description, n.notification_date, m.manager_id, m.name from managers m, "
+				+ "notifications n where m.manager_id = n.manager_id and notification_id = ?";
 
-		try {
-			Connection conn = dataSource.getConnection();
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, notificationId);
-			ResultSet rs = pstmt.executeQuery();
-			if (rs.next()) {
-				board = new NotificationVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
-						rs.getString(5));
+		try (Connection conn = dataSource.getConnection()) {
+			try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+				pstmt.setInt(1, notificationId);
+				try (ResultSet rs = pstmt.executeQuery()) {
+					if (rs.next()) {
+						board = new NotificationVO(notificationId, rs.getString(1), rs.getString(2), rs.getString(3),
+								rs.getString(4), rs.getString(5));
+					}
+				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -138,27 +139,21 @@ public class NotificationDAOImpl implements NotificationDAO {
 	/** 게시글 번호가 1번인 게시글 수정하기 */ // (로그인검증 해야함-> 매니저 아이디는 db에서 꺼내오기?????????? 로그인
 								// 어쩔)
 	@Override
-	public boolean setNotificationById(NotificationVO notificationVo) {
+	public boolean setNotification(NotificationVO notificationVO) {
 
 		String sql = "update notifications set title = ?, description = ?, notification_date = sysdate where notification_id = ?";
 		boolean result = false;
 
-		int notificationId = notificationVo.getNotificationId();
-		String title = notificationVo.getTitle();
-		String description = notificationVo.getDescription();
+		try (Connection conn = dataSource.getConnection()) {
+			try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+				pstmt.setString(1, notificationVO.getTitle());
+				pstmt.setString(2, notificationVO.getDescription());
+				pstmt.setInt(3, notificationVO.getNotificationId());
+				int num = pstmt.executeUpdate();
 
-		try {
-			Connection conn = dataSource.getConnection();
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, title);
-			pstmt.setString(2, description);
-			pstmt.setInt(3, notificationId);
-
-			int num = pstmt.executeUpdate();
-
-			if (num == 1)
-				result = true;
-
+				if (num == 1)
+					result = true;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -187,6 +182,28 @@ public class NotificationDAOImpl implements NotificationDAO {
 		}
 
 		return result;
+
+	}
+
+	@Override
+	public String getManagerIdByNotificationId(int notificationId) {
+		String sql = "select manager_id from notifications where notification_id = ?";
+		String managerId = "";
+
+		try (Connection conn = dataSource.getConnection()) {
+			try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+				pstmt.setInt(1, notificationId);
+
+				try (ResultSet rs = pstmt.executeQuery()) {
+					if (rs.next())
+						managerId = rs.getString(1);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return managerId;
 
 	}
 

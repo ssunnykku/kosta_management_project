@@ -6,19 +6,21 @@ import dao.NotificationDAO;
 import dao.NotificationDAOImpl;
 import vo.NotificationVO;
 
-public class notificationPostUIAction implements Action {
+public class SetNotificationUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {
 		
 		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
-				
+		
 		NotificationDAO notificationDAO = new NotificationDAOImpl();
-		NotificationVO notificationVO = notificationDAO.getNotification(notificationId);
+		NotificationVO notificationVO = null;
+		
+		notificationVO = notificationDAO.getNotification(notificationId);
 		
 		request.setAttribute("notificationVO", notificationVO);
-		
-		return "html/notifications/notificationPost.jsp";
+
+		return "jsp/notifications/setNotification.jsp";
 	}
 
 }

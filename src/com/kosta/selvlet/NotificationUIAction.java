@@ -9,7 +9,7 @@ import dao.NotificationDAO;
 import dao.NotificationDAOImpl;
 import vo.NotificationVO;
 
-public class notificationUIAction implements Action {
+public class NotificationUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {
@@ -24,7 +24,7 @@ public class notificationUIAction implements Action {
 		
 		request.setAttribute("notificationVOs", notificationVOs);
 
-		return "html/notifications/notificationBoard.jsp";
+		return "jsp/notifications/notificationBoard.jsp";
 	}
 
 }

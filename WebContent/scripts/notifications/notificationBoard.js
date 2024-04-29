@@ -1,4 +1,4 @@
-const notificationEnrollBtn = document.querySelector(
+/*const notificationEnrollBtn = document.querySelector(
   "#notification-enroll-btn"
 );
 const notificationDeleteBtn = document.querySelector(
@@ -36,11 +36,11 @@ notificationDeleteBtn.addEventListener("click", openEditPage);
 // function openPost(){
 // 	window.location.href = 'controller?cmd=notificationPostUI';
 // }
-
+*/
 // 글 상세보기
 const title = document.querySelectorAll(".notificationBoard-title");
 
-for (var i in title) {
+for (var i = 0; i<title.length; i++) {
   title[i].addEventListener("click", function () {
     window.location.href =
       "controller?cmd=notificationPostUI&notificationId=" + this.dataset["id"];
@@ -49,10 +49,12 @@ for (var i in title) {
 }
 
 // 글 동록 버튼
-const EnrollBtn = document.querySelector("#notification-enroll-btn");
+//const EnrollBtn = document.querySelector("#notification-enroll-btn");
+const enrollBtn = document.querySelector("#notification-enroll-btn");
 
-EnrollBtn.addEventListener("click", function () {
-  winndow.location.href = "controller?cmd=addNotificationUIAction";
+enrollBtn.addEventListener("click", function () {
+  window.location.href = "controller?cmd=addNotificationUI";
 });
+
 
 // 글 삭제 버튼

@@ -21,7 +21,7 @@ prefix="c"%>
       rel="stylesheet"
       href="${pageContext.request.contextPath}/css/format.css"
     />
-    <script src="../../../scripts/notifications/notificationBoard.js"></script>
+   
   </head>
   <body id="notification-body">
     <div id="header">
@@ -132,12 +132,12 @@ prefix="c"%>
         <div class="pagenation">
           <div class="page-number">
             <img
-              src="../../assets/double_arrow_left.svg"
+              src="${pageContext.request.contextPath}/assets/double_arrow_left.svg"
               alt="double_arrow_left"
             />
           </div>
           <div class="page-number">
-            <img src="../../assets/arrow_left.svg" alt="array_left" />
+            <img src="${pageContext.request.contextPath}/assets/arrow_left.svg" alt="array_left" />
           </div>
           <div class="page-number">
             <a href="#">1</a>
@@ -155,11 +155,11 @@ prefix="c"%>
             <a href="">5</a>
           </div>
           <div class="page-number">
-            <img src="../../assets/arrow_right.svg" alt="arrow_right" />
+            <img src="${pageContext.request.contextPath}/assets/arrow_right.svg" alt="arrow_right" />
           </div>
           <div class="page-number">
             <img
-              src="../../assets/double_arrow_right.svg"
+              src="${pageContext.request.contextPath}/assets/double_arrow_right.svg"
               alt="double_arrow_right"
             />
           </div>
@@ -173,22 +173,6 @@ prefix="c"%>
     </section>
 
     <footer></footer>
-    <script type="text/javascript">
-      const title = document.querySelectorAll(".notificationBoard-title");
-
-      for (var i in title) {
-        title[i].addEventListener("click", function () {
-          window.location.href =
-            "controller?cmd=notificationPostUI&notificationId=" +
-            this.dataset["id"];
-          //title.dataset.id -> 데이터 속성을 불러옴
-        });
-      }
-
-      /* 					function openPost() {
-		 alert("와이라노");
-		 window.location.href = 'controller?cmd=notificationPostUI&data-id';
-		 } */
-    </script>
+     <script src="${pageContext.request.contextPath}/scripts/notifications/notificationBoard.js"></script>
   </body>
 </html>

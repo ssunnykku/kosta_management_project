@@ -25,13 +25,31 @@ public class NotificationVO {
 		this.name = name;
 	}
 	
+	///////////
+	
 	public NotificationVO(int notificationId, String title, String description) {
 		setNotificationId(notificationId);
 		setTitle(title);
-		setNotificationDate(notificationDate);
 		setDescription(description);
 	}
-
+	
+	public NotificationVO(int notificationId, String title, String description, String notificationDate,
+			String managerId, String name) {
+		setNotificationId(notificationId);
+		setTitle(title);
+		setDescription(description);
+		setNotificationDate(notificationDate);
+		setManagerId(managerId);
+		setName(name);
+	}
+	
+	public NotificationVO(String title, String description, String managerId) {
+		setTitle(title);
+		setDescription(description);
+		setManagerId(managerId);
+	}
+	
+	
 	public int getNotificationId() {
 		return notificationId;
 	}

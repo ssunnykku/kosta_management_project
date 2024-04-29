@@ -13,22 +13,31 @@ public class ActionFactory {
 			a = new LoginAction();
 			break;
 		case "logoutAction":
-			a = new logoutAction();
+			a = new LogoutAction();
 			break;
-		case "notificationUI":
-			a = new notificationUIAction();
+		case "notificationBoardUI":
+			a = new NotificationUIAction();
 			break;
 		case "notificationPostUI":
-			a = new notificationPostUIAction();
+			a = new NotificationPostUIAction();
 			break;
 		case "addNotificationUI":
-			a = new addNotificationUIAction();
+			a = new AddNotificationUIAction();
 			break;
-			
-		default:
+		case "addNotification":
+			a = new AddNotificationAction();
 			break;
+		case "setNotificationUI":
+			a = new SetNotificationUIAction();
+			break;
+		case "setNotification":
+			a = new SetNotificationAction();
+			break;	
+		case "removeNotificationAction":
+			a = new RemoveNotificationAction();
+			break;	
 		}
-		return a ;
+		return a;
 	}
 
 }
