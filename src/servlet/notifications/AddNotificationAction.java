@@ -19,9 +19,7 @@ public class AddNotificationAction  implements Action {
 	@Override
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
-//		HttpSession session = request.getSession(false);
-//		System.out.println(session);
-
+		
 		String title = request.getParameter("title");
 		String description = request.getParameter("description");
 		String managerId = request.getParameter("id");
