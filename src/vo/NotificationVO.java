@@ -9,8 +9,7 @@ public class NotificationVO {
 	private String managerId;
 	private String name;
 	
-	public NotificationVO(int notificationId, String title, String description, String notificationDate,
-			String managerId) {
+	public NotificationVO(int notificationId, String title, String description, String notificationDate, String managerId) {
 		setNotificationId(notificationId);
 		setTitle(title);
 		setDescription(description);
@@ -20,11 +19,13 @@ public class NotificationVO {
 	
 	public NotificationVO(int notificationId, String title, String notificationDate, String name) {
 		setNotificationId(notificationId);
+		setDescription(description);
 		setTitle(title);
 		setNotificationDate(notificationDate);
-		this.name = name;
+		setName(name);
 	}
 	
+
 	public NotificationVO(int notificationId, String title, String description) {
 		setNotificationId(notificationId);
 		setTitle(title);
@@ -36,6 +37,14 @@ public class NotificationVO {
 		setTitle(title);
 		setDescription(description);
 		setManagerId(managerId);
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getNotificationId() {

@@ -52,7 +52,9 @@ public class NotificationDAOImpl implements NotificationDAO {
 			int num = pstmt.executeUpdate();
 			if(num==1)
 				result=true;
-
+			
+			pstmt.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -72,9 +74,17 @@ public class NotificationDAOImpl implements NotificationDAO {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next()) {
-				NotificationVO board = new NotificationVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
+				NotificationVO board = new NotificationVO(
+						rs.getInt("notification_id"), 
+						rs.getString("title"),
+						rs.getString("notification_date"), 
+						rs.getString("name"));
 				boards.add(board);
 			}
+			
+			rs.close();
+			stmt.close();
+			conn.close();
 		}  catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -88,14 +98,14 @@ public class NotificationDAOImpl implements NotificationDAO {
 		
 		NotificationVO board = null;
 		
-		String sql = "select n.notification_id, n.title, n.description, n.notification_date, m.name from managers m, notifications n where m.manager_id = n.manager_id and notification_id = ?";
+		String sql = "select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n where m.manager_id = n.manager_id and notification_id = ?";
 		
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, notificationId);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				board = new NotificationVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				board = new NotificationVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
 	        }
 		} catch (SQLException e) {
 			e.printStackTrace();
