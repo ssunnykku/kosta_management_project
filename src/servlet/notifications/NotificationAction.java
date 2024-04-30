@@ -2,26 +2,28 @@ package servlet.notifications;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 import com.google.gson.Gson;
+
 import dao.NotificationDAOImpl;
 import servlet.Action;
 import vo.NotificationVO;
 
-public class NotificationBoardAction implements Action{
+public class NotificationAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
-			Gson gson = new Gson();
-			ArrayList<NotificationVO> list =  (ArrayList<NotificationVO>) new NotificationDAOImpl().getNotificationsList();
-			
-			String json = gson.toJson(list);
-			request.setAttribute("data", json);
+
+		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
+		Gson gson = new Gson();
+		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
+
+		String json = gson.toJson(notification);
+		request.setAttribute("data", json);
 
 		return "jsp/notifications/notificationListAPI.jsp";
 	}

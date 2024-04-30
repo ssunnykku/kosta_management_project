@@ -72,24 +72,6 @@
 						<span>작성자</span>
 					</div>
 				</div>
-				<!-- <div id="notification-table-row">
-					<div class="notificationBoard-checkbox">
-						<input type="checkbox" name="" class="notificationBoard-check"
-							value="80" />
-					</div>
-					<div class="notificationBoard-no">
-						<span>80</span>
-					</div>
-					<div class="notificationBoard-title">
-						<span>2024년 KOSTA 신년회 개최 안내</span>
-					</div>
-					<div class="notificationBoard-enroll-date">
-						<span>2024.01.03</span>
-					</div>
-					<div class="notificationBoard-writer">
-						<span>홍길동</span>
-					</div>
-				</div> -->
 			</div>
 		</article>
 		<article class="page-information">

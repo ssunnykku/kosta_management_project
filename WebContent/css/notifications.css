@@ -200,7 +200,11 @@ footer {
 }
 
 #notification-row > div > span {
-  font-size: 18px;
+  font-size: 14px;
+}
+
+#notificationPost-enroll-date >span {
+	  font-size: 14px;
 }
 
 #notification-contents {

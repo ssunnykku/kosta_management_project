@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import servlet.Action;
 
-public class setNotificationAction implements Action {
+public class NotificationUIAction  implements Action{
 
 	@Override
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
+
+		return "jsp/notifications/notificationPost.jsp";
 	}
 
 }

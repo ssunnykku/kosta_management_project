@@ -1,7 +1,6 @@
 const notificationEnrollBtn = document.querySelector(
 		'#notification-enroll-btn'
 );
-
 const notificationDeleteBtn = document.querySelector(
 		'#notification-delete-btn'
 );
@@ -10,19 +9,19 @@ const notificationCheckboxAll = document.querySelectorAll(
 );
 
 const notificationTable = document.querySelector("#notification-table");
-
+const notificationRow = document.querySelector("#notification-table-row");
+const notificationBoardNo = document.querySelector(".notificationBoard-no");
 
 function pageLoad() {
-
-
+	
 	fetch("controller?cmd=notificationBoardAction")
 	.then((response) => response.json())
 	.then((data) => {
 		let result = '';
 		for (var i = 0; i < data.length; i++) {
 			const notification= data[i];
-
-			result += `<div id="notification-table-row">
+//			 href="controller?cmd=notificationPostUI"
+			result += `<a href="controller?cmd=notificationPostUI" id="notification-table-row">
 			<div class="notificationBoard-checkbox">
 			<input type="checkbox" name="" class="notificationBoard-check"
 				value="80" />
@@ -39,8 +38,7 @@ function pageLoad() {
 			<div class="notificationBoard-writer">
 			<span>${notification.name}</span>
 			</div>
-			</div>`
-
+			</a>`
 		}
 
 		$('#notification-table').append(result);
@@ -58,16 +56,26 @@ function deletePage() {
 		if (box.checked == true) {
 
 //			fetch("controller?cmd=controller?deleteNotificationAction", {
-			//  method: "DELETE",
-			//})
-			//  .then((response) => response.json())
-			//  .then((data) => console.log(data));
-			//  })
-			deletedData.push(box.value);
-		}
-
+//				method: "DELETE",
+//			})
+//			.then((response) => response.json())
+//			.then((data) => console.log(data));
+//		})
+		deletedData.push(box.value);
+	}
 
 	});
+}
+
+function getNotificationPost() {
+	//#notification-table-row 클릭하면 id값 얻어오기
+	// .notificationBoard-no 자식의 값임
+//   controller?cmd=notificationPostAction/id
+	console.log(notificationBoardNo);
+//	   location.href = "controller?cmd=notificationPostAction/" + notificationId;
+	   
+	   
+
 }
 
 
@@ -75,6 +83,7 @@ function deletePage() {
 // dao에서 for문 돌려서 삭제해줌
 //}
 
+document.addEventListener("DOMContentLoaded", pageLoad);
 notificationEnrollBtn.addEventListener('click', openEnrollPage);
 notificationDeleteBtn.addEventListener('click', deletePage);
-document.addEventListener("DOMContentLoaded", pageLoad);
+//notificationRow.addEventListener('click', getNotificationPost);

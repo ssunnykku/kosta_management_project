@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import servlet.Action;
 
-public class setNotificationUIAction implements Action {
+public class SetNotificationUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request)

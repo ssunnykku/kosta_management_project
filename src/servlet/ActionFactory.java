@@ -8,8 +8,10 @@ import servlet.notifications.AddNotificationUIAction;
 import servlet.notifications.DeleteNotificationAction;
 import servlet.notifications.NotificationBoardAction;
 import servlet.notifications.NotificationBoardUIAction;
-import servlet.notifications.setNotificationAction;
-import servlet.notifications.setNotificationUIAction;
+import servlet.notifications.NotificationAction;
+import servlet.notifications.NotificationUIAction;
+import servlet.notifications.SetNotificationAction;
+import servlet.notifications.SetNotificationUIAction;
 
 public class ActionFactory {
 	public static Action getAction(String cmd) { 
@@ -41,12 +43,17 @@ public class ActionFactory {
 			a = new AddNotificationAction();
 			break;		
 			case "setNotificationUI":
-				a = new setNotificationUIAction();
+				a = new SetNotificationUIAction();
 				break;
 		case "setNotificationAction":
-			a = new setNotificationAction();
+			a = new SetNotificationAction();
 			break;
-		}
+		case "notificationUI":
+			a = new NotificationUIAction();
+			break;
+		case "notificationAction":
+			a = new NotificationAction()
+	;	}
 		return a;
 
 	}

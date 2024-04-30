@@ -13,7 +13,7 @@
     <div id="header">
       <div id="nav-wrapper">
         <div id="top-logo">
-          <img src="../../assets/kosta-logo.png" alt="" />
+          <img src="assets/kosta-logo.png" alt="" />
         </div>
         <ul id="nav-ul">
           <li id="nav-notification" class="nav-li">
