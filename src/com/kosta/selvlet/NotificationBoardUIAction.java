@@ -9,7 +9,7 @@ import dao.NotificationDAO;
 import dao.NotificationDAOImpl;
 import vo.NotificationVO;
 
-public class NotificationUIAction implements Action {
+public class NotificationBoardUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {

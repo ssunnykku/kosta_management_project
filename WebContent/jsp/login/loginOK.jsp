@@ -11,8 +11,8 @@
 </c:if>
 
 <c:if test="${managerId != null}">
-	${managerId}님 환영합니다.
+	<script>
+		alert('${managerId}님 환영합니다.');
+		location.href = "controller?cmd=notificationBoardUI";
+	</script>
 </c:if>
-
-${sessionScope.managerId}
-뭐임???

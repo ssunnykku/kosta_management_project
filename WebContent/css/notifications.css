@@ -116,6 +116,10 @@
   width: 40%;
 }
 
+#notificationBoard-title{
+	cursor: pointer;
+}
+
 .notificationBoard-enroll-date {
   width: 20%;
 }

@@ -3,9 +3,11 @@ package com.kosta.selvlet;
 public class ActionFactory {
 
 	public static Action getAction(String cmd) {
-		
+
 		Action a = null;
 		switch (cmd) {
+
+		// login/logout
 		case "loginUI":
 			a = new LoginUIAction();
 			break;
@@ -15,8 +17,10 @@ public class ActionFactory {
 		case "logoutAction":
 			a = new LogoutAction();
 			break;
+
+		// notifications
 		case "notificationBoardUI":
-			a = new NotificationUIAction();
+			a = new NotificationBoardUIAction();
 			break;
 		case "notificationPostUI":
 			a = new NotificationPostUIAction();
@@ -32,10 +36,28 @@ public class ActionFactory {
 			break;
 		case "setNotification":
 			a = new SetNotificationAction();
-			break;	
+			break;
 		case "removeNotificationAction":
 			a = new RemoveNotificationAction();
+			break;
+
+		// courses
+		case "courseBoardUI":
+			a = new CourseBoardUIAction();
+			break;
+		case "coursePostUI":
+			a = new CoursePostUIAction();
+			break;
+		case "addCourseUI":
+			a = new addCourseUIAction();
+			break;
+		case "addCourseAction":
+			a = new addCourseAction();
 			break;	
+		case "setCourseUI":
+			a = new setCourseUIAction();
+			break;		
+			
 		}
 		return a;
 	}

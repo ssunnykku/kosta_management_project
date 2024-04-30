@@ -19,10 +19,10 @@
         </div>
         <ul id="nav-ul">
           <li id="nav-notification" class="nav-li">
-            <a href="#notifications">공지사항</a>
+            <a href="controller?cmd=notificationBoardUI">공지사항</a>
           </li>
           <li id="nav-course" class="nav-li">
-            <a href="#courses">과정 관리</a>
+            <a href="controller?cmd=courseBoardUI">과정 관리</a>
           </li>
           <li id="nav-certification" class="nav-li">
             <a href="#certifications">수료증 관리</a>
@@ -39,8 +39,9 @@
         </ul>
         <div id="header-btns">
           <div class="btn-wrapper">
-            <button id="logout-btn" type="button">로그아웃</button>
-          </div>
+            <form action="controller?cmd=logoutAction" method="post">
+              <button id="logout-btn" type="submit">로그아웃</button>
+            </form>          </div>
           <div class="btn-wrapper" id="setting-btn-wrapper">
             <button id="setting-btn" type="button"></button>
           </div>

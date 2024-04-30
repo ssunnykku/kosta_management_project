@@ -18,13 +18,15 @@
 	<div id="header">
 		<div id="nav-wrapper">
 			<div id="top-logo">
-				<img src="../../assets/kosta-logo.png" alt="" />
+				<img src="${pageContext.request.contextPath}/assets/kosta-logo.png"
+					alt=""
+				/>
 			</div>
 			<ul id="nav-ul">
 				<li id="nav-notification" class="nav-li"><a
-					href="#notifications"
+					href="controller?cmd=notificationBoardUI"
 				>공지사항</a></li>
-				<li id="nav-course" class="nav-li"><a href="#courses">과정 관리</a>
+				<li id="nav-course" class="nav-li"><a href="controller?cmd=courseBoardUI">과정 관리</a>
 				</li>
 				<li id="nav-certification" class="nav-li"><a
 					href="#certifications"
@@ -38,7 +40,9 @@
 			</ul>
 			<div id="header-btns">
 				<div class="btn-wrapper">
-					<button id="logout-btn" type="button">로그아웃</button>
+					<form action="controller?cmd=logoutAction" method="post">
+						<button id="logout-btn" type="submit">로그아웃</button>
+					</form>
 				</div>
 				<div class="btn-wrapper" id="setting-btn-wrapper">
 					<button id="setting-btn" type="button"></button>
@@ -64,8 +68,9 @@
 					<input name="description" />
 				</div>
 				<div id="setNotification-btn-wrapper">
-					<button type="submit" id="enroll-btn" class="setNotification-btn-setting">
-						등록</button>
+					<button type="submit" id="enroll-btn"
+						class="setNotification-btn-setting"
+					>등록</button>
 					<button id="delete-btn" class="setNotification-btn-setting">
 						취소</button>
 				</div>

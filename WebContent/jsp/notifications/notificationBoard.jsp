@@ -27,14 +27,14 @@ prefix="c"%>
     <div id="header">
       <div id="nav-wrapper">
         <div id="top-logo">
-          <img src="../../assets/kosta-logo.png" alt="" />
+          <img src="${pageContext.request.contextPath}/assets/kosta-logo.png" alt="" />
         </div>
         <ul id="nav-ul">
           <li id="nav-notification" class="nav-li">
-            <a href="#notifications">공지사항</a>
+            <a href="controller?cmd=notificationBoardUI">공지사항</a>
           </li>
           <li id="nav-course" class="nav-li">
-            <a href="#courses">과정 관리</a>
+            <a href="controller?cmd=courseBoardUI">과정 관리</a>
           </li>
           <li id="nav-certification" class="nav-li">
             <a href="#certifications">수료증 관리</a>
@@ -110,13 +110,7 @@ prefix="c"%>
                 data-id="${notificationVO.notificationId}"
               >
                 <!-- 데이터 속성 : data-(원하는 이름) -> 각 class에 data-id라는 이름으로 값이 저장됨 -->
-                <span>${notificationVO.title}</span>
-                <%--
-                <a
-                  href="controller?cmd=notificationPostUI&notificationId=${notificationVO.notificationId}"
-                  >${notificationVO.title}</a
-                >
-                --%>
+                <span id="notificationBoard-title">${notificationVO.title}</span>
               </div>
               <div class="notificationBoard-enroll-date">
                 <span>${notificationVO.notificationDate}</span>
@@ -158,10 +152,7 @@ prefix="c"%>
             <img src="${pageContext.request.contextPath}/assets/arrow_right.svg" alt="arrow_right" />
           </div>
           <div class="page-number">
-            <img
-              src="${pageContext.request.contextPath}/assets/double_arrow_right.svg"
-              alt="double_arrow_right"
-            />
+            <img src="${pageContext.request.contextPath}/assets/double_arrow_right.svg" alt="double_arrow_right"/>
           </div>
         </div>
       </article>

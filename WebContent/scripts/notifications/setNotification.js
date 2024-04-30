@@ -6,14 +6,13 @@ editBtn.addEventListener("click", function(){
 });
 
 // 글 삭제 버튼
-
-
 const deleteBtn = document.querySelector(".delete-btn");
 
 deleteBtn.addEventListener("click", function(){
 	const result = confirm("해당 글을 삭제하시겠습니까?");
 
 	if(result){
+		alert('삭제 완료');
 		window.location.href = "controller?cmd=removeNotificationAction&notificationId="+this.dataset["id"];
 	}
 });

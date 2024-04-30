@@ -12,14 +12,14 @@ public class FrontControllerServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("service()");  
+//		System.out.println("service()");  
 		request.setCharacterEncoding("utf-8");
 
 		String cmd = request.getParameter("cmd");
-		System.out.println("cmd"+cmd);
+//		System.out.println("cmd"+cmd);
 
 		Action a = ActionFactory.getAction(cmd);
-		System.out.println("Action"+a);
+//		System.out.println("Action"+a);
 
 		String url = a.execute(request);
 

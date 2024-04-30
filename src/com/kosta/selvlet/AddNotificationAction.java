@@ -12,7 +12,7 @@ public class AddNotificationAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request) {
 		
-		String url="controller?cmd=addNotification";
+		String url="controller?cmd=addNotificationUI";
 		
 		String title = request.getParameter("title");
 		String description = request.getParameter("description");
@@ -26,8 +26,10 @@ public class AddNotificationAction implements Action {
 		boolean result = notificationDAO.addNotification(notificationVO);
 		
 		if (result) {
-			url = "controller?cmd=notificationBoardUI";
+			url="jsp/notifications/insertOK.jsp";
+			System.out.println(result);
 		}
+		System.out.println(url);
 		
 		return url;
 	}

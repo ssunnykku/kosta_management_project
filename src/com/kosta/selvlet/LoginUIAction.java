@@ -11,7 +11,7 @@ public class LoginUIAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request) {
 		
-		return "html/login/login.html";
+		return "jsp/login/login.jsp";
 	}
 
 }
