@@ -1,4 +1,4 @@
-package vo;
+package vo.customVo;
 
 public class NotificationVO {
     
@@ -19,6 +19,16 @@ public class NotificationVO {
         setDescription(description);
         setNotificationDate(notificationDate);
         setManagerId(managerId);
+    }
+    
+    public NotificationVO(int notificationId,
+            String title,
+            String notificationDate, 
+            String name) {
+        setNotificationId(notificationId);
+        setTitle(title);
+        setNotificationDate(notificationDate);
+        setName(name);
     }
     
     public NotificationVO(int notificationId, 

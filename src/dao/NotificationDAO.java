@@ -2,7 +2,7 @@ package dao;
 
 import java.util.Collection;
 
-import vo.NotificationVO;
+import vo.customVo.NotificationVO;
 
 public interface NotificationDAO {
 	

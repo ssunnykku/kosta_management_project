@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.google.gson.Gson;
 import dao.NotificationDAOImpl;
 import servlet.Action;
-import vo.NotificationVO;
+import vo.customVo.NotificationVO;
 
 public class NotificationBoardAction implements Action{
 

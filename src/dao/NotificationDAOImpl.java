@@ -13,7 +13,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import vo.NotificationVO;
+import vo.customVo.NotificationVO;
 
 public class NotificationDAOImpl implements NotificationDAO {
 
