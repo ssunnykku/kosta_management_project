@@ -101,14 +101,20 @@ public class NotificationDAOImpl implements NotificationDAO {
 		
 		NotificationVO board = null;
 		
-		String sql = "select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n where m.manager_id = n.manager_id and notification_id = ?";
+		String sql = "select"
+				+ " n.notification_id, "
+				+ "n.title, "
+				+"n.description,"
+				+ "n.notification_date,"
+				+ " m.name "
+				+ "from managers m, notifications n where m.manager_id = n.manager_id and notification_id = ?";
 		
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, notificationId);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				board = new NotificationVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
+				board = new NotificationVO(rs.getInt(1), rs.getString(2),  rs.getString(3), rs.getString(4), rs.getString(5));
 	        }
 			rs.close();
 			pstmt.close();

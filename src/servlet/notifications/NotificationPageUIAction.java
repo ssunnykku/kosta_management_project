@@ -22,8 +22,7 @@ public class NotificationPageUIAction  implements Action{
 		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
 		
 		request.setAttribute("data", notification);
-		
-		
+
 		return "jsp/notifications/notificationPost.jsp";
 	}
 

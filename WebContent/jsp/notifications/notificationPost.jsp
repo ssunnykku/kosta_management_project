@@ -108,9 +108,7 @@
             <span>: ${data.name} <span>
           </div>
           <div class="notificationPost-content">
-            <span>
-             ${data.description}
-            </span>
+            <span> ${data.description}</span>
           </div>
         </div>
         <div id="notificationPost-btn-wrapper">
