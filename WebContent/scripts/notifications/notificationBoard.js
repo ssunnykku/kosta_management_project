@@ -79,7 +79,7 @@ $("#notification-body").css("overflow","");
 window.location.href = 'controller?cmd=notificationBoardUI';
 }
 
-const selected = [];
+let selected = [];
 $("#notification-delete-btn").click(function() {
     $(".notificationBoard-check").each(function() {
         if ($(this).prop("checked")) {
@@ -109,6 +109,7 @@ $("#cancel-btn").click(() => {
 	$(".modal-background").css("display","none");
 	$(".remove-wrapper").removeAttr("style");
 	$(".remove-wrapper").css("display","none");
+	selected = [];
 })
 $("#alert-confirm-btn").click(()=> {
 	$(".modal-background").css("display","none");
