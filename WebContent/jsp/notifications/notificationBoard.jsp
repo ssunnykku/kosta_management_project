@@ -86,6 +86,7 @@
 	<footer></footer>
 </body>
 	<jsp:include page="../common/modals/removeModal.jsp" />
+	<jsp:include page="./modals/alertNotSelectModal.jsp" />
 	<div class="modal-background" style="display: none"></div>
 		<script src="scripts/notifications/notificationBoard.js">
 	</script>

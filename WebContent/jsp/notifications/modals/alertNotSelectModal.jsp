@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>과정 삭제</title>
     <link rel="stylesheet" href="css/courses.css" />
+    <link rel="stylesheet" href="css/modal.css" />
   </head>
-  <body>
-    <div class="removecourse-wrapper">
-      <div class="removecourse-info">
-        <h1 class="upperline title">삭제 확인</h1>
-        <h1>삭제되었습니다.</h1>
+  <body >
+    <div class="select-alert-wrapper"  style="display: none">
+      <div>
+    		<h1 class="upperline title">삭제할 항목을 선택해주세요</h1>
       </div>
       <div id="btn-wrapper">
-        <button id="enroll-btn-format" class="btn-setting-format">확인</button>
+        <button id="alert-confirm-btn">확인</button>
       </div>
     </div>
   </body>

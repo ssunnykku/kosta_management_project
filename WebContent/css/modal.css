@@ -35,6 +35,16 @@
 	z-index: 200;
 }
 
+#remove-title {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	column-gap: 30px;
+}
+
 .remove-info {
 	width: 100%;
 	display: flex;
@@ -61,11 +71,17 @@
 }
 
 /**************** button *******************/
+
 #btn-wrapper {
-	width: 122px;
-	display: flex;
-	flex-drection: row;
-	justify-content: space-between;
+  height: 55px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 #delete-btn {
@@ -93,4 +109,62 @@
 	line-height: 144%;
 	/* Text/Text_Wh */
 	color: #FFFFFF;
+}
+
+/***************** notificationBoard -> alertNotSelectModal************/
+
+#alert-confirm-btn {
+	width: 57px;
+	height: 32px;
+	background: #2D62EA;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+	border-radius: 6px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+/* #select-alert-wrapper {
+	width: 340px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 16px;
+  gap: 10px;
+	
+	width: 100%;
+	display: flex;
+	flex-drection: row;
+	padding-left: 140px; 
+}
+ */
+.select-alert-wrapper {
+	position: absolute;
+	top: calc(50vh - 100px);
+	left: calc(50vw - 200px);
+	border-radius: 10px;
+	width: 340px;
+	height: 200px;
+	background: #ffffff;
+	
+	display: flex;
+	flex-direction: column;
+/* 	justify-content: space-between;'
+	align-items: center;  */
+	z-index: 200;
+}
+
+.select-alert-wrapper  > div  {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+/* 	column-gap: 30px; */
 }
