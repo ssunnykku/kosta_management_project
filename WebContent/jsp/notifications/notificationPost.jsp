@@ -96,7 +96,7 @@
             <span>NO.${data.notificationId}</span>
           </div>
           <div class="notificationPost-title">
-            <span></span>
+            <span>${data.title}</span>
           </div>
           <div class="notificationPost-enroll-date">
             <span>${data.notificationDate}</span>

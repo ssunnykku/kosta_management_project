@@ -17,34 +17,37 @@ function pageLoad() {
 	fetch("controller?cmd=notificationBoardAction")
 	.then((response) => response.json())
 	.then((data) => {
-		let result = '';
-		for (var i = 0; i < data.length; i++) {
-			const notification= data[i];
-
-			result += `<a href="controller?cmd=notificationPageUI" id="notification-table-row">
-			<div class="notificationBoard-checkbox">
-			<input type="checkbox" name="" class="notificationBoard-check"
-				value="80" />
-					</div>
-			<div class="notificationBoard-no">
-			<span>${notification.notificationId}</span>
-			</div>
-			<div class="notificationBoard-title">
-			<span>${notification.title}</span>
-			</div>
-			<div class="notificationBoard-enroll-date">
-			<span>${notification.notificationDate}</span>
-			</div>
-			<div class="notificationBoard-writer">
-			<span>${notification.name}</span>
-			</div>
-			</a>`
-		}
-
-		$('#notification-table').append(result);
+		$('#notification-table').append(getNotificationList(data));
 	})
 }
 
+function getNotificationList(data) {
+	let result = '';
+	for (var i = 0; i < data.length; i++) {
+		const notification= data[i];
+
+		result += `<a href="controller?cmd=notificationPageUI&notificationId=${notification.notificationId}" id="notification-table-row">
+		<div class="notificationBoard-checkbox">
+		<input type="checkbox" name="" class="notificationBoard-check"
+			value="80" />
+				</div>
+		<div class="notificationBoard-no">
+		<span>${notification.notificationId}</span>
+		</div>
+		<div class="notificationBoard-title">
+		<span>${notification.title}</span>
+		</div>
+		<div class="notificationBoard-enroll-date">
+		<span>${notification.notificationDate}</span>
+		</div>
+		<div class="notificationBoard-writer">
+		<span>${notification.name}</span>
+		</div>
+		</a>`
+	}
+	
+	return result;
+}
 
 function openEnrollPage() {
 	window.location.href = 'controller?cmd=addNotificationUI';

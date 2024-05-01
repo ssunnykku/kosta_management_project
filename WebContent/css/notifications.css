@@ -1,368 +1,339 @@
 @import 'reset.css';
 
 #notification-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 #notification-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
 }
 
 /*************button ***************/
-
 #notification-btn-wrapper {
-  padding-right: 50px;
-  margin: 10px 0 5px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 10px;
-
-  display: flex;
-  width: 1000px;
-  height: 50px;
-
-  align-items: center;
+	padding-right: 50px;
+	margin: 10px 0 5px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	gap: 10px;
+	display: flex;
+	width: 1000px;
+	height: 50px;
+	align-items: center;
 }
 
 #notification-enroll-btn {
-  color: #ffffff;
-  background-color: rgb(64, 64, 64);
-  border-radius: 8px;
+	color: #ffffff;
+	background-color: rgb(64, 64, 64);
+	border-radius: 8px;
 }
 
 #notification-delete-btn {
-  font-weight: 600;
-  color: rgb(64, 64, 64);
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
+	font-weight: 600;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+	border-radius: 8px;
 }
 
 /*********** table ***************/
-
 .notification-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #notification-btn-article {
-  /* height: 50px; */
-  width: 100%;
+	/* height: 50px; */
+	width: 100%;
 }
 
 #notification-table {
-  text-align: center;
-  width: 1000px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	text-align: center;
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #notification-table-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 60px;
-  align-items: center;
-
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 144%;
-
-  color: #1d1d1d;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 60px;
+	align-items: center;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 144%;
+	color: #1d1d1d;
 }
 
 #notification-table {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .table-first-row {
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 15px;
-  line-height: 144% !important;
-  text-align: center;
-
-  color: #1d1d1d;
-
-  box-sizing: border-box;
-
-  width: 100%;
-  height: 60px;
-
-  background: #ffffff;
-  border-bottom: 1px solid #f3f5f9;
-  border-radius: 10px 10px 0px 0px;
+	font-style: normal !important;
+	font-weight: 500 !important;
+	font-size: 15px;
+	line-height: 144% !important;
+	text-align: center;
+	color: #1d1d1d;
+	box-sizing: border-box;
+	width: 100%;
+	height: 60px;
+	background: #ffffff;
+	border-bottom: 1px solid #f3f5f9;
+	border-radius: 10px 10px 0px 0px;
 }
 
 .notificationBoard-checkbox {
-  width: 10%;
+	width: 10%;
 }
 
 .notificationBoard-no {
-  width: 10%;
+	width: 10%;
 }
 
 .notificationBoard-title {
-  width: 40%;
+	width: 40%;
 }
 
 .notificationBoard-enroll-date {
-  width: 20%;
+	width: 20%;
 }
 
 .notificationBoard-writer {
-  width: 20%;
+	width: 20%;
 }
 
 /************page*********/
 .page-information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .cnt-pages {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  margin: 0 150px 0 150px;
-
-  color: #999999;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 100%;
+	margin: 0 150px 0 150px;
+	color: #999999;
 }
 
 .pagenation {
-  display: flex;
-  justify-content: center;
-  height: 32px;
-  margin-top: 80px;
-
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
-  text-align: center;
-
-  color: rgba(0, 0, 0, 0.72);
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 32px;
+	margin-top: 80px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 100%;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.72);
+	align-items: center;
 }
 
 .page-number {
-  width: 32px;
-  height: 32px;
-
-  text-align: center;
+	width: 32px;
+	height: 32px;
+	text-align: center;
 }
 
 /**********footer***************/
 footer {
-  height: 200px;
+	height: 200px;
 }
 
 /***********notificationPost.html*************/
-
 #notificationPost-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
 }
 
 .notificationPost-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
 }
 
 .underline {
-  background: #ffffff;
-  border-bottom: 1px solid #f3f5f9;
-  border-radius: 10px 10px 0px 0px;
-  padding-bottom: 20px;
+	background: #ffffff;
+	border-bottom: 1px solid #f3f5f9;
+	border-radius: 10px 10px 0px 0px;
+	padding-bottom: 20px;
 }
 
 #notification-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
-  padding: 30px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 80%;
+	padding: 30px 0;
 }
 
-#notification-row > div > span {
-  font-size: 14px;
+#notificationPost-enroll-date>span {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.33);
 }
 
-#notificationPost-enroll-date >span {
-	  font-size: 14px;
+#notificationPost-no>span {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.33);
 }
 
 #notification-contents {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 100px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 100px;
 }
 
 .notificationPost-content {
-  font-size: 15px;
+	font-size: 15px;
 }
 
 #notificationPost-btn-wrapper {
-  margin: 10px 0 5px 0;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  padding-top: 120px;
+	margin: 10px 0 5px 0;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	padding-top: 120px;
 }
 
 .btn-setting {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 144%;
-
-  width: 57px;
-  height: 32px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  background: #eee;
-  padding: 5px;
-  box-shadow: 0px 0px 3px #888;
-  line-height: 1.5em;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 144%;
+	width: 57px;
+	height: 32px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	background: #eee;
+	padding: 5px;
+	box-shadow: 0px 0px 3px #888;
+	line-height: 1.5em;
 }
 
 #enroll-btn {
-  color: #ffffff;
-  background-color: rgb(64, 64, 64);
-  border-radius: 8px;
+	color: #ffffff;
+	background-color: rgb(64, 64, 64);
+	border-radius: 8px;
 }
 
-#edit-btn,
-#delete-btn {
-  font-weight: 600;
-  color: rgb(64, 64, 64);
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
+#edit-btn, #delete-btn {
+	font-weight: 600;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+	border-radius: 8px;
 }
 
 /**************** setNotification **********************/
-
 #setNotifications-section {
-  padding-top: 25px;
-  margin: 0 15% 0 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	padding-top: 25px;
+	margin: 0 15% 0 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .setNotification-contents {
+	
 }
 
 .setNotification-set-wrapper {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .setNotification-title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  width: 100%;
-  margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 20px;
 }
 
-.setNotification-title-wrapper > h3 {
-  width: 10%;
-  text-align: center;
-  transform: translateY(30%);
+.setNotification-title-wrapper>h3 {
+	width: 10%;
+	text-align: center;
+	transform: translateY(30%);
 }
 
 .setNotification-title-input-wrapper {
-  width: 90%;
+	width: 90%;
 }
 
-.setNotification-title-input-wrapper > input {
-  width: 100%;
-  height: 100%;
-
-  background: #ffffff;
-
-  border: 1px solid #cfcfcf;
-  border-radius: 10px;
+.setNotification-title-input-wrapper>input {
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border: 1px solid #cfcfcf;
+	border-radius: 10px;
 }
 
 .setNotification-input-wrapper {
-  height: 600px;
+	height: 600px;
 }
 
-.setNotification-input-wrapper > input {
-  width: 100%;
-  height: 100%;
-
-  background: #ffffff;
-
-  border: 1px solid #cfcfcf;
-  border-radius: 10px;
+.setNotification-input-wrapper>input {
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border: 1px solid #cfcfcf;
+	border-radius: 10px;
 }
 
 /*  setNotification button */
 #setNotification-btn-wrapper {
-  width: 900px;
-  height: 50px;
-
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-
-  margin-top: 20px;
-  gap: 10px;
+	width: 900px;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 20px;
+	gap: 10px;
 }
 
 .setNotification-btn-setting {
-  border-radius: 6px;
-  font-style: normal;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 144%;
-
-  color: #ffffff;
-
-  width: 57px;
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 16px;
-  gap: 10px;
-
-  background: #eee;
-  padding: 5px;
-  box-shadow: 0px 0px 5px #888;
-  line-height: 1.5em;
+	border-radius: 6px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 144%;
+	color: #ffffff;
+	width: 57px;
+	height: 32px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 16px;
+	gap: 10px;
+	background: #eee;
+	padding: 5px;
+	box-shadow: 0px 0px 5px #888;
+	line-height: 1.5em;
 }
 
 #setNotification-cancel-btn {
-  background-color: rgba(201, 211, 219, 1);
-  margin-left: 10px;
+	background-color: rgba(201, 211, 219, 1);
+	margin-left: 10px;
 }
