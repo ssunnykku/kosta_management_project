@@ -16,8 +16,6 @@ public class DeleteNotificationAction implements Action{
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 		
-		// req값으로 배열을 가지고 옴
-		// for문으로 돌려주면서 delete 해줌( 
 		NotificationDAO dao = new NotificationDAOImpl();
 
 		return  "jsp/notifications/notificationBoard.jsp";

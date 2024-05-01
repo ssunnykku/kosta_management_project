@@ -20,9 +20,11 @@ public class AddNotificationAction  implements Action {
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 		
+		HttpSession session = request.getSession(false);
+		
 		String title = request.getParameter("title");
 		String description = request.getParameter("description");
-		String managerId = request.getParameter("id");
+		String managerId = (String) session.getAttribute("userId");
 		
 		NotificationVO notification = new NotificationVO(title, description, managerId);
 		

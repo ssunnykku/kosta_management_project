@@ -35,13 +35,15 @@ public class NotificationDAOImpl implements NotificationDAO {
 	@Override   
 	public boolean addNotification(NotificationVO notification ) {
 
+		//notificationsVO [notificationId=361, title=안녕하세요 여러분, description=null, notificationDate=2024-04-29 20:42:34, managerId=null]
+		
 		String sql =  "insert into notifications (notification_id, title, description, notification_date, manager_id) "
 				+ "values (notification_id.NEXTVAL, ?, ?, sysdate, ?)";
 
 		boolean result = false;
 		String title = notification.getTitle();
 		String description = notification.getDescription();
-		String managerId = "M2018";   // ???????
+		String managerId = notification.getManagerId();
 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -91,6 +93,7 @@ public class NotificationDAOImpl implements NotificationDAO {
 
 		return boards;
 	}
+
 
 	/** 게시글 번호가 notificationId번인 게시글의 게시물 번호, 제목, 내용, 게시일, 작성자명 가져오기 */
 	@Override

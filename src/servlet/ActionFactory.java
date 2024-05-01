@@ -8,8 +8,7 @@ import servlet.notifications.AddNotificationUIAction;
 import servlet.notifications.DeleteNotificationAction;
 import servlet.notifications.NotificationBoardAction;
 import servlet.notifications.NotificationBoardUIAction;
-import servlet.notifications.NotificationAction;
-import servlet.notifications.NotificationUIAction;
+import servlet.notifications.NotificationPageUIAction;
 import servlet.notifications.SetNotificationAction;
 import servlet.notifications.SetNotificationUIAction;
 
@@ -48,12 +47,10 @@ public class ActionFactory {
 		case "setNotificationAction":
 			a = new SetNotificationAction();
 			break;
-		case "notificationUI":
-			a = new NotificationUIAction();
+		case "notificationPageUI":
+			a = new NotificationPageUIAction();
 			break;
-		case "notificationAction":
-			a = new NotificationAction()
-	;	}
+			}
 		return a;
 
 	}

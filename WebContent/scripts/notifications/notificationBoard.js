@@ -20,8 +20,8 @@ function pageLoad() {
 		let result = '';
 		for (var i = 0; i < data.length; i++) {
 			const notification= data[i];
-//			 href="controller?cmd=notificationPostUI"
-			result += `<a href="controller?cmd=notificationPostUI" id="notification-table-row">
+
+			result += `<a href="controller?cmd=notificationPageUI" id="notification-table-row">
 			<div class="notificationBoard-checkbox">
 			<input type="checkbox" name="" class="notificationBoard-check"
 				value="80" />
@@ -73,11 +73,8 @@ function getNotificationPost() {
 //   controller?cmd=notificationPostAction/id
 	console.log(notificationBoardNo);
 //	   location.href = "controller?cmd=notificationPostAction/" + notificationId;
-	   
-	   
 
 }
-
 
 // id 값을 보내줌(리스트)
 // dao에서 for문 돌려서 삭제해줌
