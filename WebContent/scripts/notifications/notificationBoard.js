@@ -4,20 +4,22 @@ const notificationEnrollBtn = document.querySelector(
 const notificationDeleteBtn = document.querySelector(
 		'#notification-delete-btn'
 );
-const notificationCheckboxAll = document.querySelectorAll(
-		'.notificationBoard-check'
-);
+let notificationCheckboxAll;
 
 const notificationTable = document.querySelector("#notification-table");
 const notificationRow = document.querySelector("#notification-table-row");
 const notificationBoardNo = document.querySelector(".notificationBoard-no");
 
-function pageLoad() {
-	
-	fetch("controller?cmd=notificationBoardAction")
+/**  Modal*/
+const modal = document.querySelector(".modal-background ");
+
+async function pageLoad() {
+
+	await fetch("controller?cmd=notificationBoardAction")
 	.then((response) => response.json())
 	.then((data) => {
 		$('#notification-table').append(getNotificationList(data));
+		notificationCheckboxAll = document.querySelectorAll('.notificationBoard-check');
 	})
 }
 
@@ -26,26 +28,26 @@ function getNotificationList(data) {
 	for (var i = 0; i < data.length; i++) {
 		const notification= data[i];
 
-		result += `<a href="controller?cmd=notificationPageUI&notificationId=${notification.notificationId}" id="notification-table-row">
+		result += `<div id="notification-table-row">
 		<div class="notificationBoard-checkbox">
 		<input type="checkbox" name="" class="notificationBoard-check"
-			value="80" />
+			value="${notification.notificationId}" />
 				</div>
 		<div class="notificationBoard-no">
 		<span>${notification.notificationId}</span>
 		</div>
-		<div class="notificationBoard-title">
+		<a href="controller?cmd=notificationPageUI&notificationId=${notification.notificationId}"  class="notificationBoard-title">
 		<span>${notification.title}</span>
-		</div>
+		</a>
 		<div class="notificationBoard-enroll-date">
 		<span>${notification.notificationDate}</span>
 		</div>
 		<div class="notificationBoard-writer">
 		<span>${notification.name}</span>
 		</div>
-		</a>`
+		</div>`
 	}
-	
+
 	return result;
 }
 
@@ -53,37 +55,44 @@ function openEnrollPage() {
 	window.location.href = 'controller?cmd=addNotificationUI';
 }
 
-function deletePage() {
-	let deletedData = [];
-	notificationCheckboxAll.forEach( (box) => {
-		if (box.checked == true) {
+async function deletePage() {
 
-//			fetch("controller?cmd=controller?deleteNotificationAction", {
-//				method: "DELETE",
-//			})
-//			.then((response) => response.json())
-//			.then((data) => console.log(data));
-//		})
-		deletedData.push(box.value);
-	}
+	await notificationCheckboxAll.forEach((box) => {
+		if (box.checked) {
+			console.log(box.value);
+			const url = "controller?cmd=deleteNotificationAction&notificationId=" + box.value
+			fetch(url, {
+				method: "DELETE",
+			})
+		}
 
 	});
+	
+	$(".modal-background").css("dispoay", "none");
+	$(".remove-wrapper").css("dispoay", "none");
+	$("#notification-body").css("position","");
+	$("#notification-body").css("width","");
+	$("#notification-body").css("height","");
+	$("#notification-body").css("overflow","");
+	
+	window.location.href = 'controller?cmd=notificationBoardUI';
 }
 
-function getNotificationPost() {
-	//#notification-table-row 클릭하면 id값 얻어오기
-	// .notificationBoard-no 자식의 값임
-//   controller?cmd=notificationPostAction/id
-	console.log(notificationBoardNo);
-//	   location.href = "controller?cmd=notificationPostAction/" + notificationId;
-
+function openModal() {
+	$(".modal-background").removeAttr("style");
+	$("#notification-body").css("position","fixed");
+	$("#notification-body").css("width","100%");
+	$("#notification-body").css("height","100%");
+	$("#notification-body").css("overflow"," hidden");
+	$(".remove-wrapper").removeAttr("style");
 }
 
-// id 값을 보내줌(리스트)
-// dao에서 for문 돌려서 삭제해줌
-//}
+$("#delete-btn").click(deletePage);
+$("#cancel-btn").click(() => {
+	window.location.href = 'controller?cmd=notificationBoardUI';
+})
 
 document.addEventListener("DOMContentLoaded", pageLoad);
 notificationEnrollBtn.addEventListener('click', openEnrollPage);
-notificationDeleteBtn.addEventListener('click', deletePage);
+notificationDeleteBtn.addEventListener('click', openModal);
 //notificationRow.addEventListener('click', getNotificationPost);

@@ -110,6 +110,9 @@ public class NotificationDAOImpl implements NotificationDAO {
 			if (rs.next()) {
 				board = new NotificationVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
 	        }
+			rs.close();
+			pstmt.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -139,6 +142,8 @@ public class NotificationDAOImpl implements NotificationDAO {
 			if(num==1)
 				result=true;
 
+			pstmt.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -161,6 +166,8 @@ public class NotificationDAOImpl implements NotificationDAO {
 			if(num==1)
 				result=true;
 
+			pstmt.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
