@@ -24,7 +24,7 @@ public class SetNotificationAction implements Action {
 
 		new NotificationDAOImpl().setNotificationById(new NotificationVO(notificationId, title, description));
 
-		return "controller?cmd=notificationBoardUI";
+		return "controller?cmd=notificationPageUI&notificationId="+notificationId;
 	}
 
 }

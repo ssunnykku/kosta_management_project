@@ -22,9 +22,7 @@ public class SetNotificationUIAction implements Action {
 		//notificationId가 null일 경우 
 	
 		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
-//		request.setAttribute("data", notification);
 		HttpSession session = request.getSession(false);
-
 		session.setAttribute("data", notification);
 	
 		return "jsp/notifications/setNotification.jsp";

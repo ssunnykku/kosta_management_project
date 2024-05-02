@@ -130,9 +130,11 @@ $("#notification-post-edit-btn").click(()=>{
 	window.location.href = "controller?cmd=setNotificationUI&notificationId="+notificationId;
 })
 
-//$("#setNotification-enroll-btn").click(()=> {
-//	console.log("저거");
-//})
+$("#setNotification-concel-btn").click(()=>{
+//	const notificationId = $(".notificationPost-no").children("span").eq(1).text();
+//	window.location.href = "controller?cmd=notificationPageUI&notificationId="+notificationId;
+	window.location.href = "controller?cmd=notificationBoardUI";
+})
 
 /*** 체크박스 상단 전체 선택 ***/
 $('#title-checkbox').change(()=>{
