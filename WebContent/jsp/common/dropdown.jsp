@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="css/header.css" />
-	<section id="nav-wrapper-dropdown">
+	<section id="nav-wrapper-dropdown" style="display: none">
 		<div id="top-logo">
 			<h1></h1>
 		</div>

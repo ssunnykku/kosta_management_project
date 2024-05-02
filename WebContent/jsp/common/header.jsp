@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <link rel="stylesheet" href="css/header.css" />
 <div id="header">
 	<section id="nav-wrapper">
@@ -30,6 +31,9 @@
 			<div class="btn-wrapper" id="setting-btn-wrapper">
 				<button id="setting-btn" type="button"></button>
 			</div>
+		</div>
 	</section>
-	  	<jsp:include page="./dropdown.jsp" />
+	<jsp:include page="./dropdown.jsp" />
+	<script src="scripts/common.js">
+	</script>
 </div>

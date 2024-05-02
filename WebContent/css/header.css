@@ -176,3 +176,7 @@
   margin-right: auto;
   padding-bottom: 10px;
 }
+
+#nav-wrapper-dropdown {
+	z-index: 200;
+}
