@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 <link rel="stylesheet" href="css/notifications.css" />
 </head>
 <body id="content-wrapper">
-	<div id="header">
+	<jsp:include page="../common/header.jsp" />
 		<div id="nav-wrapper">
 			<div id="top-logo">
 				<img src="assets/kosta-logo.png" alt="" />
@@ -69,3 +70,4 @@
 	<script src="scripts/notifications/addNotification.js"></script>
 </body>
 </html>
+

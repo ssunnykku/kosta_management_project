@@ -23,7 +23,7 @@ public class NotificationDAOImpl implements NotificationDAO {
 	public NotificationDAOImpl() {
 		try {
 			Context context = new InitialContext();
-			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/myoracle");;
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/myoracle");
 			conn = dataSource.getConnection();
 		} catch(Exception e) {
 			e.printStackTrace();

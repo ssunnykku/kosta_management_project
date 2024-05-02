@@ -9,8 +9,8 @@
 		<h1>선택 항목을 삭제하겠습니까?</h1>
 	</div>
 	<div class="remove-btn-wrapper">
-		<button id="delete-btn" >삭제</button>
-		<button id="cancel-btn">취소</button>
+		<button id="notification-delete-Modal-btn" >삭제</button>
+		<button id="notification-delete-Modal-cancel-btn">취소</button>
 	</div>
 </div>
 

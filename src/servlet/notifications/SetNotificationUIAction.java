@@ -5,15 +5,26 @@ import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import dao.NotificationDAOImpl;
 
 import servlet.Action;
+import vo.customVo.NotificationVO;
 
 public class SetNotificationUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
-		// TODO Auto-generated method stub
+		
+		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
+		//notificationId가 null일 경우 
+		System.out.println("1");
+		System.out.println("출력"+notificationId);
+		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
+		request.setAttribute("data", notification);
+
 		return "jsp/notifications/setNotification.jsp";
 	}
 

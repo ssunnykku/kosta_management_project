@@ -3,12 +3,12 @@
  <div id="header">
 		<div id="nav-wrapper">
 			<div id="top-logo">
-				<img src="assets/kosta-logo.png" alt="" />
+				<img src="assets/kosta-logo.png" alt="kosta-edu-logo" />
 			</div>
 			<ul id="nav-ul">
 				<li id="nav-notification" class="nav-li"><a
-					href="#notifications">공지사항</a></li>
-				<li id="nav-course" class="nav-li"><a href="#courses">과정 관리</a>
+					href="controller?cmd=notificationBoardUI">공지사항</a></li>
+				<li id="nav-course" class="nav-li" ><a  href="controller?cmd=courseBoardUI">과정 관리</a>
 				</li>
 				<li id="nav-certification" class="nav-li"><a
 					href="#certifications">수료증 관리</a></li>

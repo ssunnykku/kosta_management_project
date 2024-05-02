@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="css/notifications.css" />
   </head>
   <body id="content-wrapper">
-    <div id="header">
+  	<jsp:include page="../common/header.jsp" />
       <div id="nav-wrapper">
         <div id="top-logo">
-          <img src="assets/kosta-logo.png" alt="" />
+          <img src="assets/kosta-logo.png" alt="kosta-edu-logo" />
         </div>
         <ul id="nav-ul">
           <li id="nav-notification" class="nav-li">
@@ -105,18 +105,19 @@
         <div id="notification-contents">
           <div class="writer">
             <span>작성자</span>
-            <span>: ${data.name} <span>
+            <span>: ${data.name} </span>
           </div>
           <div class="notificationPost-content">
             <span> ${data.description}</span>
           </div>
         </div>
         <div id="notificationPost-btn-wrapper">
-          <button id="enroll-btn" class="btn-setting">수정</button>
-          <button id="edit-btn" class="btn-setting">삭제</button>
+          <button id="notification-post-edit-btn" class="btn-setting" >수정</button>
+          <button id="notification-post-delete-btn" class="btn-setting">삭제</button>
         </div>
       </article>
     </section>
     <footer></footer>
+<script src="scripts/notifications/notificationBoard.js"></script>
   </body>
 </html>

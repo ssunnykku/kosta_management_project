@@ -32,7 +32,8 @@ public class NotificationVO {
     }
     
     public NotificationVO(int notificationId, 
-            String title, String description, 
+            String title, 
+            String description, 
             String notificationDate, 
             String managerId,
             String name) {

@@ -67,6 +67,7 @@ await notificationCheckboxAll.forEach((box) => {
 			method: "DELETE",
 		})
 	}
+	
 });
 
 $(".modal-background").css("dispoay", "none");
@@ -77,6 +78,8 @@ $("#notification-body").css("height","");
 $("#notification-body").css("overflow","");
 
 window.location.href = 'controller?cmd=notificationBoardUI';
+
+// 여기에서 삭제 확인 해주기 
 }
 
 let selected = [];
@@ -101,11 +104,16 @@ console.log("selected: "+ selected);
 	} 
 		$(".modal-background").removeAttr("style");
 		$(".select-alert-wrapper").removeAttr("style");
+		
+		$("#notification-body").css("position","fixed");
+		$("#notification-body").css("width","100%");
+		$("#notification-body").css("height","100%");
+		$("#notification-body").css("overflow"," hidden");
 
 }
 
-$("#delete-btn").click(deletePage);
-$("#cancel-btn").click(() => {
+$("#notification-delete-Modal-btn").click(deletePage);
+$("#notification-delete-Modal-cancel-btn").click(() => {
 	$(".modal-background").css("display","none");
 	$(".remove-wrapper").removeAttr("style");
 	$(".remove-wrapper").css("display","none");
@@ -117,6 +125,15 @@ $("#alert-confirm-btn").click(()=> {
 	$(".select-alert-wrapper ").css("display","none");
 })
 
+/** notificationPost */
+$("#notification-post-edit-btn").click(()=>{
+	console.log("이거");
+	window.location.href = "controller?cmd=setNotificationUI&notificationId=" +data.notificationId;
+})
+
+$("#notification-post-delete-btn").click(()=> {
+	console.log("저거");
+})
 
 document.addEventListener("DOMContentLoaded", pageLoad);
 notificationEnrollBtn.addEventListener('click', openEnrollPage);

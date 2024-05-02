@@ -340,3 +340,17 @@ footer {
 	background-color: rgba(201, 211, 219, 1);
 	margin-left: 10px;
 }
+
+/*******************notificationPost.jsp********************/
+#notification-post-edit-btn {
+	color: #ffffff;
+	background-color: rgb(64, 64, 64);
+	border-radius: 8px;
+}
+
+#notification-post-delete-btn {
+	font-weight: 600;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+	border-radius: 8px;
+}

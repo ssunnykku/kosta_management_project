@@ -23,8 +23,7 @@ public class NotificationBoardAction implements Action{
 			
 			String json = gson.toJson(list);
 			request.setAttribute("data", json);
-	
-			
+
 		return "jsp/notifications/notificationListAPI.jsp";
 	}
 
