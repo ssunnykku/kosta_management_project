@@ -1,5 +1,7 @@
 package servlet;
 
+import servlet.benefits.BenefitBuardUIAction;
+import servlet.benefits.BenefitResultBoardUIAction;
 import servlet.courses.CourseBoardUIAction;
 import servlet.login.LoginAction;
 import servlet.login.LoginUIAction;
@@ -12,11 +14,13 @@ import servlet.notifications.NotificationBoardUIAction;
 import servlet.notifications.NotificationPageUIAction;
 import servlet.notifications.SetNotificationAction;
 import servlet.notifications.SetNotificationUIAction;
+import servlet.scholarships.ScholarshipBoardUIAction;
+import servlet.scholarships.ScholarshipResultBoardUIAction;
 
 public class ActionFactory {
 	public static Action getAction(String cmd) { 
 		Action a = null;
-
+		System.out.println(cmd);
 		switch (cmd) {
 		/***************** login ****************/
 		case "loginUI":
@@ -56,11 +60,34 @@ public class ActionFactory {
 			break;
 
 			/***************** courses ****************/
-			
+
 		case "courseBoardUI":
 			a = new CourseBoardUIAction();
 			break;
+
+			/***************** scholarships****************/
+
+		case "scholarshipBoardUI":
+			a = new ScholarshipBoardUIAction();
+			break;
+
+		case "scholarshipResultBoardUI":
+			a = new ScholarshipResultBoardUIAction();
+			break;
+			
+			/**********************benefits****************/
+		case "benefitBoardUI":
+			a = new BenefitBuardUIAction();
+			break;
+
+		case "benefitResultBoardUI":
+			a = new BenefitResultBoardUIAction();
+			break;
 		}
+
 		return a;
 	}
+
+
+
 }

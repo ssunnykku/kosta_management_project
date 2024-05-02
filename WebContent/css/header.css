@@ -87,7 +87,6 @@
 
 #logout-btn {
 	width: 65px;
-	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 500;
 	font-size: 12px;
@@ -95,15 +94,12 @@
 	text-decoration-line: underline;
 	color: rgba(0, 0, 0, 0.72);
 	cursor: pointer;
-	padding-top: 5px;
 }
 
 #setting-btn {
 	background-image: url(../assets/Setting.svg);
 	background-repeat: no-repeat;
 	height: 23px;
-	border: 1px solid #ebebeb;
-	border: 1px solid var(- -color_border_in_divider);
 	background-color: #fff;
 	background-color: var(- -color_button1_bg);
 	color: #606060;
@@ -113,6 +109,7 @@
 	line-height: 36px;
 	text-decoration: none;
 	cursor: pointer;
+	margin-top: 5px;
 }
 
 #header {
@@ -129,9 +126,9 @@
 	height: 94px;
 }
 
-#top-logo {
+#top-logo  {
 	height: 94px;
-	width: 15%;
+	width: 200px;
 	display: flex;
 	flex-direction: row;
 	justify-content: start;
@@ -168,4 +165,14 @@
 	line-height: 144%;
 	text-align: center;
 	color: #000000;
+}
+
+/************** drop down *****************/
+
+.header-underline {
+  border-top: 1px solid #b8b8b8;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
 }

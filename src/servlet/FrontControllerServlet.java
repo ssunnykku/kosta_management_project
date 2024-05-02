@@ -27,7 +27,6 @@ public class FrontControllerServlet extends HttpServlet {
 
 			url = a.execute(request);
 			request.getRequestDispatcher("/" + url).forward(request, response);
-			
 	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
