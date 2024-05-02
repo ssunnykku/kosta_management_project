@@ -124,7 +124,7 @@ $("#alert-confirm-btn").click(()=> {
 })
 
 
-/** notificationPost  수정*/
+/** notificationPost  */
 $("#notification-post-edit-btn").click(()=>{
 	const notificationId = $(".notificationPost-no").children("span").eq(1).text();
 	window.location.href = "controller?cmd=setNotificationUI&notificationId="+notificationId;
@@ -135,6 +135,21 @@ $("#setNotification-concel-btn").click(()=>{
 //	window.location.href = "controller?cmd=notificationPageUI&notificationId="+notificationId;
 	window.location.href = "controller?cmd=notificationBoardUI";
 })
+
+/** 아래 삭제 구현 해야함 **/
+
+//$("notification-post-delete-btn").click(openDeleteModal);
+		
+//		()=>{
+//	console.log("이거");
+//	const notificationId = $(".notificationPost-no").children("span").eq(1).text();
+//	const url = "controller?cmd=deleteNotificationAction&notificationId=" + notificationId ;
+//	fetch(url, {
+//		method: "DELETE",
+//	})
+//	window.location.href = "controller?cmd=notificationBoardUI";
+//}
+//)
 
 /*** 체크박스 상단 전체 선택 ***/
 $('#title-checkbox').change(()=>{

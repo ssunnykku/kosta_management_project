@@ -2,17 +2,18 @@ package dao;
 
 import java.util.Collection;
 
-import vo.customVo.NotificationVO;
+import vo.NotificationVO;
+import vo.customVo.NotificationManagerVO;
 
 public interface NotificationDAO {
 	
-	boolean addNotification(NotificationVO notification);
+	boolean addNotification(NotificationVO  notification);
 	
-	Collection<NotificationVO> getNotificationsList();
+	Collection<NotificationManagerVO> getNotificationsList();
 	
 //	int getNotificationNumber();
 	
-	NotificationVO getNotification(int notificationId);
+	NotificationManagerVO getNotification(int notificationId);
 	
 	boolean setNotificationById(NotificationVO notificationVo);
 	

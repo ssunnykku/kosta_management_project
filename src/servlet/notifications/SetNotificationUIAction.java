@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 import dao.NotificationDAOImpl;
 
 import servlet.Action;
-import vo.customVo.NotificationVO;
+import vo.customVo.NotificationManagerVO;
 
 public class SetNotificationUIAction implements Action {
 
@@ -21,7 +21,7 @@ public class SetNotificationUIAction implements Action {
 		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
 		//notificationId가 null일 경우 
 	
-		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
+		NotificationManagerVO notification = new NotificationDAOImpl().getNotification(notificationId);
 		HttpSession session = request.getSession(false);
 		session.setAttribute("data", notification);
 	

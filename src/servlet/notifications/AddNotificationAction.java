@@ -12,7 +12,8 @@ import dao.ManagerDAOImpl;
 import dao.NotificationDAO;
 import dao.NotificationDAOImpl;
 import servlet.Action;
-import vo.customVo.NotificationVO;
+import vo.NotificationVO;
+import vo.customVo.NotificationManagerVO;
 
 public class AddNotificationAction  implements Action {
 

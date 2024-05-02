@@ -6,10 +6,9 @@ import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import servlet.Action;
-import vo.customVo.NotificationVO;
+import vo.NotificationVO;
 
 public class SetNotificationAction implements Action {
 

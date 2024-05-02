@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 
 import dao.NotificationDAOImpl;
 import servlet.Action;
-import vo.customVo.NotificationVO;
+import vo.customVo.NotificationManagerVO;
 
 public class NotificationPageUIAction  implements Action{
 
@@ -20,10 +20,11 @@ public class NotificationPageUIAction  implements Action{
 
 		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
 		
-		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
-		String description = notification.getDescription();
+		NotificationManagerVO notification = new NotificationDAOImpl().getNotification(notificationId);
+//		String description = notification.getDescription();
 
 		request.setAttribute("data", notification);
+		System.out.println(notification);
 
 		return "jsp/notifications/notificationPost.jsp";
 	}

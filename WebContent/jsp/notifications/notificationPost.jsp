@@ -32,7 +32,7 @@
         <div id="notification-contents">
           <div class="writer">
             <span>작성자</span>
-            <span>: ${data.name} </span>
+            <span>: ${data.name}</span>
           </div>
           <div class="notificationPost-content">
             <pre> ${data.description}</pre>

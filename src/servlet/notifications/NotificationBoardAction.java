@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.google.gson.Gson;
 import dao.NotificationDAOImpl;
 import servlet.Action;
-import vo.customVo.NotificationVO;
+import vo.customVo.NotificationManagerVO;
 
 public class NotificationBoardAction implements Action{
 
@@ -19,7 +19,7 @@ public class NotificationBoardAction implements Action{
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 			Gson gson = new Gson();
-			ArrayList<NotificationVO> list =  (ArrayList<NotificationVO>) new NotificationDAOImpl().getNotificationsList();
+			ArrayList<NotificationManagerVO> list =  (ArrayList<NotificationManagerVO>) new NotificationDAOImpl().getNotificationsList();
 
 			String json = gson.toJson(list);
 			request.setAttribute("data", json);

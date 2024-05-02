@@ -1,6 +1,6 @@
 package vo.customVo;
 
-public class NotificationVO {
+public class NotificationManagerVO {
     
     private int notificationId;
     private String title;
@@ -9,19 +9,22 @@ public class NotificationVO {
     private String managerId;
     private String name;
     
-    public NotificationVO(int notificationId,
+    public NotificationManagerVO(
+    		int notificationId,
             String title,
             String description, 
             String notificationDate, 
-            String managerId) {
+            String name) {
         setNotificationId(notificationId);
         setTitle(title);
         setDescription(description);
         setNotificationDate(notificationDate);
-        setManagerId(managerId);
+        setManagerId(name);
     }
     
-    public NotificationVO(int notificationId,
+
+    public NotificationManagerVO(
+    		int notificationId,
             String title,
             String notificationDate, 
             String name) {
@@ -31,7 +34,8 @@ public class NotificationVO {
         setName(name);
     }
     
-    public NotificationVO(int notificationId, 
+    public NotificationManagerVO(
+    		int notificationId, 
             String title, 
             String description, 
             String notificationDate, 
@@ -45,14 +49,14 @@ public class NotificationVO {
         setName(name);
     }
 
-    public NotificationVO(int notificationId, String title, String description) {
+    public NotificationManagerVO(int notificationId, String title, String description) {
         setNotificationId(notificationId);
         setTitle(title);
         setNotificationDate(notificationDate);
         setDescription(description);
     }
 
-    public NotificationVO(String title, String description, String managerId) {
+    public NotificationManagerVO(String title, String description, String managerId) {
         setTitle(title);
         setDescription(description);
         setManagerId(managerId);
@@ -126,7 +130,7 @@ public class NotificationVO {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        NotificationVO other = (NotificationVO) obj;
+        NotificationManagerVO other = (NotificationManagerVO) obj;
         if (description == null) {
             if (other.description != null)
                 return false;
