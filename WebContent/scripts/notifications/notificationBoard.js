@@ -13,9 +13,7 @@ const notificationBoardNo = document.querySelector(".notificationBoard-no");
 /**  Modal*/
 const modal = document.querySelector(".modal-background ");
 
-
 async function pageLoad() {
-
 await fetch("controller?cmd=notificationBoardAction")
 .then((response) => response.json())
 .then((data) => {
@@ -90,8 +88,9 @@ $("#notification-delete-btn").click(function() {
     });
 });
 
- function openModal() {
-console.log("selected: "+ selected);
+ function openDeleteModal() {
+//console.log("selected: "+ selected);
+
   if (selected.length != 0){
 		$(".modal-background").removeAttr("style");
 		$("#notification-body").css("position","fixed");
@@ -124,6 +123,7 @@ $("#alert-confirm-btn").click(()=> {
 	$(".select-alert-wrapper ").css("display","none");
 })
 
+
 /** notificationPost */
 $("#notification-post-edit-btn").click(()=>{
 	console.log("이거");
@@ -134,6 +134,15 @@ $("#notification-post-delete-btn").click(()=> {
 	console.log("저거");
 })
 
+/*** 체크박스 상단 전체 선택 ***/
+$('#title-checkbox').change(()=>{
+	if($('#title-checkbox').is(':checked')){
+		$(".notificationBoard-check").prop("checked", true); 
+		return;
+	}
+	$(".notificationBoard-check").prop("checked", false); 
+})
+
 document.addEventListener("DOMContentLoaded", pageLoad);
 notificationEnrollBtn.addEventListener('click', openEnrollPage);
-notificationDeleteBtn.addEventListener('click', openModal);
+notificationDeleteBtn.addEventListener('click', openDeleteModal);

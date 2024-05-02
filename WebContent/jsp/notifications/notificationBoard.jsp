@@ -29,7 +29,7 @@
 			<div id="notification-table">
 				<div id="notification-table-row" class="table-first-row">
 					<div class="notificationBoard-checkbox">
-						<input type="checkbox" name="" />
+						<input type="checkbox" name=""   id="title-checkbox" />
 					</div>
 					<div class="notificationBoard-no">
 						<span>NO</span>
