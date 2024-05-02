@@ -17,40 +17,7 @@
 </head>
 <body id="content-wrapper">
 	<div id="header">
-		<div id="nav-wrapper">
-			<div id="top-logo">
-				<img src="${pageContext.request.contextPath}/assets/kosta-logo.png"
-					alt=""
-				/>
-			</div>
-			<ul id="nav-ul">
-				<li id="nav-notification" class="nav-li"><a
-					href="controller?cmd=notificationBoardUI"
-				>공지사항</a></li>
-				<li id="nav-course" class="nav-li"><a
-					href="controller?cmd=courseBoardUI"
-				>과정 관리</a></li>
-				<li id="nav-certification" class="nav-li"><a
-					href="#certifications"
-				>수료증 관리</a></li>
-				<li id="nav-scholarship" class="nav-li"><a href="#scholarships">장학금
-						관리</a></li>
-				<li id="nav-benefit" class="nav-li"><a href="#benefits">훈련수당
-						관리</a></li>
-				<li id="nav-student" class="nav-li"><a href="#students">수강생
-						관리</a></li>
-			</ul>
-			<div id="header-btns">
-				<div class="btn-wrapper">
-					<form action="controller?cmd=logoutAction" method="post">
-						<button id="logout-btn" type="submit">로그아웃</button>
-					</form>
-				</div>
-				<div class="btn-wrapper" id="setting-btn-wrapper">
-					<button id="setting-btn" type="button"></button>
-				</div>
-			</div>
-		</div>
+		<%@ include file="../header.jsp"%>
 	</div>
 	<section id="title-wrapper">
 	<h2 id="title">과정 관리</h2>
@@ -64,11 +31,11 @@
 	</div>
 	<div class="search-form-wrapper">
 		<!-- form???? -->
-		<select name="courseId-filter" class="data-filter">
+		<select name="courseId-filter" class="data-filter course-id">
 			<option value="none">기수</option>
 			<option value="227">227</option>
 			<option value="191">191</option>
-		</select> <select name="location-filter" class="data-filter">
+		</select> <select name="location-filter" class="data-filter location">
 			<option value="none">강의장</option>
 			<option value="227">가산</option>
 			<option value="191">성남</option>
@@ -115,7 +82,9 @@
 		<c:forEach items="${courseVOs}" var="courseVOs">
 			<div class="courseBoard-row">
 				<div id="courseBoard-no">
-					<input type="checkbox" name="" />
+					<input type="checkbox" class="checkbox" name="checkbox "
+						id="${courseVOs.courseId}"
+					/>
 				</div>
 				<div id="courseBoard-classification">
 					<span>${courseVOs.courseType}</span>
@@ -147,7 +116,8 @@
 				</div>
 				<div id="courseBoard-edit">
 					<button id="edit-btn" class="btn-setting"
-					data-id="${courseVOs.courseId}">수정</button>
+						data-id="${courseVOs.courseId}"
+					>수정</button>
 				</div>
 			</div>
 		</c:forEach>
@@ -158,6 +128,8 @@
 	</div>
 	</article> </section>
 	<footer></footer>
-		<script src="${pageContext.request.contextPath}/scripts/courses/courseBoard.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/scripts/courses/courseBoard.js"
+	></script>
 </body>
 </html>

@@ -17,6 +17,9 @@ public class ActionFactory {
 		case "logoutAction":
 			a = new LogoutAction();
 			break;
+		case "idCheckAction":
+			a = new IdCheckAction();
+			break;	
 
 		// notifications
 		case "notificationBoardUI":
@@ -49,15 +52,30 @@ public class ActionFactory {
 			a = new CoursePostUIAction();
 			break;
 		case "addCourseUI":
-			a = new addCourseUIAction();
+			a = new AddCourseUIAction();
 			break;
 		case "addCourseAction":
-			a = new addCourseAction();
+			a = new AddCourseAction();
 			break;	
 		case "setCourseUI":
-			a = new setCourseUIAction();
+			a = new SetCourseUIAction();
 			break;		
+		case "removeCourseAction":
+			a = new RemoveCourseAction();
+			break;
 			
+			
+			
+		// students
+		case "studentBoardUI":
+			a = new StudentBoardUIAction();
+			break;	
+		case "addStudentUI":
+			a = new AddStudenUIAction();
+			break;
+		case "addStudentAction":
+			a = new AddStudentAction();
+			break;
 		}
 		return a;
 	}

@@ -54,13 +54,33 @@ public class ManagerDAOImpl implements ManagerDAO {
 
 			if (originalPw.equals(password))
 				result = true;
-						
+
 			rs.close();
 			pstmt.close();
 			conn.close();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public boolean managerExists(String managerId) {
+
+		String sql = "select manager_id from managers where manager_id = ?";
+		boolean result = false;
+		try (Connection conn = dataSource.getConnection()) {
+			try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+				pstmt.setString(1, managerId);
+
+				int num = pstmt.executeUpdate();
+				if (num > 0)
+					result = true;
+			}
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return result;

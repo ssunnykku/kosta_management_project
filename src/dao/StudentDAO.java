@@ -9,23 +9,22 @@ import vo.StudentVO;
 
 public interface StudentDAO {
 
-	Collection<StudentVO> getStudentInfoList() throws ClassNotFoundException, SQLException;
-	
-	Collection<StudentVO> getStudentInfoListByCourseId(int courseId) throws ClassNotFoundException, SQLException;
-	
-	Collection<StudentVO> getStudentInfoListByName(String name) throws ClassNotFoundException, SQLException;
-	
-	boolean addStudent(StudentVO studentVO) throws ClassNotFoundException, SQLException;
+	Collection<StudentVO> getStudentInfoList();
+
+	Collection<StudentVO> getStudentInfoListByCourseId(int courseId);
+
+	Collection<StudentVO> getStudentInfoListByName(String name);
+
+	boolean addStudent(StudentVO studentVO);
 
 	boolean setStudentInfoByHrdNetId(StudentVO studentVO);
 
-//	Collection<StudentCompletionVO> getStudentCourseInfoList();
+	// Collection<StudentCompletionVO> getStudentCourseInfoList();
 
 	Collection<StudentCourseVO> getStudentCourseInfoListByCourseId(int courseId);
 
 	Collection<StudentCourseVO> getStudentCourseInfoListByName(int name);
 
 	boolean addStudentCourseInfoByHrdNetId(StudentCourseVO studentCourseVO);
-	
-	
+
 }

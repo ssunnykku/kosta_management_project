@@ -4,23 +4,22 @@ import javax.servlet.http.HttpServletRequest;
 
 import dao.CourseDAO;
 import dao.CourseDAOImpl;
-import vo.CourseVO;
 
-public class setCourseUIAction implements Action {
+public class RemoveCourseAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {
 
 		int courseId = Integer.parseInt(request.getParameter("courseId"));
-		
+
 		CourseDAO courseDAO = new CourseDAOImpl();
-		
-		CourseVO courseVO = null;
-		courseVO = courseDAO.getCourseInfoByCourseId(courseId);
-		
-		request.setAttribute("courseVO", courseVO);
-		
-		return "jsp/courses/setCourseModal.jsp";
+
+		boolean result = courseDAO.deleteCoursebyCourseId(courseId);
+
+		System.out.println("result :   "+result);
+		request.setAttribute("result", result);
+
+		return "jsp/courses/removeResult.jsp";
 	}
 
 }

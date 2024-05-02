@@ -2,7 +2,7 @@ package com.kosta.selvlet;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class addCourseUIAction implements Action {
+public class AddCourseUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {

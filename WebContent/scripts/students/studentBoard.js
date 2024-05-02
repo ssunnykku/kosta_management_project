@@ -1,4 +1,4 @@
-// filter
+/*// filter
 const courseIdSelect = document.querySelector(".courseId-filter");
 
 // button
@@ -22,4 +22,13 @@ function settlement() {
 
 settlementListBtn.addEventListener("click", getSettlementList);
 settlementBtn.addEventListener("click", settlement);
-searchBtn.addEventListener("click", filterByCourseId);
+searchBtn.addEventListener("click", filterByCourseId);*/
+
+
+// 글 동록 버튼
+//const EnrollBtn = document.querySelector("#notification-enroll-btn");
+const enrollBtn = document.querySelector("#enroll-btn");
+
+enrollBtn.addEventListener("click", function () {
+  location.href = "controller?cmd=addStudentUI";
+});

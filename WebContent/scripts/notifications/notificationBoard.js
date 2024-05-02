@@ -53,7 +53,7 @@ for (var i = 0; i<title.length; i++) {
 const enrollBtn = document.querySelector("#notification-enroll-btn");
 
 enrollBtn.addEventListener("click", function () {
-  window.location.href = "controller?cmd=addNotificationUI";
+  location.href = "controller?cmd=addNotificationUI";
 });
 
 

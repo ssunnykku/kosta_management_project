@@ -8,7 +8,7 @@ import dao.CourseDAO;
 import dao.CourseDAOImpl;
 import vo.CourseVO;
 
-public class addCourseAction implements Action {
+public class AddCourseAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {

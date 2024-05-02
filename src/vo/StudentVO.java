@@ -1,9 +1,11 @@
 package vo;
 
+import java.time.LocalDate;
+
 public class StudentVO {
 	private String hrdNetId;
 	private String name;
-	private String birth;
+	private LocalDate birth;
 	private String province;
 	private String bank;
 	private String account;
@@ -17,9 +19,9 @@ public class StudentVO {
 	private String academyLocation;
 	
 	
-	public StudentVO(String hrdNetId, int courseId, String name, String birth, char gender, String province, String bank, String account,
-			String phoneNumber, String email, int completionStatus, double completionRate, 
-			String scholarshipPayDate,  String academyLocation) {
+	public StudentVO(String hrdNetId, String name, LocalDate birth, String province, String bank, String account,
+			String phoneNumber, String email, int completionStatus, double completionRate, char gender,
+			String scholarshipPayDate, int courseId, String academyLocation) {
 		setHrdNetId(hrdNetId);
 		setName(name);
 		setBirth(birth);
@@ -36,23 +38,12 @@ public class StudentVO {
 		setAcademyLocation(academyLocation);
 	}
 	
+	// 		String sql = "select hrd_net_id, name, birth, province, bank, "
+	//+ "account, phone_number, email, completion_status, course_id "
+	//+ "from students";
 	
-	public StudentVO(String hrdNetId, int courseId, String name, String birth, String province, String bank, String account,
-			String phoneNumber, String email, int completionStatus) {
-		setHrdNetId(hrdNetId);
-		setCourseId(courseId);
-		setName(name);
-		setBirth(birth);
-		setProvince(province);
-		setBank(bank);
-		setAccount(account);
-		setPhoneNumber(phoneNumber);
-		setEmail(email);
-		setCompletionStatus(completionStatus);
-	}
-	
-	public StudentVO(String hrdNetId, String name, String birth, String province, String bank, String account,
-			String phoneNumber, String email, int completionStatus, char gender, double completionRate, int courseId, String academyLocation) {
+	public StudentVO(String hrdNetId, String name, LocalDate birth, String province, String bank, String account,
+			String phoneNumber, String email, int completionStatus, int courseId) {
 		setHrdNetId(hrdNetId);
 		setName(name);
 		setBirth(birth);
@@ -62,10 +53,7 @@ public class StudentVO {
 		setPhoneNumber(phoneNumber);
 		setEmail(email);
 		setCompletionStatus(completionStatus);
-		setGender(gender);
-		setCompletionRate(completionRate);
 		setCourseId(courseId);
-		setAcademyLocation(academyLocation);
 	}
 	
 	public String getHrdNetId() {
@@ -80,10 +68,10 @@ public class StudentVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getBirth() {
+	public LocalDate getBirth() {
 		return birth;
 	}
-	public void setBirth(String birth) {
+	public void setBirth(LocalDate birth) {
 		this.birth = birth;
 	}
 	public String getProvince() {
