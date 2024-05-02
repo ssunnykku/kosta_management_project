@@ -124,15 +124,15 @@ $("#alert-confirm-btn").click(()=> {
 })
 
 
-/** notificationPost */
+/** notificationPost  수정*/
 $("#notification-post-edit-btn").click(()=>{
-	console.log("이거");
-	window.location.href = "controller?cmd=setNotificationUI&notificationId=" +data.notificationId;
+	const notificationId = $(".notificationPost-no").children("span").eq(1).text();
+	window.location.href = "controller?cmd=setNotificationUI&notificationId="+notificationId;
 })
 
-$("#notification-post-delete-btn").click(()=> {
-	console.log("저거");
-})
+//$("#setNotification-enroll-btn").click(()=> {
+//	console.log("저거");
+//})
 
 /*** 체크박스 상단 전체 선택 ***/
 $('#title-checkbox').change(()=>{

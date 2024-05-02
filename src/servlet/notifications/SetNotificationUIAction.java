@@ -20,11 +20,13 @@ public class SetNotificationUIAction implements Action {
 		
 		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
 		//notificationId가 null일 경우 
-		System.out.println("1");
-		System.out.println("출력"+notificationId);
+	
 		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
-		request.setAttribute("data", notification);
+//		request.setAttribute("data", notification);
+		HttpSession session = request.getSession(false);
 
+		session.setAttribute("data", notification);
+	
 		return "jsp/notifications/setNotification.jsp";
 	}
 

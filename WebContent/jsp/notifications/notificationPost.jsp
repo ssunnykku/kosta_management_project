@@ -20,7 +20,7 @@
       <article class="notificationPost-contents">
         <div id="notification-row" class="underline">
           <div class="notificationPost-no">
-            <span>NO.${data.notificationId}</span>
+            <span>NO.</span><span>${data.notificationId}</span>
           </div>
           <div class="notificationPost-title">
             <span>${data.title}</span>

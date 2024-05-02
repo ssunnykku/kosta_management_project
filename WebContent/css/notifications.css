@@ -3,11 +3,10 @@
 #notification-body {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;	
+	justify-content: space-evenly;
 	width: 100%;
 	height: 100%;
-
-	}
+}
 
 #notification-section {
 	display: flex;
@@ -290,6 +289,8 @@ footer {
 	background: #ffffff;
 	border: 1px solid #cfcfcf;
 	border-radius: 10px;
+	font-size: 15px;
+	padding-left: 20px;
 }
 
 .setNotification-input-wrapper {
@@ -297,7 +298,9 @@ footer {
 }
 
 .setNotification-input-wrapper>textarea {
-	border: none;
+	padding: 20px;
+	font-size: 15px; 
+	border : none;
 	outline: none;
 	resize: none;
 	width: 100%;
@@ -305,7 +308,8 @@ footer {
 	background: #ffffff;
 	border: 1px solid #cfcfcf;
 	border-radius: 10px;
-	}
+
+}
 
 /*  setNotification button */
 #setNotification-btn-wrapper {
@@ -352,6 +356,19 @@ footer {
 }
 
 #notification-post-delete-btn {
+	font-weight: 600;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+	border-radius: 8px;
+}
+
+#setNotification-enroll-btn {
+	color: #ffffff;
+	background-color: rgb(64, 64, 64);
+	border-radius: 8px;
+}
+
+#setNotification-concel-btn {
 	font-weight: 600;
 	color: rgb(64, 64, 64);
 	background-color: rgb(255, 255, 255);
