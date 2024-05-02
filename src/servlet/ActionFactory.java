@@ -20,7 +20,7 @@ import servlet.scholarships.ScholarshipResultBoardUIAction;
 public class ActionFactory {
 	public static Action getAction(String cmd) { 
 		Action a = null;
-		System.out.println(cmd);
+
 		switch (cmd) {
 		/***************** login ****************/
 		case "loginUI":

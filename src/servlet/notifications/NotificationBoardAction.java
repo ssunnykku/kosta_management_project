@@ -20,10 +20,9 @@ public class NotificationBoardAction implements Action{
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 			Gson gson = new Gson();
 			ArrayList<NotificationVO> list =  (ArrayList<NotificationVO>) new NotificationDAOImpl().getNotificationsList();
-			
+
 			String json = gson.toJson(list);
 			request.setAttribute("data", json);
-
 		return "jsp/notifications/notificationListAPI.jsp";
 	}
 

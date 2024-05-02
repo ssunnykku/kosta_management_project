@@ -35,7 +35,7 @@
             <span>: ${data.name} </span>
           </div>
           <div class="notificationPost-content">
-            <span> ${data.description}</span>
+            <pre> ${data.description}</pre>
           </div>
         </div>
         <div id="notificationPost-btn-wrapper">
@@ -48,3 +48,4 @@
 <script src="scripts/notifications/notificationBoard.js"></script>
   </body>
 </html>
+

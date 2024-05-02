@@ -57,7 +57,6 @@ window.location.href = 'controller?cmd=addNotificationUI';
 }
 
 
-
 async function deletePage() {
 
 await notificationCheckboxAll.forEach((box) => {

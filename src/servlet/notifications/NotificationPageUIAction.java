@@ -19,8 +19,17 @@ public class NotificationPageUIAction  implements Action{
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 
 		int notificationId = Integer.parseInt(request.getParameter("notificationId"));
+		
 		NotificationVO notification = new NotificationDAOImpl().getNotification(notificationId);
+		String description = notification.getDescription();
 
+//		for (int i = 0; i < description.length(); i++) {
+//			if(description.charAt(i) == '\n') {
+//				description.replace("\n", "<br>");
+//			};
+//		}
+		
+		System.out.println(description);
 		request.setAttribute("data", notification);
 
 		return "jsp/notifications/notificationPost.jsp";

@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<div class="setNotification-input-wrapper">
-					<input name="description" />
+					<textarea name="description"  rows="20" cols="50"></textarea>
 				</div>
 				<div id="setNotification-btn-wrapper">
 					<button  type="submit"  id="enroll-btn" class="setNotification-btn-setting">
