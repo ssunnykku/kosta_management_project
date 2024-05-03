@@ -2,6 +2,8 @@ package servlet;
 
 import servlet.benefits.BenefitBuardUIAction;
 import servlet.benefits.BenefitResultBoardUIAction;
+import servlet.certifications.CertificationBoardAction;
+import servlet.certifications.CertificationBoardUIAction;
 import servlet.courses.CourseBoardUIAction;
 import servlet.login.LoginAction;
 import servlet.login.LoginUIAction;
@@ -122,7 +124,16 @@ public class ActionFactory {
 		case "studentBoardUI":
 			a = new StudentBoardUIAction();
 			break;
-		
+			
+			/**********************certifications*********************/
+		case "certificationBoardUI":
+			a = new CertificationBoardUIAction();
+			break;
+			
+		case "certificationBoardAction":
+			a = new CertificationBoardAction();
+			break;
+			
 		}
 		
 		return a;

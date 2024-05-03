@@ -15,7 +15,7 @@
 			<li id="nav-course" class="nav-li course-menu">
 				<a href="controller?cmd=courseBoardUI">과정 관리</a></li>
 			<li id="nav-certification" class="nav-li certification-menu">
-				<a href="#certifications">수료증 관리</a></li>
+				<a href="controller?cmd=certificationBoardUI">수료증 관리</a></li>
 			<li id="nav-scholarship" class="nav-li scholarship-menu">
 				<a href="controller?cmd=scholarshipBoardUI">장학금 관리</a></li>
 			<li id="nav-benefit-manage" class="nav-li benefit-menu">

@@ -16,7 +16,7 @@
 			</li>
 			<li class="nav-li-dropdown">
 				<div id ="certification-underline" class="header-underline"></div> 
-				<a class="dropdown-certification" href="#certifications">수료 대상 관리</a>
+				<a class="dropdown-certification" href="controller?cmd=certificationBoardUI">수료 대상 관리</a>
 			</li>
 			<li class="nav-li-dropdown">
 				<div id ="notification-underline" class="header-underline"></div> 

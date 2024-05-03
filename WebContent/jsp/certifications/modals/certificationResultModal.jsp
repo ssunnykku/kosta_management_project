@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수료증</title>
+    <link rel="stylesheet" href="css/certifications.css" />
+  </head>
+  <body>
+    <div id="certificationResult-wrapper">
+      <div>
+        <img src="assets/left-arrow(gray).svg" id="arrow" />
+      </div>
+
+      <div id="certificationResult-form">
+        <h1 class="certificationResult-title">수료증</h1>
+        <div class="student-info">
+          <div>
+            <h4>과정명</h4>
+            <h4 class="text-center">Java 기반 클라우드 개발자 양성 과정</h4>
+          </div>
+          <div>
+            <h4>기수</h4>
+            <h4 class="text-center">191</h4>
+          </div>
+          <div>
+            <h4>기간</h4>
+            <h4 class="text-center">2023.07.25 ~ 2023.12.22</h4>
+          </div>
+          <div>
+            <h4>이름</h4>
+            <h4 class="text-center">김지현</h4>
+          </div>
+        </div>
+        <div class="certificationResult-content">
+          <h4 class="content">
+            위 사람은 본 협회가 실시한 Java 기반 클라우드 개발자 양성 과정을
+            성실히 이수하였기에 본 수료증을 수여합니다.
+          </h4>
+          <h4 class="date">2024년 04월 04일</h4>
+        </div>
+        <button id="edit-btn" class="certificationResult-btn-setting">
+          닫기
+        </button>
+      </div>
+
+      <div>
+        <img src="../../assets/right-arrow(gray).svg" id="arrow" />
+      </div>
+    </div>
+  </body>
+</html>
