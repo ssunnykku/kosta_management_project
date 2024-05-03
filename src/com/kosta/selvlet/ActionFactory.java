@@ -59,12 +59,13 @@ public class ActionFactory {
 			break;	
 		case "setCourseUI":
 			a = new SetCourseUIAction();
-			break;		
+			break;
+		case "setCourseAction":	//
+			a = new SetCourseAction();
+			break;	
 		case "removeCourseAction":
 			a = new RemoveCourseAction();
 			break;
-			
-			
 			
 		// students
 		case "studentBoardUI":

@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -95,7 +97,10 @@
 					<span>${studentVO.name}</span>
 				</div>
 				<div class="student-birth">
-					<span>${studentVO.birth}</span>
+					<span> <fmt:parseDate var="birth" value="${studentVO.birth}"
+							pattern="yyyy-MM-dd"
+						/> <fmt:formatDate value="${birth}" pattern="yyMMdd" />
+					</span>
 				</div>
 				<div class="student-location">
 					<span>${studentVO.province}</span>

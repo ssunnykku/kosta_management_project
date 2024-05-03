@@ -1,21 +1,18 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import jdbc.JdbcConnectionManager;
 import vo.customVo.StudentCourseVO;
 import vo.StudentVO;
 
@@ -128,7 +125,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 				pstmt.setString(1, studentVO.getHrdNetId());
 				pstmt.setString(2, studentVO.getName());
-				// pstmt.setDate(3, studentVO.getBirth());
+				pstmt.setDate(3, Date.valueOf(studentVO.getBirth()));
 				pstmt.setString(4, studentVO.getProvince());
 				pstmt.setString(5, studentVO.getBank());
 				pstmt.setString(6, studentVO.getAccount());

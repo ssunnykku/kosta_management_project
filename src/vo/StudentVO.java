@@ -17,8 +17,7 @@ public class StudentVO {
 	private String scholarshipPayDate;;
 	private int courseId;
 	private String academyLocation;
-	
-	
+
 	public StudentVO(String hrdNetId, String name, LocalDate birth, String province, String bank, String account,
 			String phoneNumber, String email, int completionStatus, double completionRate, char gender,
 			String scholarshipPayDate, int courseId, String academyLocation) {
@@ -37,11 +36,11 @@ public class StudentVO {
 		setCourseId(courseId);
 		setAcademyLocation(academyLocation);
 	}
-	
-	// 		String sql = "select hrd_net_id, name, birth, province, bank, "
-	//+ "account, phone_number, email, completion_status, course_id "
-	//+ "from students";
-	
+
+	// String sql = "select hrd_net_id, name, birth, province, bank, "
+	// + "account, phone_number, email, completion_status, course_id "
+	// + "from students";
+
 	public StudentVO(String hrdNetId, String name, LocalDate birth, String province, String bank, String account,
 			String phoneNumber, String email, int completionStatus, int courseId) {
 		setHrdNetId(hrdNetId);
@@ -55,92 +54,156 @@ public class StudentVO {
 		setCompletionStatus(completionStatus);
 		setCourseId(courseId);
 	}
-	
+
+	// 은행, 계좌번호 있는 버전
+	public StudentVO(String hrdNetId, String name, LocalDate birth, String province, String bank, String account,
+			String phoneNumber, String email, int completionStatus, char gender, int courseId, String academyLocation) {
+		setHrdNetId(hrdNetId);
+		setName(name);
+		setBirth(birth);
+		setProvince(province);
+		setBank(bank);
+		setAccount(account);
+		setPhoneNumber(phoneNumber);
+		setEmail(email);
+		setCompletionStatus(completionStatus);
+		setCompletionRate(completionRate);
+		setGender(gender);
+		setScholarshipPayDate(scholarshipPayDate);
+		setCourseId(courseId);
+		setAcademyLocation(academyLocation);
+	}
+
+	// 은행, 계좌번호 없는 버전
+	public StudentVO(String hrdNetId, String name, LocalDate birth, String province, String phoneNumber, String email,
+			int completionStatus, char gender, int courseId, String academyLocation) {
+		setHrdNetId(hrdNetId);
+		setName(name);
+		setBirth(birth);
+		setProvince(province);
+		setBank(bank);
+		setAccount(account);
+		setPhoneNumber(phoneNumber);
+		setEmail(email);
+		setCompletionStatus(completionStatus);
+		setCompletionRate(completionRate);
+		setGender(gender);
+		setScholarshipPayDate(scholarshipPayDate);
+		setCourseId(courseId);
+		setAcademyLocation(academyLocation);
+	}
+
 	public String getHrdNetId() {
 		return hrdNetId;
 	}
+
 	public void setHrdNetId(String hrdNetId) {
 		this.hrdNetId = hrdNetId;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public LocalDate getBirth() {
 		return birth;
 	}
+
 	public void setBirth(LocalDate birth) {
 		this.birth = birth;
 	}
+
 	public String getProvince() {
 		return province;
 	}
+
 	public void setProvince(String province) {
 		this.province = province;
 	}
+
 	public String getBank() {
 		return bank;
 	}
+
 	public void setBank(String bank) {
 		this.bank = bank;
 	}
+
 	public String getAccount() {
 		return account;
 	}
+
 	public void setAccount(String account) {
 		this.account = account;
 	}
+
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
+
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public int getCompletionStatus() {
 		return completionStatus;
 	}
+
 	public void setCompletionStatus(int completionStatus) {
 		this.completionStatus = completionStatus;
 	}
+
 	public double getCompletionRate() {
 		return completionRate;
 	}
+
 	public void setCompletionRate(double completionRate) {
 		this.completionRate = completionRate;
 	}
+
 	public char getGender() {
 		return gender;
 	}
+
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
+
 	public String getScholarshipPayDate() {
 		return scholarshipPayDate;
 	}
+
 	public void setScholarshipPayDate(String scholarshipPayDate) {
 		this.scholarshipPayDate = scholarshipPayDate;
 	}
+
 	public int getCourseId() {
 		return courseId;
 	}
+
 	public void setCourseId(int courseId) {
 		this.courseId = courseId;
 	}
+
 	public String getAcademyLocation() {
 		return academyLocation;
 	}
+
 	public void setAcademyLocation(String academyLocation) {
 		this.academyLocation = academyLocation;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -164,7 +227,6 @@ public class StudentVO {
 		result = prime * result + ((scholarshipPayDate == null) ? 0 : scholarshipPayDate.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -236,7 +298,6 @@ public class StudentVO {
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
 		return "studentsVO [hrdNetId=" + hrdNetId + ", name=" + name + ", birth=" + birth + ", province=" + province
@@ -245,6 +306,5 @@ public class StudentVO {
 				+ ", scholarshipPayDate=" + scholarshipPayDate + ", courseId=" + courseId + ", academyLocation="
 				+ academyLocation + "]";
 	}
-	
-	
+
 }

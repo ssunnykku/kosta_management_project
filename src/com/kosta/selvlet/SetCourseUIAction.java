@@ -10,6 +10,8 @@ public class SetCourseUIAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request) {
+		
+		System.out.println(request.getParameter("courseId"));
 
 		int courseId = Integer.parseInt(request.getParameter("courseId"));
 		

@@ -37,19 +37,19 @@
 				<div class="student-items">
 					<div class="student-items-item">
 						<h4>생년월일 *</h4>
-						<input type="text" id="birth" name="birth"/>
+						<input type="date" id="birth" name="birth"/>
 					</div>
 					<div class="student-items-item">
 						<h4>성별 *</h4>
 						<div class="gender">
 							<div>
-								<input type="radio" id="select" name="gender" /> <label
+								<input type="radio" id="select" name="gender" value="1"/> <label
 									for="select"
 								>남성</label>
 							</div>
 							<div>
-								<input type="radio" id="select2" name="gender" /> <label
-									for="select2"
+								<input type="radio" id="select2" name="gender" value="2"/> <label
+									for="select2" 
 								>여성</label>
 							</div>
 						</div>
@@ -59,7 +59,7 @@
 					<div class="student-items-item">
 						<h4>기수 *</h4>
 						<form action="">
-							<select name="course_number" id="course_number">
+							<select name="course_id" id="course_number">
 								<option>기수를 선택하세요.</option>
 								<option value="275">275기</option>
 								<option value="276">276기</option>
