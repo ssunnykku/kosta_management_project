@@ -68,7 +68,7 @@ public class NotificationDAOImpl implements NotificationDAO {
 	public Collection<NotificationManagerVO> getNotificationsList() {
 
 		
-		String sql = "select n.notification_id, n.title, n.notification_date, m.name "
+		String sql = "select n.notification_id, n.title, to_char(n.notification_date, 'yyyy-mm-dd') as notification_date, m.name "
 				+ "from managers m, notifications n where m.manager_id = n.manager_id "
 				+ "order by notification_id desc, notification_date desc";
 		
