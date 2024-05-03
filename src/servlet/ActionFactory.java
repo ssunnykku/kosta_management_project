@@ -10,12 +10,21 @@ import servlet.notifications.AddNotificationAction;
 import servlet.notifications.AddNotificationUIAction;
 import servlet.notifications.DeleteNotificationAction;
 import servlet.notifications.NotificationBoardAction;
+import servlet.notifications.NotificationBoardPageAction;
 import servlet.notifications.NotificationBoardUIAction;
 import servlet.notifications.NotificationPageUIAction;
 import servlet.notifications.SetNotificationAction;
 import servlet.notifications.SetNotificationUIAction;
 import servlet.scholarships.ScholarshipBoardUIAction;
 import servlet.scholarships.ScholarshipResultBoardUIAction;
+import servlet.students.AddAttendanceUIAction;
+import servlet.students.AddStudentUIAction;
+import servlet.students.AttendanceBoardAction;
+import servlet.students.AttendanceBoardUIAction;
+import servlet.students.PointBoardAction;
+import servlet.students.PointBoardUIAction;
+import servlet.students.SetStudentAction;
+import servlet.students.StudentBoardUIAction;
 
 public class ActionFactory {
 	public static Action getAction(String cmd) { 
@@ -58,7 +67,11 @@ public class ActionFactory {
 		case "notificationPageUI":
 			a = new NotificationPageUIAction();
 			break;
-
+		/*pagenation*/
+		case "notificationBoardPageAction":
+			a = new NotificationBoardPageAction();
+			break;
+			
 			/***************** courses ****************/
 
 		case "courseBoardUI":
@@ -75,7 +88,7 @@ public class ActionFactory {
 			a = new ScholarshipResultBoardUIAction();
 			break;
 			
-			/**********************benefits****************/
+			/**********************benefits********************/
 		case "benefitBoardUI":
 			a = new BenefitBuardUIAction();
 			break;
@@ -83,8 +96,37 @@ public class ActionFactory {
 		case "benefitResultBoardUI":
 			a = new BenefitResultBoardUIAction();
 			break;
+		
+		/**********************students*********************/
+		case "attendanceBoardUI":
+			a = new AttendanceBoardUIAction();
+			break;
+		case "attendanceBoardAction":
+			a = new AttendanceBoardAction();
+			break;
+		case "pointBoardUI":
+			a = new PointBoardUIAction();
+			break;
+		case "pointBoardAction":
+			a = new PointBoardAction();
+			break;
+		case "addAttendanceUI":
+			a = new AddAttendanceUIAction();
+			break;
+		case "addStudentUI":
+			a = new AddStudentUIAction();
+			break;
+		case "setStudentAction":
+			a = new SetStudentAction();
+			break;
+		case "studentBoardUI":
+			a = new StudentBoardUIAction();
+			break;
+		
 		}
-
+			
+		
+		
 		return a;
 	}
 

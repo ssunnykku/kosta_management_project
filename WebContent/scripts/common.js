@@ -1,7 +1,7 @@
-$("#header").mouseenter(()=>{
+$("#nav-ul").mouseenter(()=>{
 	$("#nav-wrapper-dropdown").removeAttr("style");
 })
 
-$("#header").mouseleave(()=>{
+$("#nav-wrapper-dropdown").mouseleave(()=>{
 	$("#nav-wrapper-dropdown").css("display","none");
 })

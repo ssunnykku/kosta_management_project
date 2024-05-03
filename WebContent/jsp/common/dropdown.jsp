@@ -5,8 +5,8 @@
 		<div id="top-logo">
 			<h1></h1>
 		</div>
-		<ul id="nav-ul">
-			<li id="nav-notification" class="nav-li-dropdown">
+		<ul id="nav-ul" class = "dromdown-ul">
+			<li id="nav-notification" >
 				<div class="header-underline"></div> <a
 				href="controller?cmd=notificationBoardUI">공지사항</a>
 			</li>
@@ -26,8 +26,8 @@
 					정산</a> <a href="controller?cmd=benefitResultBoardUI">정산 내역 조회</a>
 			</li>
 			<li id="nav-student" class="nav-li-dropdown">
-				<div class="header-underline"></div> <a href="#students">수강생 정보</a> <a
-				href="#students">출결 관리</a> <a href="#students">포인트 관리</a>
+				<div class="header-underline"></div> <a href="controller?cmd=studentBoardUI">수강생 정보</a> <a
+				href="controller?cmd=attendanceBoardUI">출결 관리</a> <a href="controller?cmd=pointBoardUI">포인트 관리</a>
 			</li>
 		</ul>
 		<div id="header-btns">

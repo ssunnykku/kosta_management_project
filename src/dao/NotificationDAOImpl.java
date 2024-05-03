@@ -32,11 +32,8 @@ public class NotificationDAOImpl implements NotificationDAO {
 	}
 
 	//	M2018 직원이 게시글을 작성
-	/**  로그인 어떻게 구현? */
 	@Override   
 	public boolean addNotification(NotificationVO notification ) {
-
-		//notificationsVO [notificationId=361, title=안녕하세요 여러분, description=null, notificationDate=2024-04-29 20:42:34, managerId=null]
 		
 		String sql =  "insert into notifications (notification_id, title, description, notification_date, manager_id) "
 				+ "values (notification_id.NEXTVAL, ?, ?, sysdate, ?)";
@@ -70,7 +67,11 @@ public class NotificationDAOImpl implements NotificationDAO {
 	@Override
 	public Collection<NotificationManagerVO> getNotificationsList() {
 
-		String sql = "select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n where m.manager_id = n.manager_id order by notification_date desc";
+		
+		String sql = "select n.notification_id, n.title, n.notification_date, m.name "
+				+ "from managers m, notifications n where m.manager_id = n.manager_id "
+				+ "order by notification_id desc, notification_date desc";
+		
 		List<NotificationManagerVO> boards = new ArrayList<>();
 
 		try {
@@ -183,5 +184,75 @@ public class NotificationDAOImpl implements NotificationDAO {
 
 	}
 
+/** 페이지네이션 적용 **/
+public Collection<NotificationManagerVO> getNotificationsListPerPage(int curser, int offset, int page) {
+	
+	System.out.println(curser);
+	System.out.println("?" + (curser-offset*(page-1)));
+	System.out.println((curser-offset*(page-1)-offset));
+//	String sql = "select * from (select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n "
+//			+ "where m.manager_id = n.manager_id order by notification_id desc, notification_date desc) "
+//			+ "where notification_id >= " + (curser-offset*(page-1)) + " and rownum <= " + offset;
+String sql = "select * from "
+		+ "(select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n"		
+	+ " where m.manager_id = n.manager_id  order by notification_id desc, notification_date desc) "
+		+ "where notification_id between " + ((page-1) *offset) + 1  +  " and " +   (page * offset);
 
+	
+	
+//	String sql = "SELECT notification_id, title, notification_date, name FROM "
+//			+ "(SELECT n.notification_id, n.title, n.notification_date, m.name, ROW_NUMBER() OVER (ORDER BY n.notification_id DESC, n.notification_date DESC) "
+//			+ "AS row_num FROM managers m JOIN notifications n ON m.manager_id = n.manager_id) AS sub WHERE row_num "
+//			+ "BETWEEN " +(curser-offset*(page-1))+" AND " + (curser-offset*(page-1));
+//"
+		List<NotificationManagerVO> boards = new ArrayList<>();
+
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			while(rs.next()) {
+				NotificationManagerVO board = new NotificationManagerVO(
+						rs.getInt("notification_id"), 
+						rs.getString("title"),
+						rs.getString("notification_date"), 
+						rs.getString("name"));
+				boards.add(board);
+			}
+			
+			rs.close();
+			stmt.close();
+			conn.close();
+		}  catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return boards;
+	}
+
+public int getFirstNotificationId() {
+
+	String sql = "select notification_id from (select notification_id from notifications "
+			+ "order by notification_id desc, notification_date desc) "
+			+ "where rownum = 1";
+
+		int result = 0;
+
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if(rs.next()) {
+				result = rs.getInt(1);
+			}
+			
+			rs.close();
+			stmt.close();
+			conn.close();
+		}  catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+	
+	
 }
