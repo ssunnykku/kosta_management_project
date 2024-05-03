@@ -10,17 +10,18 @@
 			<img src="assets/kosta-logo.png" alt="kosta-edu-logo" />
 		</div>
 		<ul id="nav-ul">
-			<li id="nav-notification" class="nav-li"><a>공지사항</a></li>
-			<li id="nav-course" class="nav-li"><a
-				href="controller?cmd=courseBoardUI">과정 관리</a></li>
-			<li id="nav-certification" class="nav-li"><a
-				href="#certifications">수료증 관리</a></li>
-			<li id="nav-scholarship" class="nav-li"><a
-				href="controller?cmd=scholarshipBoardUI">장학금 관리</a></li>
-			<li id="nav-benefit" class="nav-li"><a
-				href="controller?cmd=benefitBoardUI">지원금 관리</a></li>
-			<li id="nav-student" class="nav-li"><a href="controller?cmd=studentBoardUI">수강생
-					관리</a></li>
+			<li  class="nav-li notification-menu">
+				<a id="nav-notification" href="controller?cmd=notificationBoardUI">공지사항</a></li>
+			<li id="nav-course" class="nav-li course-menu">
+				<a href="controller?cmd=courseBoardUI">과정 관리</a></li>
+			<li id="nav-certification" class="nav-li certification-menu">
+				<a href="#certifications">수료증 관리</a></li>
+			<li id="nav-scholarship" class="nav-li scholarship-menu">
+				<a href="controller?cmd=scholarshipBoardUI">장학금 관리</a></li>
+			<li id="nav-benefit-manage" class="nav-li benefit-menu">
+				<a href="controller?cmd=benefitBoardUI ">지원금 관리</a></li>
+			<li id="nav-student" class="nav-li student-menu">
+				<a href="controller?cmd=studentBoardUI">수강생 관리</a></li>
 		</ul>
 		<div id="header-btns">
 			<form action="controller?cmd=logoutAction" method="post"

@@ -167,6 +167,14 @@
 	color: #000000;
 }
 
+ .selected-menu {
+  color: #2d62ea;
+}
+ 
+/*  #nav-student {
+  color: #2d62ea;
+} */
+ 
 /************** drop down *****************/
 
 .header-underline {

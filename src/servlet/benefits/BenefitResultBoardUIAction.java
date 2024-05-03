@@ -14,7 +14,7 @@ public class BenefitResultBoardUIAction   implements Action {
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		return "jsp/benefits/benefitBoard.jsp";
+		return "jsp/benefits/benefitResultBoard.jsp";
 	}
 
 }

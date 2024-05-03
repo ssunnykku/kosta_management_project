@@ -6,28 +6,33 @@
 			<h1></h1>
 		</div>
 		<ul id="nav-ul" class = "dromdown-ul">
-			<li id="nav-notification" >
-				<div class="header-underline"></div> <a
-				href="controller?cmd=notificationBoardUI">공지사항</a>
+			<li class="nav-li-dropdown">
+				<div id ="notification-underline" class="header-underline"></div> 
+				<a class="dropdown-notification" href="controller?cmd=notificationBoardUI">공지사항</a>
 			</li>
-			<li id="nav-course" class="nav-li-dropdown">
-				<div class="header-underline"></div> <a href="controller?cmd=courseBoardUI">과정
-					관리</a>
+			<li class="nav-li-dropdown">
+				<div id ="course-underline" class="header-underline"></div> 
+				<a class="dropdown-course" href="controller?cmd=courseBoardUI">과정관리</a>
 			</li>
-			<li id="nav-certification" class="nav-li-dropdown">
-				<div class="header-underline"></div> <a href="#certifications">수료 대상 관리</a>
+			<li class="nav-li-dropdown">
+				<div id ="certification-underline" class="header-underline"></div> 
+				<a class="dropdown-certification" href="#certifications">수료 대상 관리</a>
 			</li>
-			<li id="nav-scholarship" class="nav-li-dropdown">
-				<div class="header-underline"></div> <a href="controller?cmd=scholarshipBoardUI">장학금
-					정산</a> <a href="controller?cmd=scholarshipResultBoardUI">정산 내역 조회</a>
+			<li class="nav-li-dropdown">
+				<div id ="notification-underline" class="header-underline"></div> 
+				<a class="dropdown-scholarship" href="controller?cmd=scholarshipBoardUI">장학금 정산</a> 
+				<a class="dropdown-scholarship" href="controller?cmd=scholarshipResultBoardUI">정산 결과 조회</a>
 			</li>
-			<li id="nav-benefit" class="nav-li-dropdown">
-				<div class="header-underline"></div> <a href="controller?cmd=benefitBoardUI">지원금
-					정산</a> <a href="controller?cmd=benefitResultBoardUI">정산 내역 조회</a>
+			<li class="nav-li-dropdown">
+				<div id ="benefit-underline" class="header-underline"></div> 
+				<a class="dropdown-benefit" href="controller?cmd=benefitBoardUI">지원금 정산</a> 
+				<a class="dropdown-benefit" href="controller?cmd=benefitResultBoardUI">정산 결과조회</a>
 			</li>
-			<li id="nav-student" class="nav-li-dropdown">
-				<div class="header-underline"></div> <a href="controller?cmd=studentBoardUI">수강생 정보</a> <a
-				href="controller?cmd=attendanceBoardUI">출결 관리</a> <a href="controller?cmd=pointBoardUI">포인트 관리</a>
+			<li class="nav-li-dropdown">
+				<div id ="student-underline" class="header-underline"></div> 
+				<a class="dropdown-student" href="controller?cmd=studentBoardUI">수강생 정보</a> 
+				<a class="dropdown-student" href="controller?cmd=attendanceBoardUI">출결 관리</a> 
+				<a class="dropdown-student" href="controller?cmd=pointBoardUI">포인트 관리</a>
 			</li>
 		</ul>
 		<div id="header-btns">
