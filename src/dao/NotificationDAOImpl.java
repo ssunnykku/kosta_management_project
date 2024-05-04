@@ -191,26 +191,13 @@ public class NotificationDAOImpl implements NotificationDAO {
 	}
 
 /** 페이지네이션 적용 **/
-public Collection<NotificationManagerVO> getNotificationsListPerPage(int curser, int offset, int page) {
-	
-	System.out.println(curser);
-	System.out.println("?" + (curser-offset*(page-1)));
-	System.out.println((curser-offset*(page-1)-offset));
-//	String sql = "select * from (select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n "
-//			+ "where m.manager_id = n.manager_id order by notification_id desc, notification_date desc) "
-//			+ "where notification_id >= " + (curser-offset*(page-1)) + " and rownum <= " + offset;
-String sql = "select * from "
-		+ "(select n.notification_id, n.title, n.notification_date, m.name from managers m, notifications n"		
-	+ " where m.manager_id = n.manager_id  order by notification_id desc, notification_date desc) "
-		+ "where notification_id between " + ((page-1) *offset) + 1  +  " and " +   (page * offset);
+public Collection<NotificationManagerVO> getNotificationsListPerPage(int offset, int page) {
 
-	
-	
-//	String sql = "SELECT notification_id, title, notification_date, name FROM "
-//			+ "(SELECT n.notification_id, n.title, n.notification_date, m.name, ROW_NUMBER() OVER (ORDER BY n.notification_id DESC, n.notification_date DESC) "
-//			+ "AS row_num FROM managers m JOIN notifications n ON m.manager_id = n.manager_id) AS sub WHERE row_num "
-//			+ "BETWEEN " +(curser-offset*(page-1))+" AND " + (curser-offset*(page-1));
-//"
+	String sql = "SELECT * FROM (SELECT ROWNUM AS RN, notification_id, title, notification_date, name "
+			+ "FROM (SELECT n.notification_id, n.title, n.notification_date, m.name FROM managers m, notifications n "
+			+ "WHERE m.manager_id = n.manager_id ORDER BY notification_id DESC, notification_date DESC)) "
+			+ "WHERE RN BETWEEN +"+((page*offset)-(offset-1))+" AND "+page*offset;
+
 		List<NotificationManagerVO> boards = new ArrayList<>();
 
 		try {

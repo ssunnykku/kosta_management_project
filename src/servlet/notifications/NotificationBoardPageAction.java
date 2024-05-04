@@ -17,11 +17,12 @@ public class NotificationBoardPageAction implements Action {
 	public String execute(HttpServletRequest request)
 			throws ServletException, IOException, SQLException, ClassNotFoundException {
 		
-		int offset = 10;
-		int curser = new NotificationDAOImpl().getFirstNotificationId();
+//		int curser = new NotificationDAOImpl().getFirstNotificationId();
 		int page = Integer.parseInt(request.getParameter("page"));
+		int offset = 10;
+		System.out.println(page);
 		Gson gson = new Gson();
-		String json = gson.toJson(new NotificationDAOImpl().getNotificationsListPerPage(curser, offset, page));
+		String json = gson.toJson(new NotificationDAOImpl().getNotificationsListPerPage(offset, page));
 		
 		request.setAttribute("data", json);
 	

@@ -14,9 +14,13 @@ const notificationBoardNo = document.querySelector(".notificationBoard-no");
 const modal = document.querySelector(".modal-background ");
 
 async function pageLoad() {
-await fetch("controller?cmd=notificationBoardAction")
+//await fetch("controller?cmd=notificationBoardAction")
+let urlParams = new URL(location.href).searchParams;
+let page = urlParams.get("page");
+await fetch("controller?cmd=notificationBoardPageAction&page="+page)
 .then((response) => response.json())
 .then((data) => {
+	console.log(data);
 	$('#notification-table').append(getNotificationList(data));
 	notificationCheckboxAll = document.querySelectorAll('.notificationBoard-check');
 })
