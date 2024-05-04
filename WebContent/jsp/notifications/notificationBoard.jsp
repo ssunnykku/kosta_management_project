@@ -79,7 +79,7 @@
 		</article>
 		<article class="page-information">
 			<div class="cnt-pages">
-				<span>총 72건 (1 to 5)</span>
+				<span>총 112건 (1 to 12)</span>
 			</div>
 		</article>
 	</section>

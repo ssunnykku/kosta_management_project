@@ -66,7 +66,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	height: 60px;
+	height: 55px;
 	align-items: center;
 	font-style: normal;
 	font-weight: 300;
@@ -120,6 +120,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	height: 45px;
+
 }
 
 .cnt-pages {
@@ -129,6 +131,7 @@
 	line-height: 100%;
 	margin: 0 150px 0 150px;
 	color: #999999;
+	
 }
 
 .pagenation {
@@ -163,10 +166,15 @@ footer {
 	flex-direction: column;
 }
 
+.notificationPost-title > span {
+	font-size: 17px;
+}
+
 .notificationPost-contents {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 30px 0 30px 0;
 	gap: 30px;
 }
 
@@ -174,6 +182,7 @@ footer {
 	background: #ffffff;
 	border-bottom: 1px solid #f3f5f9;
 	border-radius: 10px 10px 0px 0px;
+	justify-content: space-around;
 	padding-bottom: 20px;
 }
 
@@ -186,12 +195,12 @@ footer {
 }
 
 #notificationPost-enroll-date>span {
-	font-size: 14px;
+	font-size: 15px;
 	color: rgba(0, 0, 0, 0.33);
 }
 
 #notificationPost-no>span {
-	font-size: 14px;
+	font-size: 15px;
 	color: rgba(0, 0, 0, 0.33);
 }
 
@@ -203,8 +212,9 @@ footer {
 	row-gap: 100px;
 }
 
-.notificationPost-content {
-	font-size: 15px;
+.notificationPost-content > pre {
+	width: 100%;
+	font-size: 16.5px;
 }
 
 #notificationPost-btn-wrapper {
@@ -296,6 +306,7 @@ footer {
 .setNotification-input-wrapper {
 	height: 600px;
 }
+
 
 .setNotification-input-wrapper>textarea {
 	padding: 20px;

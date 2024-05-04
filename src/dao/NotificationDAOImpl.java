@@ -67,7 +67,6 @@ public class NotificationDAOImpl implements NotificationDAO {
 	@Override
 	public Collection<NotificationManagerVO> getNotificationsList() {
 
-		
 		String sql = "select n.notification_id, n.title, to_char(n.notification_date, 'yyyy-mm-dd') as notification_date, m.name "
 				+ "from managers m, notifications n where m.manager_id = n.manager_id "
 				+ "order by notification_id desc, notification_date desc";
@@ -85,6 +84,8 @@ public class NotificationDAOImpl implements NotificationDAO {
 						rs.getString("name"));
 				boards.add(board);
 			}
+			
+			System.out.println(boards);
 			
 			rs.close();
 			stmt.close();
@@ -107,7 +108,7 @@ public class NotificationDAOImpl implements NotificationDAO {
 				+ " n.notification_id, "
 				+ "n.title, "
 				+"n.description,"
-				+ "n.notification_date,"
+				+ "to_char(n.notification_date, 'yyyy-mm-dd') as notification_date,"
 				+ " m.name "
 				+ "from managers m, notifications n where m.manager_id = n.manager_id and notification_id = ?";
 		
@@ -116,7 +117,12 @@ public class NotificationDAOImpl implements NotificationDAO {
 			pstmt.setInt(1, notificationId);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				board = new NotificationManagerVO(rs.getInt(1), rs.getString(2),  rs.getString(3), rs.getString(4), rs.getString(5));
+				board = new NotificationManagerVO(
+						rs.getInt(1), 
+						rs.getString(2),  
+						rs.getString(3), 
+						rs.getString(4), 
+						rs.getString(5));
 	        }
 			rs.close();
 			pstmt.close();

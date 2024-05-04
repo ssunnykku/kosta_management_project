@@ -16,8 +16,7 @@
       <h2 id="title">장학금 정산</h2>
     </section>
     <section id="scholarship-contents">
-      <article>
-        <div class="scholarship-search-form-wrapper">
+      <article class="scholarship-search-form-wrapper">
           <!-- form???? -->
           <select
             name="scholarship-courseId-filter"
@@ -29,7 +28,6 @@
           </select>
           <input placeholder="수강생을 입력하세요" class="search-input" />
           <button type="button" class="board-filter-search-btn">검색</button>
-        </div>
       </article>
       <article>
         <div id="scholarshipBoard-table">

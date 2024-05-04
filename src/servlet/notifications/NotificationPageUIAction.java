@@ -24,7 +24,7 @@ public class NotificationPageUIAction  implements Action{
 //		String description = notification.getDescription();
 
 		request.setAttribute("data", notification);
-		System.out.println(notification);
+//		System.out.println(notification);
 
 		return "jsp/notifications/notificationPost.jsp";
 	}

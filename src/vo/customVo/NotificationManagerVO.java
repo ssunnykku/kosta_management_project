@@ -19,7 +19,7 @@ public class NotificationManagerVO {
         setTitle(title);
         setDescription(description);
         setNotificationDate(notificationDate);
-        setManagerId(name);
+        setName(name);
     }
     
 
@@ -33,34 +33,34 @@ public class NotificationManagerVO {
         setNotificationDate(notificationDate);
         setName(name);
     }
-    
-    public NotificationManagerVO(
-    		int notificationId, 
-            String title, 
-            String description, 
-            String notificationDate, 
-            String managerId,
-            String name) {
-        setNotificationId(notificationId);
-        setTitle(title);
-        setDescription(description);
-        setNotificationDate(notificationDate);
-        setManagerId(managerId);
-        setName(name);
-    }
+//    
+//    public NotificationManagerVO(
+//    		int notificationId, 
+//            String title, 
+//            String description, 
+//            String notificationDate, 
+//            String managerId,
+//            String name) {
+//        setNotificationId(notificationId);
+//        setTitle(title);
+//        setDescription(description);
+//        setNotificationDate(notificationDate);
+//        setManagerId(managerId);
+//        setName(name);
+//    }
+//
+//    public NotificationManagerVO(int notificationId, String title, String description) {
+//        setNotificationId(notificationId);
+//        setTitle(title);
+//        setNotificationDate(notificationDate);
+//        setDescription(description);
+//    }
 
-    public NotificationManagerVO(int notificationId, String title, String description) {
-        setNotificationId(notificationId);
-        setTitle(title);
-        setNotificationDate(notificationDate);
-        setDescription(description);
-    }
-
-    public NotificationManagerVO(String title, String description, String managerId) {
-        setTitle(title);
-        setDescription(description);
-        setManagerId(managerId);
-    }
+//    public NotificationManagerVO(String title, String description, String managerId) {
+//        setTitle(title);
+//        setDescription(description);
+//        setManagerId(managerId);
+//    }
     
     public String getName() {
         return name;

@@ -243,11 +243,15 @@
 /*****************scholarship settlement***********/
 #scholarship-contents {
   padding: 0 10% 0 10%;
+/*   display: flex;
+   */
 }
 /* button, search */
 
 .scholarship-search-form-wrapper {
+width: 520px;
   margin: 20px 0 20px 0;
+  margin-left: 35%;
   display: flex;
   justify-content: center;
   gap: 10px;
